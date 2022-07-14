@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.0"
   }
 }
