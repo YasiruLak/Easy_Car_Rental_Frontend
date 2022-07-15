@@ -1,6 +1,8 @@
 import main1 from "../../assets/images/main1.png";
 import about1 from "../../assets/images/about1.png";
-import homeimg from "../../assets/images/homeimg.png";
+import homeImg from "../../assets/images/homeImg.png";
+import driver1 from "../../assets/images/driver1.png";
+import vehicle from "../../assets/images/vehicle.png";
 
 export const styleSheet={
     container:{
@@ -55,7 +57,7 @@ export const styleSheet={
         flexWrap: 'wrap',
         flexDirection: 'row',
         alignItems: 'center',
-        color:'black'
+
     },
 
     home_left:{
@@ -70,42 +72,40 @@ export const styleSheet={
 
     about_container:{
         width:'100vw',
-        height:'100vh',
+        height:'80vh',
         // backgroundImage: `url(${main1})`,
         // backgroundRepeat: 'no-repeat',
         // backgroundSize: 'cover',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+        backgroundColor:'#DD1F3F'
     },
 
     about_container_left:{
         width:'55vw',
-        height:'100vh',
-        // backgroundColor:'green',
+        height:'80vh',
         display: 'flex',
         margin:'auto',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent:'center',
-        backgroundImage: `url(${homeimg})`,
-        backgroundRepeat: 'no-repeat',
-    },
 
+
+    },
 
     about_container_right:{
         width:'45vw',
-        height:'100vh',
+        height:'80vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent:'center',
-
     },
 
     about_right:{
         width: '45vw',
-        height: '100vh',
+        height: '80vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
@@ -115,48 +115,213 @@ export const styleSheet={
 
     about_right_1:{
         width: '45vw',
-        height: '25vh',
+        height: '20vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent:'center',
-        // border:'1px solid red',
-        paddingTop:'110px',
+         //border:'1px solid white',
+        paddingTop:'60px',
         paddingRight:'460px'
     },
 
     about_right_2:{
         width: '45vw',
-        height: '30vh',
+        height: '25vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent:'center',
-        // border:'1px solid red',
-        paddingBottom:'100px',
+         //border:'1px solid white',
+        paddingBottom:'40px',
         paddingRight:'90px'
     },
 
     about_right_3:{
         width: '45vw',
-        height: '45vh',
+        height: '35vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent:'space-evenly',
-        // border:'1px solid red',
+         //border:'1px solid red',
         flexDirection:'column',
         paddingRight:'100px'
 
     },
 
-    vehicle_container:{
+    service_container:{
         width:'100vw',
-        height:'100vh',
+        height:'140vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+
+
     },
 
+    service_header:{
+        width:'100vw',
+        height:'20vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent:'center',
+        flexDirection:'row',
+
+
+    },
+    service_card_content:{
+        width:'100vw',
+        height:'120vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems:'center',
+        flexDirection:'column',
+        justifyContent:'center',
+
+    },
+
+    service_card_content_grid:{
+        width:'100vw',
+        height:'60vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'center',
+
+    },
+
+    service_card_content_grid_row:{
+        width:'33.33vw',
+        height:'60vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'left',
+        border: '1px solid red'
+
+    },
+
+    driver_container:{
+        width:'100vw',
+        height:'70vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        backgroundColor:'#DD1F3F'
+
+    },
+
+    driver_container_left:{
+        width:'50vw',
+        height:'70vh',
+    },
+
+    driver_container_right:{
+        width:'50vw',
+        height:'70vh',
+        display:'flex',
+        flexWrap:'wrap',
+        alignItems:'center',
+        justifyContent:'center',
+    },
+
+    driver_left_1:{
+        height:'50vh',
+        width:'50vw',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent:'center',
+
+    },
+
+    vehicle_container:{
+        width:'100vw',
+        height:'150vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+
+    },
+
+    vehicle:{
+        width:'100vw',
+        height:'130vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+
+    },
+
+    vehicle_detail:{
+        width:'90vw',
+        height:'120vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+
+    },
+
+    vehicle_detail_row:{
+        width:'90vw',
+        height:'60vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    vehicle_card:{
+        width:'29vw',
+        height:'60vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    vehicle_card_desc:{
+        width:'23vw',
+        height:'7vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+        marginTop:'30px',
+
+    },
+
+    desc_1:{
+        width:'11vw',
+        height:'7vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+
+    },
+
+    vehicle_card_detail:{
+        width:'22.5vw',
+        height:'7vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    }
 
 }
