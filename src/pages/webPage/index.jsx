@@ -1,13 +1,21 @@
 import {Component} from "react";
 import {styleSheet} from "./style";
 import {withStyles} from "@mui/styles";
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import homeImg from "../../assets/images/homeImg.png";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import driver1 from "../../assets/images/driver1.png";
+import vehicle3 from "../../assets/images/vehicle3.png";
+import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
+import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
+
+import LocationCityOutlinedIcon from '@mui/icons-material/LocationCityOutlined';
+import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
+import AddLocationOutlinedIcon from '@mui/icons-material/AddLocationOutlined';
+import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined';
 
 
 class WebPage extends Component {
@@ -132,10 +140,11 @@ class WebPage extends Component {
                 <Grid className={classes.service_container}>
                     <Grid className={classes.service_header}>
                         <Grid>
-                            <Typography variant="h6" gutterBottom component="div" style={{color:'#ffd438',marginLeft:'80px'}}>
+                            <Typography variant="h6" gutterBottom component="div"
+                                        style={{color: '#ffd438', marginLeft: '80px'}}>
                                 see our
                             </Typography>
-                            <Typography variant="h4" gutterBottom component="div" style={{color:'#ff4529'}}>
+                            <Typography variant="h4" gutterBottom component="div" style={{color: '#ff4529'}}>
                                 Popular Service
                             </Typography>
                         </Grid>
@@ -145,11 +154,19 @@ class WebPage extends Component {
                         <Grid className={classes.service_card_content_grid}>
                             <Grid className={classes.service_card_content_grid_row}>
                                 <Grid>
-                                    <LocationOnOutlinedIcon style={{fontSize: '45px', color: 'red',paddingLeft:'10px'}}/>
-                                    <Typography variant="h4" gutterBottom component="div" style={{paddingLeft:'10px'}}>
-                                        h3. Heading
+                                    <LocationOnOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'155px',
+                                        marginBottom:'20px'
+
+                                    }}>
+                                        City Transfer
                                     </Typography>
-                                    <Typography variant="body1" gutterBottom style={{paddingLeft:'10px'}}>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
                                         body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
                                         blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
                                         neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
@@ -157,13 +174,116 @@ class WebPage extends Component {
                                     </Typography>
                                 </Grid>
                             </Grid>
-                            <Grid className={classes.service_card_content_grid_row}></Grid>
-                            <Grid className={classes.service_card_content_grid_row}></Grid>
+                            <Grid className={classes.service_card_content_grid_row}>
+                                <Grid>
+                                    <LocationCityOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'140px',
+                                        marginBottom:'20px'
+                                    }}>
+                                        Whole City Tour
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
+                                        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                        quasi quidem quibusdam.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid className={classes.service_card_content_grid_row}>
+                                <Grid>
+                                    <DirectionsCarFilledOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'95px',
+                                        marginBottom:'20px'
+
+                                    }}>
+                                        Unlimited Miles car Rental
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
+                                        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                        quasi quidem quibusdam.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Grid>
                         <Grid className={classes.service_card_content_grid}>
-                            <Grid className={classes.service_card_content_grid_row}></Grid>
-                            <Grid className={classes.service_card_content_grid_row}></Grid>
-                            <Grid className={classes.service_card_content_grid_row}></Grid>
+                            <Grid className={classes.service_card_content_grid_row}>
+                                <Grid>
+                                    <SpeedOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'100px',
+                                        marginBottom:'20px'
+                                    }}>
+                                        Fast & Easy Booking
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
+                                        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                        quasi quidem quibusdam.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid className={classes.service_card_content_grid_row}>
+                                <Grid>
+                                    <AddLocationOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'105px',
+                                        marginBottom:'20px'
+
+                                    }}>
+                                        Many Pickup Location
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
+                                        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                        quasi quidem quibusdam.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid className={classes.service_card_content_grid_row}>
+                                <Grid>
+                                    <FlightTakeoffOutlinedIcon
+                                        style={{fontSize: '45px', color: '#fcbf5b', marginLeft:'205px', marginBottom:'20px'}}/>
+                                    <Typography variant="h5" gutterBottom component="div" style={{
+                                        fontWeight: '600',
+                                        color: '#ff4529',
+                                        marginLeft:'150px',
+                                        marginBottom:'20px'
+                                    }}>
+                                       Airport Transfer
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom
+                                                style={{padding: '12px', color: '#ff9e03'}}>
+                                        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                        quasi quidem quibusdam.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
 
@@ -174,7 +294,7 @@ class WebPage extends Component {
                         <Grid className={classes.driver_left_1}>
                             <Typography variant="h4" gutterBottom component="div" style={{
                                 fontWeight: '600',
-                                color: '#d4cccb',
+                                color: '#ffffff',
                                 marginTop: '60px',
                                 marginLeft: '60px'
                             }}>
@@ -184,8 +304,8 @@ class WebPage extends Component {
                         <Grid className={classes.driver_left_1}>
                             <Button variant="outlined" size="large"
                                     style={{
-                                        borderColor: 'white',
-                                        color: 'white',
+                                        borderColor: '#ffffff',
+                                        color: '#ffffff',
                                         marginBottom: '600px',
                                         marginRight: '360px'
                                     }}>
@@ -194,7 +314,7 @@ class WebPage extends Component {
                         </Grid>
                     </Grid>
                     <Grid className={classes.driver_container_right}>
-                        <img src={driver1} alt="" style={{width: '700px'}}/>
+                        <img src={vehicle3} alt="" style={{width: '700px'}}/>
                     </Grid>
                 </Grid>
 
@@ -214,7 +334,7 @@ class WebPage extends Component {
                         <Grid className={classes.vehicle_detail}>
                             <Grid className={classes.vehicle_detail_row}>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -222,30 +342,39 @@ class WebPage extends Component {
                                             image={driver1}
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div" style={{marginLeft:'130px'}}>
+                                            <Typography gutterBottom variant="h5" component="div"
+                                                        style={{marginLeft: '130px'}}>
                                                 Tesla
                                             </Typography>
-                                            <Typography gutterBottom variant="h5" component="div" style={{marginLeft:'80px'}}>
+                                            <Typography gutterBottom variant="h5" component="div"
+                                                        style={{marginLeft: '80px'}}>
                                                 $50.00/ Per Day
                                             </Typography>
 
                                             <Grid className={classes.vehicle_card_detail}>
-                                                <Grid></Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}></Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}></Grid>
                                             </Grid>
 
-                                            <Grid className={classes.vehicle_card_desc} >
+                                            <Grid className={classes.vehicle_card_desc}>
                                                 <Grid className={classes.desc_1}>
-                                                    <Button variant="contained" fullWidth>Contained</Button>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
                                                 </Grid>
-                                                <Grid className={classes.desc_1} style={{marginLeft:'5px'}}>
-                                                    <Button variant="contained" fullWidth>Contained</Button>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
                                                 </Grid>
                                             </Grid>
                                         </CardContent>
                                     </Card>
                                 </div>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -264,7 +393,7 @@ class WebPage extends Component {
                                     </Card>
                                 </div>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -285,7 +414,7 @@ class WebPage extends Component {
                             </Grid>
                             <Grid className={classes.vehicle_detail_row}>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -304,7 +433,7 @@ class WebPage extends Component {
                                     </Card>
                                 </div>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -323,7 +452,7 @@ class WebPage extends Component {
                                     </Card>
                                 </div>
                                 <div className={classes.vehicle_card}>
-                                    <Card sx={{ maxWidth: 345 , minHeight: 380}}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
@@ -344,6 +473,43 @@ class WebPage extends Component {
                             </Grid>
                         </Grid>
                     </Grid>
+                </Grid>
+
+
+                <Grid className={classes.footer_container}>
+                    <Grid className={classes.footer_content}>
+                        <Grid className={classes.footer_content_1}>
+                            <Grid className={classes.content_1_head}>
+                                <DirectionsCarOutlinedIcon style={{
+                                    fontSize: '60px',
+                                    color: 'red',
+                                    paddingLeft: '80px',
+                                    paddingTop: '40px'
+                                }}/>
+                            </Grid>
+                            <Grid className={classes.content_2_head}>
+                                <Typography variant="h5" gutterBottom component="div" style={{paddingRight: '120px',
+                                    paddingTop: '50px',fontWeight:'600'}}>
+                                    <span style={{color:'red'}}>Easy</span> Car Rental Service
+                                </Typography>
+                            </Grid>
+
+                            <Grid className={classes.content_1_head_1}>
+
+                            </Grid>
+
+                        </Grid>
+                        <Grid className={classes.footer_content_2}></Grid>
+                        <Grid className={classes.footer_content_3}></Grid>
+                        <Grid className={classes.footer_content_4}></Grid>
+                    </Grid>
+                    <Grid className={classes.copyright}>
+                        <Typography variant="caption" display="block" gutterBottom style={{color: 'red'}}>
+                            Copyright 2022,developed by <span style={{color: 'black'}}>Yasiru Dahanayaka</span>. All
+                            Rights Reserved
+                        </Typography>
+                    </Grid>
+
                 </Grid>
             </Grid>
         )

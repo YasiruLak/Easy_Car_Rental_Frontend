@@ -1,8 +1,5 @@
 import main1 from "../../assets/images/main1.png";
-import about1 from "../../assets/images/about1.png";
-import homeImg from "../../assets/images/homeImg.png";
-import driver1 from "../../assets/images/driver1.png";
-import vehicle from "../../assets/images/vehicle.png";
+
 
 export const styleSheet={
     container:{
@@ -152,7 +149,7 @@ export const styleSheet={
 
     service_container:{
         width:'100vw',
-        height:'140vh',
+        height:'120vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -173,7 +170,7 @@ export const styleSheet={
     },
     service_card_content:{
         width:'100vw',
-        height:'120vh',
+        height:'100vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
@@ -184,7 +181,7 @@ export const styleSheet={
 
     service_card_content_grid:{
         width:'100vw',
-        height:'60vh',
+        height:'50vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
@@ -195,13 +192,14 @@ export const styleSheet={
 
     service_card_content_grid_row:{
         width:'33.33vw',
-        height:'60vh',
+        height:'50vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
         flexDirection:'row',
-        justifyContent:'left',
-        border: '1px solid red'
+        justifyContent:'center',
+        // border: '1px solid red',
+        alignContent:'center'
 
     },
 
@@ -316,10 +314,129 @@ export const styleSheet={
     vehicle_card_detail:{
         width:'22.5vw',
         height:'7vh',
+        // border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    vehicle_card_subDetail:{
+        width:'7.5vw',
+        height:'7vh',
+        border:'1px solid red',
+        //backgroundColor:'red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'left',
+    },
+
+    footer_container:{
+        width:'100vw',
+        height: '60vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    footer_content:{
+        width:'100vw',
+        height: '50vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+    footer_content_1:{
+        width:'35vw',
+        height: '50vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    content_1_head:{
+        width:'12vw',
+        height: '20vh',
         border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    content_2_head:{
+        width:'23vw',
+        height: '20vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    content_1_head_1:{
+        width:'35vw',
+        height: '30vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    footer_content_2:{
+        width:'15vw',
+        height: '50vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    footer_content_3:{
+        width:'20vw',
+        height: '50vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    footer_content_4:{
+        width:'30vw',
+        height: '50vh',
+        border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent:'center',
+    },
+
+    copyright:{
+        width:'100vw',
+        height: '10vh',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
     }
