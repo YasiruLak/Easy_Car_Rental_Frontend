@@ -1,7 +1,7 @@
 import {Component} from "react";
 import {styleSheet} from "./style";
 import {withStyles} from "@mui/styles";
-import {Button, Card, CardContent, CardMedia, Grid, Typography} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Grid, TextField, Typography} from "@mui/material";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -482,29 +482,81 @@ class WebPage extends Component {
                             <Grid className={classes.content_1_head}>
                                 <DirectionsCarOutlinedIcon style={{
                                     fontSize: '60px',
-                                    color: 'red',
+                                    color: '#ffffff',
                                     paddingLeft: '80px',
-                                    paddingTop: '40px'
+                                    paddingTop: '60px'
                                 }}/>
                             </Grid>
                             <Grid className={classes.content_2_head}>
                                 <Typography variant="h5" gutterBottom component="div" style={{paddingRight: '120px',
-                                    paddingTop: '50px',fontWeight:'600'}}>
-                                    <span style={{color:'red'}}>Easy</span> Car Rental Service
+                                    paddingTop: '70px',fontWeight:'600'}}>
+                                    <span style={{color:'#ffffff'}}>Easy</span> Car Rental Service
                                 </Typography>
                             </Grid>
 
                             <Grid className={classes.content_1_head_1}>
-
+                                <Typography variant="body2" gutterBottom style={{color: '#ffffff'}}>
+                                    body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                    blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+                                    neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+                                    quasi quidem quibusdam.
+                                </Typography>
                             </Grid>
 
                         </Grid>
-                        <Grid className={classes.footer_content_2}></Grid>
-                        <Grid className={classes.footer_content_3}></Grid>
-                        <Grid className={classes.footer_content_4}></Grid>
+                        <Grid className={classes.footer_content_2}>
+                            <Typography variant="h5" gutterBottom component="div" style={{marginLeft:'10px', fontWeight:'600',marginTop:'14px', color:'#ffffff'}}>
+                                Quick Links
+                            </Typography>
+                            <Grid>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                   Home
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    About Us
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    Service
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    Driver
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div"style={{marginBottom:'18px',color: '#ffffff'}}>
+                                    Booking
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                        <Grid className={classes.footer_content_3}>
+                            <Typography variant="h5" gutterBottom component="div" style={{ fontWeight:'600',color:'#ffffff'}}>
+                                Contact Us
+                            </Typography>
+                            <Grid>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    337/A Galle rd, Panadura
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    +94 76 83 83 493
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
+                                    easycarrental@gmail.com
+                                </Typography>
+                                <Typography variant="subtitle1" gutterBottom component="div"style={{marginBottom:'18px',color: '#ffffff'}}>
+                                    8am - 5pm 24/7
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                        <Grid className={classes.footer_content_4}>
+                            <Typography variant="h5" gutterBottom component="div" style={{marginLeft:'10px', fontWeight:'600',marginBottom:'28px', color:'#ffffff'}}>
+                                Newsletter
+                            </Typography>
+                            <Typography variant="body2" gutterBottom style={{color:'#ffffff'}}>
+                                Subscribe our newsletter to get updated information
+                            </Typography>
+                            <TextField id="outlined-basic" label="Email" variant="outlined" style={{borderRadius:'100px'}}/>
+                        </Grid>
                     </Grid>
                     <Grid className={classes.copyright}>
-                        <Typography variant="caption" display="block" gutterBottom style={{color: 'red'}}>
+                        <Typography variant="caption" display="block" gutterBottom style={{color: '#ffffff'}}>
                             Copyright 2022,developed by <span style={{color: 'black'}}>Yasiru Dahanayaka</span>. All
                             Rights Reserved
                         </Typography>

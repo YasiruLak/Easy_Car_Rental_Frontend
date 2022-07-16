@@ -336,17 +336,18 @@ export const styleSheet={
 
     footer_container:{
         width:'100vw',
-        height: '60vh',
+        height: '50vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
+        backgroundColor:'#DD1F3F'
     },
 
     footer_content:{
         width:'100vw',
-        height: '50vh',
+        height: '40vh',
         //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
@@ -356,7 +357,7 @@ export const styleSheet={
     },
     footer_content_1:{
         width:'35vw',
-        height: '50vh',
+        height: '40vh',
         //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
@@ -368,7 +369,7 @@ export const styleSheet={
     content_1_head:{
         width:'12vw',
         height: '20vh',
-        border:'1px solid red',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
@@ -379,7 +380,7 @@ export const styleSheet={
     content_2_head:{
         width:'23vw',
         height: '20vh',
-        border:'1px solid red',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
@@ -389,8 +390,20 @@ export const styleSheet={
 
     content_1_head_1:{
         width:'35vw',
-        height: '30vh',
-        border:'1px solid red',
+        height: '20vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'center',
+        padding:'10px'
+    },
+
+    footer_content_2:{
+        width:'15vw',
+        height: '40vh',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
@@ -398,32 +411,21 @@ export const styleSheet={
         justifyContent:'center',
     },
 
-    footer_content_2:{
-        width:'15vw',
-        height: '50vh',
-        border:'1px solid red',
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent:'center',
-    },
-
     footer_content_3:{
         width:'20vw',
-        height: '50vh',
-        border:'1px solid red',
+        height: '40vh',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent:'center',
     },
 
     footer_content_4:{
         width:'30vw',
-        height: '50vh',
-        border:'1px solid red',
+        height: '40vh',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
