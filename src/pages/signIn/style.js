@@ -1,4 +1,5 @@
 import Login from "../../assets/images/login.jpg";
+import logo from "../../assets/images/logo.png";
 
 export const styleSheet={
     container:{
@@ -30,9 +31,7 @@ export const styleSheet={
         flexWrap: 'wrap',
         flexDirection: 'column',
         //border:'1px solid red',
-        // backgroundImage: `url(${Login})`,
-        // backgroundRepeat: 'no-repeat',
-       //backgroundSize: 'cover',
+
     },
 
     signIn_container_2:{
@@ -41,7 +40,72 @@ export const styleSheet={
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        //border:'1px solid red'
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    circle:{
+        width:'40vw',
+        height:'30vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    textField:{
+        width:'40vw',
+        height:'70vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    logo:{
+        width:'150px',
+        height:'150px',
+        borderRadius:'100px',
+        backgroundImage: `url(${logo})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    },
+
+    userName:{
+        width:'40vw',
+        height:'20vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-end'
+    },
+
+    passwordField:{
+        width:'40vw',
+        height:'25vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    loginButton:{
+        width:'40vw',
+        height:'25vh',
+        //border:'1px solid red',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start'
     }
 
 
