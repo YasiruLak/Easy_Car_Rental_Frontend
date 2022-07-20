@@ -9,6 +9,11 @@ import homeImg from "../../assets/images/homeImg.png";
 class SignUp extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+            formData:{
+
+            }
+        }
     }
 
     render(){

@@ -44,6 +44,8 @@
   },
   "devDependencies": {
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.0"
+    "@mui/material": "^5.9.0",
+    "@mui/x-data-grid": "^5.13.1",
+    "prop-types": "^15.8.1"
   }
 }

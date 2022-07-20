@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Login Page done">
-      <change afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/signUp/style.js" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Sign Up Page done">
+      <change afterPath="$PROJECT_DIR$/src/axsios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Button/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SnackBar/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Table/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/vehicleManage/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +38,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/webPage/style.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/vehicleManage/style.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2C3uFkiIynsYIWNI6AdZNzRWqw9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -46,15 +55,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Lecture Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="ts.external.directory.path" value="C:\Users\Yasiru\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\212.5457.46\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\assets\images" />
     </key>
@@ -73,7 +86,8 @@
       <workItem from="1658152000557" duration="1122000" />
       <workItem from="1658198279348" duration="44000" />
       <workItem from="1658213232651" duration="802000" />
-      <workItem from="1658214149409" duration="8603000" />
+      <workItem from="1658214149409" duration="11287000" />
+      <workItem from="1658286510637" duration="18352000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -89,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658234737657</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sign Up Page done">
+      <created>1658239966780</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658239966780</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated" />
     <MESSAGE value="Login Page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Page done" />
+    <MESSAGE value="Sign Up Page done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Page done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
