@@ -14,7 +14,7 @@ export const styleSheet= {
 
     signUpForm:{
         width: '50vw',
-        height: '70vh',
+        height: '100vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
@@ -32,6 +32,16 @@ export const styleSheet= {
         flexWrap: 'wrap',
         flexDirection: 'column',
         //border:'1px solid red'
+    },
+    header_content:{
+        width: '50vw',
+        height: '20vh',
+        //border:'1px solid red',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
     },
 
     leftForm:{

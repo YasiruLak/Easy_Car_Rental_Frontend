@@ -11,7 +11,6 @@ import driver1 from "../../assets/images/driver1.png";
 import vehicle3 from "../../assets/images/vehicle3.png";
 import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
-
 import LocationCityOutlinedIcon from '@mui/icons-material/LocationCityOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
 import AddLocationOutlinedIcon from '@mui/icons-material/AddLocationOutlined';
@@ -40,8 +39,9 @@ class WebPage extends Component {
                             <Tab value="three" label="Services" className={classes.navItems}/>
                             <Tab value="four" label="About" className={classes.navItems}/>
                             <Tab value="four" label="Reviews" className={classes.navItems}/>
-                            <Button variant="outlined" endIcon={<AccountCircleIcon/>}
-                                    style={{borderColor: 'red', color: 'red'}}>
+                            <Button variant="outlined" size="small" endIcon={<AccountCircleIcon/>}
+                                    style={{borderColor: 'white', color: 'white', borderRadius:'50px', height:'35px',justifyContent:'center',width:'100px',
+                                    margin:'2px 10px 0 10px'}}>
                                 SignIn
                             </Button>
                         </Tabs>
@@ -521,7 +521,7 @@ class WebPage extends Component {
                                 <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
                                     Driver
                                 </Typography>
-                                <Typography variant="subtitle1" gutterBottom component="div"style={{marginBottom:'18px',color: '#ffffff'}}>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{marginBottom:'18px',color: '#ffffff'}}>
                                     Booking
                                 </Typography>
                             </Grid>
@@ -540,7 +540,7 @@ class WebPage extends Component {
                                 <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
                                     easycarrental@gmail.com
                                 </Typography>
-                                <Typography variant="subtitle1" gutterBottom component="div"style={{marginBottom:'18px',color: '#ffffff'}}>
+                                <Typography variant="subtitle1" gutterBottom component="div" style={{marginBottom:'18px',color: '#ffffff'}}>
                                     8am - 5pm 24/7
                                 </Typography>
                             </Grid>
@@ -552,7 +552,7 @@ class WebPage extends Component {
                             <Typography variant="body2" gutterBottom style={{color:'#ffffff'}}>
                                 Subscribe our newsletter to get updated information
                             </Typography>
-                            <TextField id="outlined-basic" label="Email" variant="outlined" style={{borderRadius:'100px'}}/>
+                            <TextField id="outlined-basic" label="Email" variant="outlined" size="small" style={{borderRadius:'100px', color:'white'}}/>
                         </Grid>
                     </Grid>
                     <Grid className={classes.copyright}>

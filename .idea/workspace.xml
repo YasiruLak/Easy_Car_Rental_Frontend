@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Sign Up Page done">
-      <change afterPath="$PROJECT_DIR$/src/axsios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Button/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/SnackBar/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Table/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/vehicleManage/style.js" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Manage Page Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/webPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +83,8 @@
       <workItem from="1658198279348" duration="44000" />
       <workItem from="1658213232651" duration="802000" />
       <workItem from="1658214149409" duration="11287000" />
-      <workItem from="1658286510637" duration="18352000" />
+      <workItem from="1658286510637" duration="18410000" />
+      <workItem from="1658372093686" duration="4876000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -110,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658239966780</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Vehicle Manage Page Done">
+      <created>1658337862357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658337862357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +136,8 @@
     <MESSAGE value="Updated" />
     <MESSAGE value="Login Page done" />
     <MESSAGE value="Sign Up Page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Page done" />
+    <MESSAGE value="Vehicle Manage Page Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Manage Page Done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

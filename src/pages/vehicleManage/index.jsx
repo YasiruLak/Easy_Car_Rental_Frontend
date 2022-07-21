@@ -6,24 +6,24 @@ import GDSEButton from "../../components/common/Button";
 import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
 
 const vehicleType = [
-    { label: 'GENERAL' },
-    { label: 'LUXURY' },
-    { label: 'PREMIUM' },
+    {label: 'GENERAL'},
+    {label: 'LUXURY'},
+    {label: 'PREMIUM'},
 ];
 
 const fuelType = [
-    { label: 'DIESEL'},
-    { label: 'PETROL'},
+    {label: 'DIESEL'},
+    {label: 'PETROL'},
 ];
 
 const transmisionType = [
-    { label: 'MANUAL'},
-    { label: 'AUTO'},
+    {label: 'MANUAL'},
+    {label: 'AUTO'},
 ];
 
 const availability = [
-    { label: 'AVAILABLE'},
-    { label: 'NOT_AVAILABLE'},
+    {label: 'AVAILABLE'},
+    {label: 'NOT_AVAILABLE'},
 ];
 
 class VehicleManage extends Component {
@@ -37,10 +37,17 @@ class VehicleManage extends Component {
             <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitCustomer}>
                 <Grid container className="pt-2" spacing={0}>
                     <Grid item lg={12} xs={12} sm={12} md={12}
-                          style={{alignItems: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center',backgroundColor:'#0984e3'}}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color:'white',}}>Vehicle Manage</Typography>
+                          style={{
+                              alignItems: 'center',
+                              display: 'flex',
+                              flexWrap: 'wrap',
+                              justifyContent: 'center',
+                              backgroundColor: '#0984e3'
+                          }}>
+                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Vehicle
+                            Manage</Typography>
                     </Grid>
-                    <Grid item xs={2} sm={4} md={2} lg={2} style={{margin: '12px 12px 14px 16px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -58,7 +65,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                         <TextValidator
                             id="outlinedbasic"
                             placeholder="CAV-4777"
@@ -75,7 +82,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -93,7 +100,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -105,7 +112,7 @@ class VehicleManage extends Component {
                             renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -117,7 +124,7 @@ class VehicleManage extends Component {
                             renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 14px 16px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -135,7 +142,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                         <TextValidator
                             id="outlinedbasic"
                             placeholder="Black"
@@ -152,7 +159,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -164,7 +171,7 @@ class VehicleManage extends Component {
                             renderInput={(params) => <TextField {...params} label="Transmission Type"/>}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -182,7 +189,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                         <TextValidator
                             id="outlinedbasic"
                             placeholder="800 Km"
@@ -199,7 +206,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -217,7 +224,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -235,7 +242,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -253,7 +260,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -271,7 +278,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
 
                         <TextValidator
                             id="outlinedbasic"
@@ -289,7 +296,7 @@ class VehicleManage extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -309,11 +316,6 @@ class VehicleManage extends Component {
                                     style={{margin: '10px 12px 5px 5px'}}/>
                         <GDSEButton label="delete" type="submit" size="medium" color="primary" variant="outlined"
                                     style={{margin: '10px 12px 5px 5px'}}/>
-
-                    </Grid>
-
-                    <Grid>
-
                     </Grid>
                 </Grid>
             </ValidatorForm>

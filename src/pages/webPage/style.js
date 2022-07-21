@@ -76,7 +76,7 @@ export const styleSheet={
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        backgroundColor:'#DD1F3F'
+        backgroundColor:'#f53b57'
     },
 
     about_container_left:{
@@ -209,7 +209,7 @@ export const styleSheet={
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        backgroundColor:'#DD1F3F'
+        backgroundColor:'#f53b57'
 
     },
 
@@ -342,7 +342,7 @@ export const styleSheet={
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
-        backgroundColor:'#DD1F3F'
+        backgroundColor:'#f53b57'
     },
 
     footer_content:{

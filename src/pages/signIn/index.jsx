@@ -30,6 +30,7 @@ class SignIn extends Component {
                                     id="outlined-required"
                                     label="User Name"
                                     defaultValue=""
+                                    size="small"
                                 />
                             </Grid>
                             <Grid className={classes.passwordField}>
@@ -39,9 +40,10 @@ class SignIn extends Component {
                                         label="Password"
                                         type="password"
                                         autoComplete="current-password"
+                                        size="small"
                                     />
                                     <Typography variant="subtitle2" gutterBottom component="div" style={{marginTop:'4px',marginLeft:'4px'}}>
-                                        forgot <span style={{color:'blue'}}>Password</span>
+                                        Forgot <span style={{color:'blue'}}>Password</span>
                                     </Typography>
                                 </Grid>
                             </Grid>
