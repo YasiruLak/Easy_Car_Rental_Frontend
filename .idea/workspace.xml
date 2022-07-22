@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Manage Page Done">
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Sign Up Form Updated">
+      <change afterPath="$PROJECT_DIR$/src/components/common/DatePicker/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/BodyStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/AdminProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/customerProfile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/customerProfile/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/driverProfile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/driverProfile/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/popUp/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/popUp/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signUp/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axsios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axsios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +52,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/app/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/webPage/style.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/pages/vehicleManage/style.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2C3uFkiIynsYIWNI6AdZNzRWqw9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -65,6 +81,8 @@
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\AdminDashboard\bodyComponent" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\assets\images" />
     </key>
   </component>
@@ -84,7 +102,8 @@
       <workItem from="1658213232651" duration="802000" />
       <workItem from="1658214149409" duration="11287000" />
       <workItem from="1658286510637" duration="18410000" />
-      <workItem from="1658372093686" duration="4876000" />
+      <workItem from="1658372093686" duration="12117000" />
+      <workItem from="1658459583394" duration="16079000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -114,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658337862357</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sign Up Form Updated">
+      <created>1658408557761</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658408557761</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +163,8 @@
     <MESSAGE value="Login Page done" />
     <MESSAGE value="Sign Up Page done" />
     <MESSAGE value="Vehicle Manage Page Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Manage Page Done" />
+    <MESSAGE value="Sign Up Form Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Form Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

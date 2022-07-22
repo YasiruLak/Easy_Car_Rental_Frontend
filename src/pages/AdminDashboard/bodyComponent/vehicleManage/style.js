@@ -4,12 +4,13 @@ export const styleSheet= {
         height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
+        marginLeft:'40px',
         // alignItems: 'center',
         // justifyContent: 'center',
         // display: 'flex',
         // flexWrap: 'wrap',
         // flexDirection: 'row',
-        //backgroundColor:'#5B6C8C'
+        backgroundColor:'red'
     },
 
 

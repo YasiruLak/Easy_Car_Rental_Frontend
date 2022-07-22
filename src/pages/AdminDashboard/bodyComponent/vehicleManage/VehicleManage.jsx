@@ -2,8 +2,9 @@ import {Component} from "react";
 import {Autocomplete, Grid, TextField, Typography} from "@mui/material";
 import {withStyles} from "@mui/styles";
 import {styleSheet} from "./style";
-import GDSEButton from "../../components/common/Button";
+import GDSEButton from "../../../../components/common/Button";
 import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
+import VehicleService from "../../../../service/VehicleService";
 
 const vehicleType = [
     {label: 'GENERAL'},
@@ -29,13 +30,37 @@ const availability = [
 class VehicleManage extends Component {
     constructor(props) {
         super(props);
+        this.state ={
+            formData:{
+                vehicleId:'',
+                registrationNo:'',
+                vehicleBrand:'',
+                vehicleType:'',
+                fuelType:'',
+                numberOfPassenger:'',
+                vehicleColour:'',
+                transmissionType:'',
+                refundableDamagedFee:'',
+                vehicleMileage:'',
+                vehiclePriceRate:'',
+                freeMileage:'',
+                lastServiceMileage:'',
+                vehicleAvailability:'',
+            }
+        }
+    }
+
+    submitVehicle = async () =>{
+        let formData = this.state.formData;
+        let res = await VehicleService.postVehicle(formData)
+        console.log(res)
     }
 
     render() {
         const {classes} = this.props
         return (
-            <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitCustomer}>
-                <Grid container className="pt-2" spacing={0}>
+            <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitVehicle}>
+                <Grid container className="pt-2" spacing={1} style={{marginLeft:'8px'}}>
                     <Grid item lg={12} xs={12} sm={12} md={12}
                           style={{
                               alignItems: 'center',
@@ -48,7 +73,6 @@ class VehicleManage extends Component {
                             Manage</Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
-
                         <TextValidator
                             id="outlinedbasic"
                             placeholder="V00-001"
@@ -56,12 +80,12 @@ class VehicleManage extends Component {
                             size="small"
                             style={{width: '100%'}}
                             label="Vehicle Id"
-                            // value={}
-                            // onChange={(e) => {
-                            //     let formData = this.state.formData
-                            //     formData.id = e.target.value
-                            //     this.setState({ formData })
-                            // }}
+                            value={this.state.formData.vehicleId}
+                            onChange={(e) => {
+                                let formData = this.state.formData
+                                formData.vehicleId = e.target.value
+                                this.setState({ formData })
+                            }}
                             validators={['required']}
                         />
                     </Grid>
@@ -73,12 +97,12 @@ class VehicleManage extends Component {
                             size="small"
                             style={{width: '100%'}}
                             label="Registration No"
-                            // value={}
-                            // onChange={(e) => {
-                            //     let formData = this.state.formData
-                            //     formData.id = e.target.value
-                            //     this.setState({ formData })
-                            // }}
+                            value={this.state.formData.registrationNo}
+                            onChange={(e) => {
+                                let formData = this.state.formData
+                                formData.registrationNo = e.target.value
+                                this.setState({ formData })
+                            }}
                             validators={['required']}
                         />
                     </Grid>
@@ -311,10 +335,6 @@ class VehicleManage extends Component {
                     <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
                           alignItems="center">
                         <GDSEButton label="save" type="submit" size="medium" color="primary" variant="outlined"
-                                    style={{margin: '10px 12px 5px 5px'}}/>
-                        <GDSEButton label="update" type="submit" size="medium" color="primary" variant="outlined"
-                                    style={{margin: '10px 12px 5px 5px'}}/>
-                        <GDSEButton label="delete" type="submit" size="medium" color="primary" variant="outlined"
                                     style={{margin: '10px 12px 5px 5px'}}/>
                     </Grid>
                 </Grid>

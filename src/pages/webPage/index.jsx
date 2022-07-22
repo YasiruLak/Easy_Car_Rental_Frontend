@@ -41,7 +41,7 @@ class WebPage extends Component {
                             <Tab value="four" label="Reviews" className={classes.navItems}/>
                             <Button variant="outlined" size="small" endIcon={<AccountCircleIcon/>}
                                     style={{borderColor: 'white', color: 'white', borderRadius:'50px', height:'35px',justifyContent:'center',width:'100px',
-                                    margin:'2px 10px 0 10px'}}>
+                                        margin:'2px 10px 0 10px'}}>
                                 SignIn
                             </Button>
                         </Tabs>
@@ -273,7 +273,7 @@ class WebPage extends Component {
                                         marginLeft:'150px',
                                         marginBottom:'20px'
                                     }}>
-                                       Airport Transfer
+                                        Airport Transfer
                                     </Typography>
                                     <Typography variant="body1" gutterBottom
                                                 style={{padding: '12px', color: '#ff9e03'}}>
@@ -510,7 +510,7 @@ class WebPage extends Component {
                             </Typography>
                             <Grid>
                                 <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
-                                   Home
+                                    Home
                                 </Typography>
                                 <Typography variant="subtitle1" gutterBottom component="div" style={{color: '#ffffff'}}>
                                     About Us
