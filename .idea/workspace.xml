@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Sign Up Form Updated">
-      <change afterPath="$PROJECT_DIR$/src/components/common/DatePicker/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/BodyStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/AdminProfile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/customerProfile/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/customerProfile/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/driverProfile/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/driverProfile/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/popUp/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/popUp/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Add Admin Dashboard Drawer">
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/BodyStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/BodyStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/DriverProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axsios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axsios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/vehicleManage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/AdminProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/AdminProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/customerProfile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/CustomerProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/customerProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/driverProfile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/driverProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/popUp/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/popUp/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/DriverDashboadrd/bodyComponent" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -78,12 +82,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\DriverDashboadrd\bodyComponent" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\DriverDashboadrd\header" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard\bodyComponent" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard\header" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\DriverDashboadrd\bodyComponent" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard\bodyComponent" />
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\AdminDashboard\bodyComponent" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src" />
-      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\assets\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -103,7 +113,8 @@
       <workItem from="1658214149409" duration="11287000" />
       <workItem from="1658286510637" duration="18410000" />
       <workItem from="1658372093686" duration="12117000" />
-      <workItem from="1658459583394" duration="16079000" />
+      <workItem from="1658459583394" duration="19125000" />
+      <workItem from="1658546801079" duration="11455000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -140,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658408557761</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Admin Dashboard Drawer">
+      <created>1658502238798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658502238798</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +182,8 @@
     <MESSAGE value="Sign Up Page done" />
     <MESSAGE value="Vehicle Manage Page Done" />
     <MESSAGE value="Sign Up Form Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Form Updated" />
+    <MESSAGE value="Add Admin Dashboard Drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Admin Dashboard Drawer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

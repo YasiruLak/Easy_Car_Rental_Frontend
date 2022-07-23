@@ -16,11 +16,8 @@ export default function SideNavData({handleDrawerClose}) {
 
     const classes = useStyles();
     const listItemData = [
-        {label: "Home", link: "/adminHome", icon: <HomeIcon/>},
-        {label: "Vehicle Manage", link: "/vehicleManage", icon: <DirectionsCarIcon/>},
-        {label: "Driver Manage", link: "/driverManage", icon: <HandymanIcon/>},
-        {label: "User Manage", link: "/customerManage", icon: <SupportAgentIcon/>},
-        {label: "Profile", link: "/adminProfile", icon: <PersonIcon/>},
+
+        {label: "Profile", link: "/driverProfile", icon: <PersonIcon/>},
 
 
     ]

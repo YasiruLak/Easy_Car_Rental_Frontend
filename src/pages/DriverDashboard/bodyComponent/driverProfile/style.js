@@ -9,8 +9,7 @@ export const styleSheet= {
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        //backgroundColor:'#5B6C8C',
-        //marginRight:'100px'
+        //backgroundColor:'#5B6C8C'
     },
 
     header_name:{
@@ -26,7 +25,7 @@ export const styleSheet= {
 
     profile_content:{
         width: '50vw',
-        height: '50vh',
+        height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
@@ -37,7 +36,7 @@ export const styleSheet= {
 
     leftForm:{
         width: '25vw',
-        height: '50vh',
+        height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
@@ -48,7 +47,7 @@ export const styleSheet= {
 
     rightForm:{
         width: '25vw',
-        height: '50vh',
+        height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
@@ -59,7 +58,7 @@ export const styleSheet= {
 
     profile_footer:{
         width: '82.3vw',
-        height: '25vh',
+        height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',

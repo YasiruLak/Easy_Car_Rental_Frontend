@@ -5,6 +5,9 @@ import {Box} from "@mui/material";
 import SideNav from "./SideNav";
 import VehicleManage from "../bodyComponent/vehicleManage/VehicleManage";
 import AdminProfile from "../bodyComponent/adminProfile/AdminProfile";
+import AdminHome from "../bodyComponent/adminHome/AdminHome";
+import DriverManage from "../bodyComponent/driverManage/DriverManage";
+import CustomerManage from "../bodyComponent/customerManage/CustomerManage";
 
 
 export default function AdminDashboard() {
@@ -18,8 +21,11 @@ export default function AdminDashboard() {
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
                 <Routes>
-                    <Route exact path="/vehicleManage" element={<VehicleManage/>}/>
-                    <Route exact path="/adminProfile" element={<AdminProfile/>}/>
+                    <Route path="/vehicleManage" element={<VehicleManage/>}/>
+                    <Route path="/adminProfile" element={<AdminProfile/>}/>
+                    <Route exact path="/adminHome" element={<AdminHome/>}/>
+                    <Route exact path="/driverManage" element={<DriverManage/>}/>
+                    <Route exact path="/customerManage" element={<CustomerManage/>}/>
 
                 </Routes>
             </Box>
