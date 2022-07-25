@@ -1,10 +1,14 @@
 import {Component} from "react";
-import {Button, Grid, IconButton, TextField, Typography} from "@mui/material";
+import {Autocomplete, Button, Grid, IconButton, TextField, Typography} from "@mui/material";
 import {withStyles} from "@mui/styles";
 import {styleSheet} from "./style";
 import {PhotoCamera} from "@mui/icons-material";
 import homeImg from "../../assets/images/homeImg.png";
 
+const role = [
+    {label: 'DRIVER'},
+    {label: 'CUSTOMER'},
+];
 
 class SignUp extends Component {
     constructor(props) {
@@ -57,7 +61,24 @@ class SignUp extends Component {
                         <TextField id="outlined-basic" label="Contact No" variant="outlined" size="small"/>
                         <TextField id="outlined-basic" label="User Name" variant="outlined" size="small"/>
                         <TextField id="outlined-basic" label="Confirm Password" variant="outlined" size="small"/>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined" size="small"/>
+                        <Autocomplete
+                            disablePortal
+                            id="combo-box-demo"
+                            options={role}
+                            style={{width: '100%'}}
+                            size="small"
+                            variant="outlined"
+                            placeholder="General"
+                            // value={this.state.formData.vehicleType}
+                            // onChange={(e) => {
+                            //     let formData = this.state.formData
+                            //     formData.vehicleType = e.target.value
+                            //     this.setState({ formData })
+                            // }}
+                            // onChange={(event) => props.onChange(event.target.value)}
+                            validators={['required']}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
+                        />
                         <Button variant="contained" size="large">
                             Register
                         </Button>

@@ -1,7 +1,19 @@
 import {Component} from "react";
 import {withStyles} from "@mui/styles";
 import {styleSheet} from "./styles";
-import {Grid} from "@material-ui/core";
+import {
+    Grid,
+    IconButton,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Tooltip
+} from "@material-ui/core";
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 class CustomerManage extends Component {
     constructor(props) {

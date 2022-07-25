@@ -20,6 +20,7 @@ export default function SideNavData({handleDrawerClose}) {
         {label: "Profile", link: "/driverProfile", icon: <PersonIcon/>},
 
 
+
     ]
     return (<List>
         {listItemData.map((item, i) => (

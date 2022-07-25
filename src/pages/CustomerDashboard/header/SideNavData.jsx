@@ -8,6 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
+
 export default function SideNavData({handleDrawerClose}) {
 
     handleDrawerClose = ()=>{
@@ -17,6 +18,7 @@ export default function SideNavData({handleDrawerClose}) {
     const classes = useStyles();
     const listItemData = [
 
+        {label: "Booking", link: "/booking", icon: <DirectionsCarIcon/>},
         {label: "Profile", link: "/customerProfile", icon: <PersonIcon/>},
 
 

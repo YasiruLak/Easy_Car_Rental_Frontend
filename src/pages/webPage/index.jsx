@@ -8,6 +8,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import homeImg from "../../assets/images/homeImg.png";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import driver1 from "../../assets/images/driver1.png";
+import c1 from "../../assets/images/c1.png";
+import c2 from "../../assets/images/c2.png";
+import c3 from "../../assets/images/c3.png";
+import c4 from "../../assets/images/c4.png";
+import c5 from "../../assets/images/c5.png";
+import c6 from "../../assets/images/c6.png";
 import vehicle3 from "../../assets/images/vehicle3.png";
 import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
@@ -15,6 +21,8 @@ import LocationCityOutlinedIcon from '@mui/icons-material/LocationCityOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
 import AddLocationOutlinedIcon from '@mui/icons-material/AddLocationOutlined';
 import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined';
+import StarIcon from '@mui/icons-material/Star';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 
 class WebPage extends Component {
@@ -321,11 +329,12 @@ class WebPage extends Component {
                 <Grid className={classes.vehicle_container}>
                     <Grid className={classes.service_header}>
                         <Grid>
-                            <Typography variant="h6" gutterBottom component="div">
-                                h5. Heading
+                            <Typography variant="h6" gutterBottom component="div"
+                                        style={{color: '#ffd438', marginLeft: '80px'}}>
+                                see our
                             </Typography>
-                            <Typography variant="h4" gutterBottom component="div">
-                                h3. Heading
+                            <Typography variant="h4" gutterBottom component="div" style={{color: '#ff4529',marginLeft:'32px'}}>
+                                Vehicle List
                             </Typography>
                         </Grid>
                     </Grid>
@@ -339,16 +348,14 @@ class WebPage extends Component {
                                             component="img"
                                             alt="green iguana"
                                             height="140"
-                                            image={driver1}
+                                            image={c1}
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div"
-                                                        style={{marginLeft: '130px'}}>
-                                                Tesla
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Suzuki Alto - Premium - Manual
                                             </Typography>
-                                            <Typography gutterBottom variant="h5" component="div"
-                                                        style={{marginLeft: '80px'}}>
-                                                $50.00/ Per Day
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                               64,350.00 lkr - month
                                             </Typography>
 
                                             <Grid className={classes.vehicle_card_detail}>
@@ -358,8 +365,167 @@ class WebPage extends Component {
                                                         Model-2022
                                                     </Typography>
                                                 </Grid>
-                                                <Grid className={classes.vehicle_card_subDetail}></Grid>
-                                                <Grid className={classes.vehicle_card_subDetail}></Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        General
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Manual
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+
+                                            <Grid className={classes.vehicle_card_desc}>
+                                                <Grid className={classes.desc_1}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
+                                                </Grid>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
+                                                </Grid>
+                                            </Grid>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                                <div className={classes.vehicle_card}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
+                                        <CardMedia
+                                            component="img"
+                                            alt="green iguana"
+                                            height="140"
+                                            image={c2}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Toyota Corolla Axzio
+                                            </Typography>
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                                120,330.00 lkr - month
+                                            </Typography>
+
+                                            <Grid className={classes.vehicle_card_detail}>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Premium
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Manual
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+
+                                            <Grid className={classes.vehicle_card_desc}>
+                                                <Grid className={classes.desc_1}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
+                                                </Grid>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
+                                                </Grid>
+                                            </Grid>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                                <div className={classes.vehicle_card}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
+                                        <CardMedia
+                                            component="img"
+                                            alt="green iguana"
+                                            height="140"
+                                            image={c3}
+                                            style={{backgroundRepeat: 'no-repeat',
+                                                backgroundSize: 'cover',}}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Mercedes
+                                            </Typography>
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                                300,000.00 lkr - month
+                                            </Typography>
+
+                                            <Grid className={classes.vehicle_card_detail}>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Luxury
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Manual
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+
+                                            <Grid className={classes.vehicle_card_desc}>
+                                                <Grid className={classes.desc_1}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
+                                                </Grid>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
+                                                </Grid>
+                                            </Grid>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </Grid>
+                            <Grid className={classes.vehicle_detail_row}>
+                                <div className={classes.vehicle_card}>
+                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
+                                        <CardMedia
+                                            component="img"
+                                            alt="green iguana"
+                                            height="140"
+                                            image={c4}
+
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Toyota Prius C/Aqua - Auto
+                                            </Typography>
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                                110,330.00 lkr - month
+                                            </Typography>
+
+                                            <Grid className={classes.vehicle_card_detail}>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        General
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Manual
+                                                    </Typography>
+                                                </Grid>
                                             </Grid>
 
                                             <Grid className={classes.vehicle_card_desc}>
@@ -382,13 +548,42 @@ class WebPage extends Component {
                                             image={driver1}
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Perodua Bezza Sedan
                                             </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                                120,350.00 lkr - month
                                             </Typography>
+
+                                            <Grid className={classes.vehicle_card_detail}>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Premium
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Auto
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+
+                                            <Grid className={classes.vehicle_card_desc}>
+                                                <Grid className={classes.desc_1}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
+                                                </Grid>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
+                                                </Grid>
+                                            </Grid>
                                         </CardContent>
                                     </Card>
                                 </div>
@@ -398,75 +593,45 @@ class WebPage extends Component {
                                             component="img"
                                             alt="green iguana"
                                             height="140"
-                                            image={driver1}
+                                            image={c6}
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
+                                            <Typography gutterBottom variant="h6" component="div">
+                                                Toyota Premium
                                             </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                            <Typography gutterBottom variant="body2" component="div" style={{color:'green'}}>
+                                                227,150.00 lkr - month
                                             </Typography>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </Grid>
-                            <Grid className={classes.vehicle_detail_row}>
-                                <div className={classes.vehicle_card}>
-                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="green iguana"
-                                            height="140"
-                                            image={driver1}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                                <div className={classes.vehicle_card}>
-                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="green iguana"
-                                            height="140"
-                                            image={driver1}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                                <div className={classes.vehicle_card}>
-                                    <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="green iguana"
-                                            height="140"
-                                            image={driver1}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
-                                            </Typography>
+
+                                            <Grid className={classes.vehicle_card_detail}>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <DirectionsCarFilledOutlinedIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Model-2022
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <StarIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Luxuary
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid className={classes.vehicle_card_subDetail}>
+                                                    <AutorenewIcon style={{fontSize:'16px',marginRight:'2px', color:'#ff4529'}}/>
+                                                    <Typography variant="caption" display="block" gutterBottom style={{color: 'red',marginTop:'10px',marginLeft:'4px'}}>
+                                                        Manual
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+
+                                            <Grid className={classes.vehicle_card_desc}>
+                                                <Grid className={classes.desc_1}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Rent</Button>
+                                                </Grid>
+                                                <Grid className={classes.desc_1} style={{marginLeft: '5px',}}>
+                                                    <Button variant="contained" fullWidth style={{color:'#ffffff', backgroundColor:'#ff4529'}}>Details</Button>
+                                                </Grid>
+                                            </Grid>
                                         </CardContent>
                                     </Card>
                                 </div>

@@ -325,7 +325,7 @@ export const styleSheet={
     vehicle_card_subDetail:{
         width:'7.5vw',
         height:'7vh',
-        border:'1px solid red',
+        //border:'1px solid red',
         //backgroundColor:'red',
         display: 'flex',
         flexWrap: 'wrap',

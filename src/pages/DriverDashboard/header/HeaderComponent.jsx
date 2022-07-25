@@ -4,6 +4,7 @@ import {useStyles} from "./HeaderStyles";
 import {Box} from "@mui/material";
 import SideNav from "./SideNav";
 import DriverProfile from "../bodyComponent/driverProfile/DriverProfile";
+import Booking from "../../CustomerDashboard/bodyComponent/booking/Booking";
 
 
 
@@ -19,6 +20,7 @@ export default function DriverDashboard() {
             <Box className={classes.wrapper}>
                 <Routes>
                     <Route exact path="/driverProfile" element={<DriverProfile/>}/>
+
                 </Routes>
             </Box>
         </div>

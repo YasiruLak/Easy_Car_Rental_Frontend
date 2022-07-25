@@ -19,9 +19,9 @@ function App() {
     // </Routes>
 
       <Fragment>
-          {/*//<AdminDashboard/>*/}
+          <AdminDashboard/>
           {/*<CustomerDashboard/>*/}
-          <DriverDashboard/>
+          {/*<DriverDashboard/>*/}
 
       </Fragment>
   );

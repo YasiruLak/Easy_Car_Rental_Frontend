@@ -4,6 +4,8 @@ import {useStyles} from "./HeaderStyles";
 import {Box} from "@mui/material";
 import SideNav from "./SideNav";
 import CustomerProfile from "../bodyComponent/customerProfile/CustomerProfile";
+import Booking from "../bodyComponent/booking/Booking";
+
 
 
 
@@ -18,6 +20,7 @@ export default function CustomerDashboard() {
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
                 <Routes>
+                    <Route exact path="/booking" element={<Booking/>}/>
                     <Route exact path="/customerProfile" element={<CustomerProfile/>}/>
                 </Routes>
             </Box>
