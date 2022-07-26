@@ -5,7 +5,6 @@ import {styleSheet} from "./style";
 import GDSEButton from "../../../../components/common/Button";
 import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
 import VehicleService from "../../../../service/VehicleService";
-import GDSESnackBar from "../../../../components/common/SnackBar";
 import DeleteIcon from '@mui/icons-material/Delete';
 import Tooltip from '@mui/material/Tooltip';
 import EditIcon from '@mui/icons-material/Edit';
@@ -16,8 +15,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import Stack from '@mui/material/Stack';
+import GDSESnackBar from "../../../../components/common/SnackBar";
+
 
 const vehicleType = [
     {label: 'GENERAL'},
@@ -43,6 +42,13 @@ const availability = [
 class VehicleManage extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            selectValue: ""
+        };
+
+        this.handleDropdownChange = this.handleDropdownChange.bind(this);
+
         this.state = {
             formData: {
                 vehicleId: '',
@@ -77,6 +83,38 @@ class VehicleManage extends Component {
         }
     }
 
+    deleteVehicle = async (vehicleId) => {
+        let params = {
+            vehicleId: vehicleId
+        }
+        let res = await VehicleService.deleteVehicle(params);
+
+        if(res.status === 200) {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'success'
+            });
+            this.loadData();
+        } else {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'error'
+            });
+        }
+    };
+
+    handleDropdownChange(e) {
+        this.setState({ selectValue: e.target.value });
+    }
+
+    exampleForMap = () => {
+        this.state.data.map((value, index) => {
+            console.log(value)   // access element one by one
+        })
+    };
+
     loadData = async () => {
         let res = await VehicleService.fetchVehicle();
 
@@ -86,6 +124,8 @@ class VehicleManage extends Component {
             });
         }
         console.log(this.state.data)    // print customers array
+
+        this.exampleForMap()
 
     };
 
@@ -101,14 +141,14 @@ class VehicleManage extends Component {
 
             console.log(res)    //print the promise
 
-            if (res.status === 200) {
+            if (res.status === 201) {
                 this.setState({
                     alert: true,
                     message: res.data.message,
                     severity: 'success'
                 });
                 this.clearFields();
-                this.loadData();
+                await this.loadData();
             } else {
                 this.setState({
                     alert: true,
@@ -127,7 +167,7 @@ class VehicleManage extends Component {
                     btnColor: 'primary'
                 });
                 this.clearFields();
-                this.loadData();
+                await this.loadData();
             } else {
                 this.setState({
                     alert: true,
@@ -195,7 +235,6 @@ class VehicleManage extends Component {
             }
         });
     };
-
 
     render() {
         const {classes} = this.props
@@ -267,24 +306,11 @@ class VehicleManage extends Component {
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={vehicleType}
-                                style={{width: '100%'}}
-                                size="small"
-                                variant="outlined"
-                                placeholder="General"
-                                value={this.state.formData.vehicleType}
-                                // onChange={(e) => {
-                                //     let formData = this.state.formData
-                                //     formData.vehicleType = e.target.value
-                                //     this.setState({ formData })
-                                // }}
-                                // onChange={(event) => props.onChange(event.target.value)}
-                                validators={['required']}
-                                renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
-                            />
+                            <select id="dropdown" onChange={this.handleDropdownChange} value={this.state.selectValue}>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Premium">Premium</option>
+                                <option value="General">General</option>
+                            </select>
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                             <Autocomplete
@@ -394,7 +420,7 @@ class VehicleManage extends Component {
                                 value={this.state.formData.vehiclePriceRate.monthlyRate}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehiclePriceRateMonthly = e.target.value
+                                    formData.vehiclePriceRate.monthlyRate = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -412,7 +438,7 @@ class VehicleManage extends Component {
                                 value={this.state.formData.vehiclePriceRate.dailyRate}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehiclePriceRateDaily = e.target.value
+                                    formData.vehiclePriceRate.dailyRate = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -430,7 +456,7 @@ class VehicleManage extends Component {
                                 value={this.state.formData.freeMileage.dailyMileage}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.freeMileageDaily = e.target.value
+                                    formData.freeMileage.dailyMileage = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -448,7 +474,7 @@ class VehicleManage extends Component {
                                 value={this.state.formData.freeMileage.monthlyMileage}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.freeMileageMonthly = e.target.value
+                                    formData.freeMileage.monthlyMileage = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -564,6 +590,16 @@ class VehicleManage extends Component {
                         </Table>
                     </TableContainer>
                 </Grid>
+                <GDSESnackBar
+                    open={this.state.alert}
+                    onClose={() => {
+                        this.setState({ alert: false })
+                    }}
+                    message={this.state.message}
+                    autoHideDuration={3000}
+                    severity={this.state.severity}
+                    variant="filled"
+                />
             </>
         );
     }

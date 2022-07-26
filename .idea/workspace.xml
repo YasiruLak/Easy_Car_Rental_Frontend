@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Dashboard Implement">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/c6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Manage Updated">
+      <change afterPath="$PROJECT_DIR$/src/service/SignUpService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axsios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axsios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/VehicleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +98,8 @@
       <workItem from="1658585534985" duration="2093000" />
       <workItem from="1658595494335" duration="130000" />
       <workItem from="1658636044166" duration="21798000" />
-      <workItem from="1658751254134" duration="8779000" />
+      <workItem from="1658751254134" duration="8959000" />
+      <workItem from="1658808553138" duration="24677000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -164,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658561701510</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Vehicle Manage Updated">
+      <created>1658776181562</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658776181563</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +183,8 @@
     <MESSAGE value="Sign Up Form Updated" />
     <MESSAGE value="Add Admin Dashboard Drawer" />
     <MESSAGE value="Dashboard Implement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dashboard Implement" />
+    <MESSAGE value="Vehicle Manage Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Manage Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
