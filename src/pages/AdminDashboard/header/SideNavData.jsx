@@ -7,6 +7,9 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PersonIcon from '@mui/icons-material/Person';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DvrIcon from '@mui/icons-material/Dvr';
+import PaidIcon from '@mui/icons-material/Paid';
 
 export default function SideNavData({handleDrawerClose}) {
 
@@ -17,9 +20,12 @@ export default function SideNavData({handleDrawerClose}) {
     const classes = useStyles();
     const listItemData = [
         {label: "Home", link: "/adminHome", icon: <HomeIcon/>},
+        {label: "View Booking", link: "/viewBooking", icon: <DvrIcon/>},
+        {label: "Schedule", link: "/schedule", icon: <CalendarMonthIcon/>},
         {label: "Vehicle Manage", link: "/vehicleManage", icon: <DirectionsCarIcon/>},
         {label: "Driver Manage", link: "/driverManage", icon: <HandymanIcon/>},
         {label: "User Manage", link: "/customerManage", icon: <SupportAgentIcon/>},
+        {label: "Payment", link: "/payment", icon: <PaidIcon/>},
         {label: "Profile", link: "/adminProfile", icon: <PersonIcon/>},
 
 

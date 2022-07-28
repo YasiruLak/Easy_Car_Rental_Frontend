@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Manage Updated">
-      <change afterPath="$PROJECT_DIR$/src/service/SignUpService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated SignUp">
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/Schedule.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/DriverManageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/VehicleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,9 @@
       <workItem from="1658595494335" duration="130000" />
       <workItem from="1658636044166" duration="21798000" />
       <workItem from="1658751254134" duration="8959000" />
-      <workItem from="1658808553138" duration="24677000" />
+      <workItem from="1658808553138" duration="24982000" />
+      <workItem from="1658895993561" duration="23578000" />
+      <workItem from="1658986404989" duration="5437000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -157,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658776181563</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated SignUp">
+      <created>1658867144038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658867144038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +199,8 @@
     <MESSAGE value="Add Admin Dashboard Drawer" />
     <MESSAGE value="Dashboard Implement" />
     <MESSAGE value="Vehicle Manage Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Manage Updated" />
+    <MESSAGE value="Updated SignUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated SignUp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

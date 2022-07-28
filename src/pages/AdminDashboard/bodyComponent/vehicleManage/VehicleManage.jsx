@@ -17,37 +17,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import GDSESnackBar from "../../../../components/common/SnackBar";
 
-
-const vehicleType = [
-    {label: 'GENERAL'},
-    {label: 'LUXURY'},
-    {label: 'PREMIUM'},
-];
-
-const fuelType = [
-    {label: 'DIESEL'},
-    {label: 'PETROL'},
-];
-
-const transmisionType = [
-    {label: 'MANUAL'},
-    {label: 'AUTO'},
-];
-
-const availability = [
-    {label: 'AVAILABLE'},
-    {label: 'NOT_AVAILABLE'},
-];
-
 class VehicleManage extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            selectValue: ""
-        };
-
-        this.handleDropdownChange = this.handleDropdownChange.bind(this);
 
         this.state = {
             formData: {
@@ -62,7 +34,7 @@ class VehicleManage extends Component {
                 refundableDamagedFee: '',
                 vehicleMileage: '',
                 vehiclePriceRate: {
-                    dailyRate:'',
+                    dailyRate: '',
                     monthlyRate: ''
                 },
                 freeMileage: {
@@ -79,7 +51,46 @@ class VehicleManage extends Component {
 
             data: [],
             btnLabel: 'save',
-            btnColor: 'primary'
+            btnColor: 'primary',
+
+            fuelTypes: [
+                {
+                    type: 'DIESEL'
+                },
+                {
+                    type: 'PETROL'
+                }
+            ],
+
+            vehicleTypes: [
+                {
+                    type: 'GENERAL'
+                },
+                {
+                    type: 'LUXURY'
+                },
+                {
+                    type: 'PREMIUM'
+                }
+            ],
+
+            transmissionTypes: [
+                {
+                    type: 'AUTO'
+                },
+                {
+                    type: 'MANUAL'
+                }
+            ],
+
+            availabilityTypes: [
+                {
+                    type: 'AVAILABLE'
+                },
+                {
+                    type: 'NOT_AVAILABLE'
+                }
+            ],
         }
     }
 
@@ -89,7 +100,7 @@ class VehicleManage extends Component {
         }
         let res = await VehicleService.deleteVehicle(params);
 
-        if(res.status === 200) {
+        if (res.status === 200) {
             this.setState({
                 alert: true,
                 message: res.data.message,
@@ -104,10 +115,6 @@ class VehicleManage extends Component {
             });
         }
     };
-
-    handleDropdownChange(e) {
-        this.setState({ selectValue: e.target.value });
-    }
 
     exampleForMap = () => {
         this.state.data.map((value, index) => {
@@ -136,7 +143,7 @@ class VehicleManage extends Component {
     submitVehicle = async () => {
         let formData = this.state.formData;
 
-        if(this.state.btnLabel === "save") {
+        if (this.state.btnLabel === "save") {
             let res = await VehicleService.postVehicle(formData);
 
             console.log(res)    //print the promise
@@ -158,7 +165,7 @@ class VehicleManage extends Component {
             }
         } else {
             let res = await VehicleService.putVehicle(formData);
-            if(res.status === 200) {
+            if (res.status === 200) {
                 this.setState({
                     alert: true,
                     message: res.data.message,
@@ -196,7 +203,7 @@ class VehicleManage extends Component {
                 refundableDamagedFee: data.refundableDamagedFee,
                 vehicleMileage: data.vehicleMileage,
                 vehiclePriceRate: {
-                    dailyRate:data.vehiclePriceRate.dailyRate,
+                    dailyRate: data.vehiclePriceRate.dailyRate,
                     monthlyRate: data.vehiclePriceRate.monthlyRate
                 },
                 freeMileage: {
@@ -223,7 +230,7 @@ class VehicleManage extends Component {
                 refundableDamagedFee: '',
                 vehicleMileage: '',
                 vehiclePriceRate: {
-                    dailyRate:'',
+                    dailyRate: '',
                     monthlyRate: ''
                 },
                 freeMileage: {
@@ -306,23 +313,39 @@ class VehicleManage extends Component {
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <select id="dropdown" onChange={this.handleDropdownChange} value={this.state.selectValue}>
-                                <option value="Luxury">Luxury</option>
-                                <option value="Premium">Premium</option>
-                                <option value="General">General</option>
-                            </select>
+                            <Autocomplete
+                                onChange={(e, value, r) => {
+
+                                    let formData = this.state.formData
+                                    formData.fuelType = value.type
+                                    this.setState({formData})
+
+                                }}
+                                getOptionLabel={
+                                    (option) => option.type
+                                }
+                                id="controllable-states-demo"
+                                options={this.state.fuelTypes}
+                                size="small"
+                                renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
+                            />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                             <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={fuelType}
-                                style={{width: '100%'}}
+                                onChange={(e, value, r) => {
+
+                                    let formData = this.state.formData
+                                    formData.vehicleType = value.type
+                                    this.setState({formData})
+
+                                }}
+                                getOptionLabel={
+                                    (option) => option.type
+                                }
+                                id="controllable-states-demo"
+                                options={this.state.vehicleTypes}
                                 size="small"
-                                variant="outlined"
-                                placeholder="Petrol"
-                                value={this.state.formData.fuelType}
-                                renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
+                                renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
@@ -362,15 +385,20 @@ class VehicleManage extends Component {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={transmisionType}
-                                style={{width: '100%'}}
+                                onChange={(e, value, r) => {
+
+                                    let formData = this.state.formData
+                                    formData.transmissionType = value.type
+                                    this.setState({formData})
+
+                                }}
+                                getOptionLabel={
+                                    (option) => option.type
+                                }
                                 size="small"
-                                variant="outlined"
-                                placeholder="Auto"
-                                value={this.state.formData.transmissionType}
-                                renderInput={(params) => <TextField {...params} label="Transmission Type"/>}
+                                id="controllable-states-demo"
+                                options={this.state.transmissionTypes}
+                                renderInput={(params) => <TextField {...params} label="Transmission"/>}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
@@ -444,7 +472,7 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -462,7 +490,7 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -480,7 +508,7 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6} md={6} lg={1} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -498,28 +526,39 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
                             <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={availability}
-                                style={{width: '100%'}}
+                                // style={{padding: '10px', width: '230px'}}
+                                onChange={(e, value, r) => {
+
+                                    let formData = this.state.formData
+                                    formData.vehicleAvailability = value.type
+                                    this.setState({formData})
+
+                                }}
+                                getOptionLabel={
+                                    (option) => option.type
+                                }
                                 size="small"
-                                variant="outlined"
-                                placeholder="Available"
-                                value={this.state.formData.vehicleAvailability}
+                                id="controllable-states-demo"
+                                options={this.state.availabilityTypes}
+                                // sx={{width: 300}}
                                 renderInput={(params) => <TextField {...params} label="Availability"/>}
                             />
                         </Grid>
                         <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
-                            <GDSEButton label={this.state.btnLabel} type="submit" size="medium" color={this.state.btnColor} variant="contained"
-                                        style={{margin: '10px 12px 5px 5px'}}/>
+                            <GDSEButton label={this.state.btnLabel} type="submit" size="medium"
+                                        color={this.state.btnColor} variant="contained"
+                                        style={{margin: '10px 12px 16px 5px'}}/>
+                            <GDSEButton label="cancel" size="medium" color="error" variant="contained"
+                                        style={{margin: '10px 12px 16px 5px'}}/>
                         </Grid>
                     </Grid>
                 </ValidatorForm>
                 <Grid>
-                    <TableContainer component={Paper} style={{height: '45vh',width:'81vw',backgroundColor:'#eeeff1'}}>
+                    <TableContainer component={Paper}
+                                    style={{height: '45vh', width: '81vw', backgroundColor: '#eeeff1'}}>
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>
@@ -570,7 +609,7 @@ class VehicleManage extends Component {
                                                             this.updateVehicle(row);
                                                         }}
                                                     >
-                                                        <EditIcon color="primary" />
+                                                        <EditIcon color="primary"/>
                                                     </IconButton>
                                                 </Tooltip>
                                                 <Tooltip title="Delete">
@@ -579,7 +618,7 @@ class VehicleManage extends Component {
                                                             this.deleteVehicle(row.vehicleId)
                                                         }}
                                                     >
-                                                        <DeleteIcon color="error" />
+                                                        <DeleteIcon color="error"/>
                                                     </IconButton>
                                                 </Tooltip>
                                             </TableCell>
@@ -593,7 +632,7 @@ class VehicleManage extends Component {
                 <GDSESnackBar
                     open={this.state.alert}
                     onClose={() => {
-                        this.setState({ alert: false })
+                        this.setState({alert: false})
                     }}
                     message={this.state.message}
                     autoHideDuration={3000}

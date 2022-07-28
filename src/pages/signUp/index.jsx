@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {Button, Grid, IconButton, TextField, Typography} from "@mui/material";
+import {Grid, IconButton, TextField, Typography} from "@mui/material";
 import {withStyles} from "@mui/styles";
 import {styleSheet} from "./style";
 import {PhotoCamera} from "@mui/icons-material";
@@ -46,7 +46,6 @@ class SignUp extends Component {
     }
 
 
-
     clearFields = () => {
         this.setState({
             formData: {
@@ -70,55 +69,58 @@ class SignUp extends Component {
     };
 
 
-
     submitSignUp = async () => {
+        let formData = this.state.formData;
+        if (formData.user.role === 'CUSTOMER') {
             let formData = this.state.formData;
-            if(formData.user.role === 'CUSTOMER'){
-                let formData = this.state.formData;
 
-                let res = await SignUpService.postSignUpCustomer(formData);
+            let res = await SignUpService.postSignUpCustomer(formData);
 
-                console.log(res)    //print the promise
+            console.log(res)    //print the promise
 
-                if (res.status === 201) {
-                    this.setState({
-                        alert: true,
-                        message: res.data.message,
-                        severity: 'success'
-                    });
-                    this.clearFields();
-                } else {
-                    this.setState({
-                        alert: true,
-                        message: res.response.data.message,
-                        severity: 'error'
-                    });
-                }
-            }else if (formData.user.role === 'DRIVER'){
-                let formData = this.state.formData;
-
-                let res = await SignUpService.postSignUpDriver(formData);
-
-                console.log(res)    //print the promise
-
-                if (res.status === 201) {
-                    this.setState({
-                        alert: true,
-                        message: res.data.message,
-                        severity: 'success'
-                    });
-                    this.clearFields();
-                } else {
-                    this.setState({
-                        alert: true,
-                        message: res.response.data.message,
-                        severity: 'error'
-                    });
-                }
+            if (res.status === 200) {
+                this.setState({
+                    alert: true,
+                    message: res.data.message,
+                    severity: 'success'
+                });
+                this.clearFields();
+            } else {
+                this.setState({
+                    alert: true,
+                    message: res.response.data.message,
+                    severity: 'error'
+                });
             }
+        } else if (formData.user.role === 'DRIVER') {
+            let formData = this.state.formData;
+
+            let res = await SignUpService.postSignUpDriver(formData);
+
+            console.log(res)    //print the promise
+
+            if (res.status === 200) {
+                this.setState({
+                    alert: true,
+                    message: res.data.message,
+                    severity: 'success'
+                });
+                this.clearFields();
+            } else {
+                this.setState({
+                    alert: true,
+                    message: res.response.data.message,
+                    severity: 'error'
+                });
+            }
+        } else {
+            this.setState({
+                alert: true,
+                message: 'please select the type',
+                severity: 'error'
+            });
+        }
     };
-
-
 
     render() {
         const {classes} = this.props
@@ -236,12 +238,12 @@ class SignUp extends Component {
                                            }}
                                            validators={['required']}
                                 />
-                                <TextField id="outlined-basic" label="Confirm Password" variant="outlined"
+                                <TextField id="outlined-basic" label="Register Id" variant="outlined"
                                            size="small"
-                                           value={this.state.formData.user.password}
+                                           value={this.state.formData.id}
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.user.password = e.target.value
+                                               formData.id = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
@@ -256,7 +258,8 @@ class SignUp extends Component {
                                            validators={['required']}
                                 />
 
-                                <GDSEButton variant="contained" size="large" type="submit" label={this.state.btnLabel} color={this.state.btnColor}>
+                                <GDSEButton variant="contained" size="large" type="submit" label={this.state.btnLabel}
+                                            color={this.state.btnColor}>
                                     Register
                                 </GDSEButton>
                             </Grid>
@@ -266,7 +269,7 @@ class SignUp extends Component {
                 <GDSESnackBar
                     open={this.state.alert}
                     onClose={() => {
-                        this.setState({ alert: false })
+                        this.setState({alert: false})
                     }}
                     message={this.state.message}
                     autoHideDuration={3000}
