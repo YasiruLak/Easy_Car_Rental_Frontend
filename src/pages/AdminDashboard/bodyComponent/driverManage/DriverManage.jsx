@@ -102,10 +102,6 @@ class DriverManage extends Component {
                 drivingLicenseNo: data.drivingLicenseNo,
                 email: data.email,
                 contactNo: data.contactNo,
-                user: {
-                    userName:data.user.userName,
-                    password: data.user.password
-                },
                 driverAvailability: data.driverAvailability
 
             }

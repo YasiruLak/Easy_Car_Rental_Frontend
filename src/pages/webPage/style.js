@@ -149,7 +149,7 @@ export const styleSheet={
 
     service_container:{
         width:'100vw',
-        height:'120vh',
+        height:'80vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -165,12 +165,13 @@ export const styleSheet={
         alignItems: 'center',
         justifyContent:'center',
         flexDirection:'row',
+        //border:'1px solid red'
 
 
     },
     service_card_content:{
         width:'100vw',
-        height:'100vh',
+        height:'60vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
@@ -181,7 +182,7 @@ export const styleSheet={
 
     service_card_content_grid:{
         width:'100vw',
-        height:'50vh',
+        height:'30vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
@@ -191,14 +192,14 @@ export const styleSheet={
     },
 
     service_card_content_grid_row:{
-        width:'33.33vw',
-        height:'50vh',
+        width:'25vw',
+        height:'30vh',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'center',
-        // border: '1px solid red',
+        //border: '1px solid red',
         alignContent:'center'
 
     },
@@ -239,7 +240,7 @@ export const styleSheet={
 
     vehicle_container:{
         width:'100vw',
-        height:'150vh',
+        height:'280vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -248,23 +249,25 @@ export const styleSheet={
 
     vehicle:{
         width:'100vw',
-        height:'130vh',
+        height:'260vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
+        //border:'1px solid red'
 
     },
 
     vehicle_detail:{
         width:'90vw',
-        height:'120vh',
+        height:'240vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
+        //border:'1px solid red'
 
     },
 
@@ -288,33 +291,36 @@ export const styleSheet={
         justifyContent:'center',
     },
 
-    vehicle_card_desc:{
-        width:'23vw',
-        height:'7vh',
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent:'center',
-        marginTop:'30px',
-
-    },
+    // vehicle_card_desc:{
+    //     width:'23vw',
+    //     height:'7vh',
+    //     display: 'flex',
+    //     flexWrap: 'wrap',
+    //     flexDirection: 'column',
+    //     alignItems: 'center',
+    //     justifyContent:'center',
+    //     marginTop:'30px',
+    //     border:'1px solid red'
+    //
+    // },
 
     desc_1:{
-        width:'11vw',
+        width:'22vw',
         height:'7vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent:'center',
+        //border:'1px solid red',
+        marginTop:'12px',
 
     },
 
     vehicle_card_detail:{
         width:'22.5vw',
-        height:'7vh',
-        // border:'1px solid red',
+        height:'4vh',
+        //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -324,7 +330,7 @@ export const styleSheet={
 
     vehicle_card_subDetail:{
         width:'7.5vw',
-        height:'7vh',
+        height:'4vh',
         //border:'1px solid red',
         //backgroundColor:'red',
         display: 'flex',

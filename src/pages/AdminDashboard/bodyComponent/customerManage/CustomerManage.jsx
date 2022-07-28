@@ -19,27 +19,8 @@ import {Autocomplete, TextField, Typography} from "@mui/material";
 import GDSEButton from "../../../../components/common/Button";
 import Paper from "@mui/material/Paper";
 import GDSESnackBar from "../../../../components/common/SnackBar";
-
-const vehicleType = [
-    {label: 'GENERAL'},
-    {label: 'LUXURY'},
-    {label: 'PREMIUM'},
-];
-
-const fuelType = [
-    {label: 'DIESEL'},
-    {label: 'PETROL'},
-];
-
-const transmisionType = [
-    {label: 'MANUAL'},
-    {label: 'AUTO'},
-];
-
-const availability = [
-    {label: 'AVAILABLE'},
-    {label: 'NOT_AVAILABLE'},
-];
+import DriverManageService from "../../../../service/DriverManageService";
+import CustomerManageService from "../../../../service/CustomerManageService";
 
 class CustomerManage extends Component {
     constructor(props) {
@@ -47,27 +28,20 @@ class CustomerManage extends Component {
 
         this.state = {
             formData: {
-                vehicleId: '',
-                registrationNo: '',
-                vehicleBrand: '',
-                vehicleType: '',
-                fuelType: '',
-                numberOfPassenger: '',
-                vehicleColour: '',
-                transmissionType: '',
-                refundableDamagedFee: '',
-                vehicleMileage: '',
-                vehiclePriceRate: {
-                    dailyRate:'',
-                    monthlyRate: ''
+                id: '',
+                nic: '',
+                name: {
+                    firstName:'',
+                    lastName: ''
                 },
-                freeMileage: {
-                    dailyMileage: '',
-                    monthlyMileage: ''
-                },
-                lastServiceMileage: '',
-                vehicleAvailability: ''
-
+                address: '',
+                drivingLicenseNo: '',
+                email: '',
+                contactNo: '',
+                user: {
+                    userName:'',
+                    password: ''
+                }
             },
             alert: false,
             message: '',
@@ -79,11 +53,126 @@ class CustomerManage extends Component {
         }
     }
 
+    deleteCustomer = async (id) => {
+        let params = {
+            id: id
+        }
+        let res = await CustomerManageService.deleteCustomer(params);
+
+        if (res.status === 200) {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'success'
+            });
+            this.loadData();
+        } else {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'error'
+            });
+        }
+    };
+
+    updateCustomer = (data) => {
+        console.log(data)
+
+        this.setState({
+            btnLabel: 'update',
+            btnColor: 'secondary',
+            formData: {
+                id: data.id,
+                nic: data.nic,
+                name: {
+                    firstName:data.name.firstName,
+                    lastName: data.name.lastName
+                },
+                address: data.address,
+                drivingLicenseNo: data.drivingLicenseNo,
+                email: data.email,
+                contactNo: data.contactNo,
+                driverAvailability: data.driverAvailability
+
+            }
+        });
+    };
+
+    exampleForMap = () => {
+        this.state.data.map((value, index) => {
+            console.log(value)   // access element one by one
+        })
+    };
+
+    loadData = async () => {
+        let res = await CustomerManageService.fetchCustomer();
+
+        if (res.status === 200) {
+            this.setState({
+                data: res.data.data
+            });
+        }
+        console.log(this.state.data)    // print customers array
+
+        this.exampleForMap()
+
+    };
+
+    componentDidMount() {
+        this.loadData();
+    };
+
+    clearFields = () => {
+        this.setState({
+            formData: {
+                id: '',
+                nic: '',
+                name: {
+                    firstName:'',
+                    lastName: ''
+                },
+                address: '',
+                drivingLicenseNo: '',
+                email: '',
+                contactNo: '',
+                user: {
+                    userName:'',
+                    password: ''
+                }
+            }
+        });
+    };
+
+    submitCustomer = async () => {
+        let formData = this.state.formData;
+
+        if (this.state.btnLabel === "update") {
+            let res = await CustomerManageService.putCustomer(formData);
+            if (res.status === 200) {
+                this.setState({
+                    alert: true,
+                    message: res.data.message,
+                    severity: 'success',
+                    btnLabel: 'update',
+                    btnColor: 'secondary'
+                });
+                this.clearFields();
+                await this.loadData();
+            } else {
+                this.setState({
+                    alert: true,
+                    message: res.response.data.message,
+                    severity: 'error'
+                });
+            }
+        }
+    };
+
     render() {
         const {classes} = this.props
         return(
             <>
-                <ValidatorForm ref="form" className="pt-2">
+                <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitCustomer}>
                     <Grid container className="pt-2" spacing={1} style={{marginLeft: '8px'}}>
                         <Grid item lg={12} xs={12} sm={12} md={12}
                               style={{
@@ -99,15 +188,15 @@ class CustomerManage extends Component {
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
                             <TextValidator
                                 id="outlinedbasic"
-                                placeholder="V00-001"
+                                placeholder="D00-001"
                                 variant="outlined"
                                 size="small"
                                 style={{width: '100%'}}
-                                label="Vehicle Id"
-                                value={this.state.formData.vehicleId}
+                                label="Customer Id"
+                                value={this.state.formData.id}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehicleId = e.target.value
+                                    formData.id = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -116,15 +205,15 @@ class CustomerManage extends Component {
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
                             <TextValidator
                                 id="outlinedbasic"
-                                placeholder="CAV-4777"
+                                placeholder="981631161V"
                                 variant="outlined"
                                 size="small"
                                 style={{width: '100%'}}
-                                label="Registration No"
-                                value={this.state.formData.registrationNo}
+                                label="NIC No"
+                                value={this.state.formData.nic}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.registrationNo = e.target.value
+                                    formData.nic = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -134,44 +223,52 @@ class CustomerManage extends Component {
 
                             <TextValidator
                                 id="outlinedbasic"
-                                placeholder="Axio"
+                                placeholder="Yasiru"
                                 variant="outlined"
                                 size="small"
                                 style={{width: '100%'}}
-                                label="Vehicle Brand"
-                                value={this.state.formData.vehicleBrand}
+                                label="First name"
+                                value={this.state.formData.name.firstName}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehicleBrand = e.target.value
+                                    formData.name.firstName = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={fuelType}
-                                style={{width: '100%'}}
-                                size="small"
+                            <TextValidator
+                                id="outlinedbasic"
+                                placeholder="Dahanayaka"
                                 variant="outlined"
-                                placeholder="Petrol"
-                                value={this.state.formData.fuelType}
-                                renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
+                                size="small"
+                                style={{width: '100%'}}
+                                label="Last name"
+                                value={this.state.formData.name.lastName}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.name.lastName = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={vehicleType}
-                                style={{width: '100%'}}
-                                size="small"
+                            <TextValidator
+                                id="outlinedbasic"
+                                placeholder="Galle"
                                 variant="outlined"
-                                placeholder="Petrol"
-                                value={this.state.formData.vehicleType}
-                                renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
+                                size="small"
+                                style={{width: '100%'}}
+                                label="Address"
+                                value={this.state.formData.address}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.address = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
@@ -180,13 +277,13 @@ class CustomerManage extends Component {
                                 id="outlinedbasic"
                                 variant="outlined"
                                 size="small"
-                                label="No of Passenger"
+                                label="License No"
                                 style={{width: '100%'}}
-                                placeholder="2"
-                                value={this.state.formData.numberOfPassenger}
+                                placeholder="5678G"
+                                value={this.state.formData.drivingLicenseNo}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.numberOfPassenger = e.target.value
+                                    formData.drivingLicenseNo = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -195,46 +292,15 @@ class CustomerManage extends Component {
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <TextValidator
                                 id="outlinedbasic"
-                                placeholder="Black"
+                                placeholder="yasirudahanayaka19@gmail.com"
                                 variant="outlined"
                                 size="small"
                                 style={{width: '100%'}}
-                                label="Colour"
-                                value={this.state.formData.vehicleColour}
+                                label="Email"
+                                value={this.state.formData.email}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehicleColour = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={transmisionType}
-                                style={{width: '100%'}}
-                                size="small"
-                                variant="outlined"
-                                placeholder="Auto"
-                                value={this.state.formData.transmissionType}
-                                renderInput={(params) => <TextField {...params} label="Transmission Type"/>}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="10000.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Damaged Fee"
-                                value={this.state.formData.refundableDamagedFee}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.refundableDamagedFee = e.target.value
+                                    formData.email = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
@@ -243,126 +309,25 @@ class CustomerManage extends Component {
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <TextValidator
                                 id="outlinedbasic"
-                                placeholder="800 Km"
+                                placeholder="076-8383493"
                                 variant="outlined"
                                 size="small"
                                 style={{width: '100%'}}
-                                label="Service Mileage"
-                                value={this.state.formData.vehicleMileage}
+                                label="Contact no"
+                                value={this.state.formData.contactNo}
                                 onChange={(e) => {
                                     let formData = this.state.formData
-                                    formData.vehicleMileage = e.target.value
+                                    formData.contactNo = e.target.value
                                     this.setState({formData})
                                 }}
                                 validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="2500.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Monthly Amount"
-                                value={this.state.formData.vehiclePriceRate.monthlyRate}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehiclePriceRate.monthlyRate = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="200.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Daily Amount"
-                                value={this.state.formData.vehiclePriceRate.dailyRate}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehiclePriceRate.dailyRate = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="100 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Daily Km"
-                                value={this.state.formData.freeMileage.dailyMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.freeMileage.dailyMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="1000 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Monthly Km"
-                                value={this.state.formData.freeMileage.monthlyMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.freeMileage.monthlyMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="500 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Last Service"
-                                value={this.state.formData.lastServiceMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.lastServiceMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={availability}
-                                style={{width: '100%'}}
-                                size="small"
-                                variant="outlined"
-                                placeholder="Available"
-                                value={this.state.formData.vehicleAvailability}
-                                renderInput={(params) => <TextField {...params} label="Availability"/>}
                             />
                         </Grid>
                         <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
                             <GDSEButton label={this.state.btnLabel} type="submit" size="medium" color={this.state.btnColor} variant="contained"
+                                        style={{margin: '10px 12px 16px 5px'}}/>
+                            <GDSEButton label="cancel" size="medium" color="error" variant="contained"
                                         style={{margin: '10px 12px 16px 5px'}}/>
                         </Grid>
                     </Grid>
@@ -387,14 +352,14 @@ class CustomerManage extends Component {
                                 {
                                     this.state.data.map((row) => (
                                         <TableRow>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
+                                            <TableCell align="left">{row.id}</TableCell>
+                                            <TableCell align="left">{row.nic}</TableCell>
+                                            <TableCell align="left">{row.name.firstName}</TableCell>
+                                            <TableCell align="left">{row.name.lastName}</TableCell>
+                                            <TableCell align="left">{row.drivingLicenseNo}</TableCell>
+                                            <TableCell align="left">{row.address}</TableCell>
+                                            <TableCell align="left">{row.email}</TableCell>
+                                            <TableCell align="left">{row.contactNo}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
@@ -408,7 +373,7 @@ class CustomerManage extends Component {
                                                 <Tooltip title="Delete">
                                                     <IconButton
                                                         onClick={() => {
-                                                            this.deleteCustomer(row)
+                                                            this.deleteCustomer(row.id)
                                                         }}
                                                     >
                                                         <DeleteIcon color="error" />
