@@ -260,292 +260,292 @@ class VehicleManage extends Component {
                             <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Vehicle
                                 Manage</Typography>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="V00-001"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Vehicle Id"
-                                value={this.state.formData.vehicleId}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehicleId = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="CAV-4777"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Registration No"
-                                value={this.state.formData.registrationNo}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.registrationNo = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="V00-001"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Vehicle Id"
+                                    value={this.state.formData.vehicleId}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehicleId = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="CAV-4777"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Registration No"
+                                    value={this.state.formData.registrationNo}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.registrationNo = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="Axio"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Vehicle Brand"
-                                value={this.state.formData.vehicleBrand}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehicleBrand = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <Autocomplete
-                                onChange={(e, value, r) => {
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="Axio"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Vehicle Brand"
+                                    value={this.state.formData.vehicleBrand}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehicleBrand = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                                <Autocomplete
+                                    onChange={(e, value, r) => {
 
-                                    let formData = this.state.formData
-                                    formData.fuelType = value.type
-                                    this.setState({formData})
+                                        let formData = this.state.formData
+                                        formData.fuelType = value.type
+                                        this.setState({formData})
 
-                                }}
-                                getOptionLabel={
-                                    (option) => option.type
-                                }
-                                id="controllable-states-demo"
-                                options={this.state.fuelTypes}
-                                size="small"
-                                renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
-                            <Autocomplete
-                                onChange={(e, value, r) => {
+                                    }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    id="controllable-states-demo"
+                                    options={this.state.fuelTypes}
+                                    size="small"
+                                    renderInput={(params) => <TextField {...params} label="Fuel Type"/>}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 0 12px'}}>
+                                <Autocomplete
+                                    onChange={(e, value, r) => {
 
-                                    let formData = this.state.formData
-                                    formData.vehicleType = value.type
-                                    this.setState({formData})
+                                        let formData = this.state.formData
+                                        formData.vehicleType = value.type
+                                        this.setState({formData})
 
-                                }}
-                                getOptionLabel={
-                                    (option) => option.type
-                                }
-                                id="controllable-states-demo"
-                                options={this.state.vehicleTypes}
-                                size="small"
-                                renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
+                                    }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    id="controllable-states-demo"
+                                    options={this.state.vehicleTypes}
+                                    size="small"
+                                    renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                variant="outlined"
-                                size="small"
-                                label="No of Passenger"
-                                style={{width: '100%'}}
-                                placeholder="2"
-                                value={this.state.formData.numberOfPassenger}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.numberOfPassenger = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="Black"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Colour"
-                                value={this.state.formData.vehicleColour}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehicleColour = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-                            <Autocomplete
-                                onChange={(e, value, r) => {
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    variant="outlined"
+                                    size="small"
+                                    label="No of Passenger"
+                                    style={{width: '100%'}}
+                                    placeholder="2"
+                                    value={this.state.formData.numberOfPassenger}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.numberOfPassenger = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="Black"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Colour"
+                                    value={this.state.formData.vehicleColour}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehicleColour = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <Autocomplete
+                                    onChange={(e, value, r) => {
 
-                                    let formData = this.state.formData
-                                    formData.transmissionType = value.type
-                                    this.setState({formData})
+                                        let formData = this.state.formData
+                                        formData.transmissionType = value.type
+                                        this.setState({formData})
 
-                                }}
-                                getOptionLabel={
-                                    (option) => option.type
-                                }
-                                size="small"
-                                id="controllable-states-demo"
-                                options={this.state.transmissionTypes}
-                                renderInput={(params) => <TextField {...params} label="Transmission"/>}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                    }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    size="small"
+                                    id="controllable-states-demo"
+                                    options={this.state.transmissionTypes}
+                                    renderInput={(params) => <TextField {...params} label="Transmission"/>}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="10000.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Damaged Fee"
-                                value={this.state.formData.refundableDamagedFee}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.refundableDamagedFee = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="800 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Service Mileage"
-                                value={this.state.formData.vehicleMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehicleMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="10000.00"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Damaged Fee"
+                                    value={this.state.formData.refundableDamagedFee}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.refundableDamagedFee = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="800 Km"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Service Mileage"
+                                    value={this.state.formData.vehicleMileage}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehicleMileage = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="2500.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Monthly Amount"
-                                value={this.state.formData.vehiclePriceRate.monthlyRate}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehiclePriceRate.monthlyRate = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="2500.00"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Monthly Amount"
+                                    value={this.state.formData.vehiclePriceRate.monthlyRate}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehiclePriceRate.monthlyRate = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="200.00"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Daily Amount"
-                                value={this.state.formData.vehiclePriceRate.dailyRate}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.vehiclePriceRate.dailyRate = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="200.00"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Daily Amount"
+                                    value={this.state.formData.vehiclePriceRate.dailyRate}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.vehiclePriceRate.dailyRate = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="100 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Daily Km"
-                                value={this.state.formData.freeMileage.dailyMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.freeMileage.dailyMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="100 Km"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Daily Km"
+                                    value={this.state.formData.freeMileage.dailyMileage}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.freeMileage.dailyMileage = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="1000 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Monthly Km"
-                                value={this.state.formData.freeMileage.monthlyMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.freeMileage.monthlyMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="1000 Km"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Monthly Km"
+                                    value={this.state.formData.freeMileage.monthlyMileage}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.freeMileage.monthlyMileage = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
 
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="500 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Last Service"
-                                value={this.state.formData.lastServiceMileage}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.lastServiceMileage = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
-                            <Autocomplete
-                                // style={{padding: '10px', width: '230px'}}
-                                onChange={(e, value, r) => {
+                                <TextValidator
+                                    id="outlinedbasic"
+                                    placeholder="500 Km"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '100%'}}
+                                    label="Last Service"
+                                    value={this.state.formData.lastServiceMileage}
+                                    onChange={(e) => {
+                                        let formData = this.state.formData
+                                        formData.lastServiceMileage = e.target.value
+                                        this.setState({formData})
+                                    }}
+                                    validators={['required']}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                                <Autocomplete
+                                    // style={{padding: '10px', width: '230px'}}
+                                    onChange={(e, value, r) => {
 
-                                    let formData = this.state.formData
-                                    formData.vehicleAvailability = value.type
-                                    this.setState({formData})
+                                        let formData = this.state.formData
+                                        formData.vehicleAvailability = value.type
+                                        this.setState({formData})
 
-                                }}
-                                getOptionLabel={
-                                    (option) => option.type
-                                }
-                                size="small"
-                                id="controllable-states-demo"
-                                options={this.state.availabilityTypes}
-                                // sx={{width: 300}}
-                                renderInput={(params) => <TextField {...params} label="Availability"/>}
-                            />
-                        </Grid>
+                                    }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    size="small"
+                                    id="controllable-states-demo"
+                                    options={this.state.availabilityTypes}
+                                    // sx={{width: 300}}
+                                    renderInput={(params) => <TextField {...params} label="Availability"/>}
+                                />
+                            </Grid>
                         <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
                             <GDSEButton label={this.state.btnLabel} type="submit" size="medium"

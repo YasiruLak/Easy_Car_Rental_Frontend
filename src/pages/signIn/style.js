@@ -57,13 +57,14 @@ export const styleSheet={
 
     textField:{
         width:'40vw',
-        height:'70vh',
+        height:'60vh',
         //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom:'150px'
     },
 
     logo:{
@@ -88,7 +89,7 @@ export const styleSheet={
 
     passwordField:{
         width:'40vw',
-        height:'25vh',
+        height:'20vh',
         //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
@@ -99,7 +100,7 @@ export const styleSheet={
 
     loginButton:{
         width:'40vw',
-        height:'25vh',
+        height:'20vh',
         //border:'1px solid red',
         display: 'flex',
         flexWrap: 'wrap',
