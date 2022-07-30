@@ -1,5 +1,9 @@
 import {Component} from "react";
 import {Grid, IconButton, withStyles} from "@material-ui/core";
+import {styleSheet} from "./styles";
+import {Typography} from "@mui/material";
+import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
+import GDSEButton from "../../../../components/common/Button";
 import DeleteIcon from '@mui/icons-material/Delete';
 import Tooltip from '@mui/material/Tooltip';
 import EditIcon from '@mui/icons-material/Edit';
@@ -10,10 +14,6 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import {styleSheet} from "./styles";
-import {Typography} from "@mui/material";
-import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
-import GDSEButton from "../../../../components/common/Button";
 
 class ViewBooking extends Component {
     constructor(props) {
@@ -25,44 +25,58 @@ class ViewBooking extends Component {
         return (
             <>
                 <Grid className={classes.viewBooking_container}>
-                    <Grid item lg={12} xs={12} sm={12} md={12}
+                    <Grid item lg={12} xs={12} sm={12} md={12} container className="pt-2" spacing={1}
                           style={{
                               alignItems: 'center',
                               display: 'flex',
                               flexWrap: 'wrap',
                               justifyContent: 'center',
-                              backgroundColor: '#0984e3'
+                              backgroundColor: '#3d3d3d',
+                              width:'81vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Vehicle
-                            Manage</Typography>
+                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Booking
+                            View</Typography>
                     </Grid>
                     <ValidatorForm ref="form" className="pt-2">
-                        <Grid item xs={6} sm={12} md={12} lg={12} style={{margin: '12px 12px 14px 16px'}}>
-                            <TextValidator
-                                item xs={12}
-                                id="outlinedbasic"
-                                placeholder="V00-001"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="Vehicle Id"
-                                // value={this.state.formData.vehicleId}
-                                // onChange={(e) => {
-                                //     let formData = this.state.formData
-                                //     formData.vehicleId = e.target.value
-                                //     this.setState({formData})
-                                // }}
-                                validators={['required']}
-                            />
-                        </Grid>
-                            <GDSEButton type="submit" size="medium"
-                                        variant="contained"
-                                        style={{margin: '10px 12px 16px 5px'}}/>
+                        <Grid style={classes.search_Bar}>
+                            <Grid
+                                  style={{
+                                      alignItems: 'center',
+                                      display: 'flex',
+                                      flexWrap: 'wrap',
+                                      justifyContent: 'center',
+                                      //backgroundColor: '#0984e3',
+                                      //border:'1px solid red',
+                                      width:'80vw',
+                                      height:'20vh'
+                                  }}>
+                                <TextValidator
+                                    id="outlined-basic"
+                                    placeholder="B00-001"
+                                    variant="outlined"
+                                    size="small"
+                                    style={{width: '40vw',marginTop:'70px'}}
+                                    label="Booking No"
+                                    // value={this.state.formData.vehicleId}
+                                    // onChange={(e) => {
+                                    //     let formData = this.state.formData
+                                    //     formData.vehicleId = e.target.value
+                                    //     this.setState({formData})
+                                    // }}
+                                    validators={['required']}
+                                />
+                                <Grid>
+                                    <GDSEButton label="Search" type="submit" size="medium"
+                                                color="primary" variant="contained"
+                                                style={{margin: '70px 16px 0 20px'}}/>
+                                </Grid>
+                            </Grid>
 
+                        </Grid>
                     </ValidatorForm>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '60vh', width: '81vw', backgroundColor: '#eeeff1'}}>
+                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

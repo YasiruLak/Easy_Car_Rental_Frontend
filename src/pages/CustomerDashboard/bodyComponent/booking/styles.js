@@ -13,11 +13,12 @@ export const styleSheet = {
     },
     searchBar:{
         width: '82vw',
-        height: '35vh',
+        height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
+        margin:'30px 0 10px 0',
         flexDirection: 'column',
         //backgroundColor:'red',
     },

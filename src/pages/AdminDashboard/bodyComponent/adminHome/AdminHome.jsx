@@ -27,7 +27,6 @@ class AdminHome extends Component{
                             </CardContent>
                         </Card>
                     </Grid>
-
                     <Grid >
                         <Card sx={{ minWidth: 275 }} style={{backgroundColor:'#20bf6b',color:'white',width:'180px'}} >
                             <CardContent>
@@ -40,7 +39,6 @@ class AdminHome extends Component{
                             </CardContent>
                         </Card>
                     </Grid>
-
                     <Grid >
                         <Card sx={{ minWidth: 275 }} style={{backgroundColor:'#fa8231',color:'white',width:'180px'}} >
                             <CardContent style={{alignItems:'center',justifyContent:'center'}}>
@@ -53,7 +51,6 @@ class AdminHome extends Component{
                             </CardContent>
                         </Card>
                     </Grid>
-
                     <Grid >
                         <Card sx={{ minWidth: 275 }} style={{backgroundColor:'#eb3b5a',color:'white',width:'180px'}} >
                             <CardContent>

@@ -1,6 +1,6 @@
 export const styleSheet= {
     container: {
-        width: '100vw',
+        width: '82.3vw',
         height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
@@ -13,7 +13,7 @@ export const styleSheet= {
     },
 
     header_name:{
-        width: '100vw',
+        width: '82.3vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -24,7 +24,7 @@ export const styleSheet= {
     },
 
     profile_content:{
-        width: '50vw',
+        width: '41vw',
         height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -35,7 +35,7 @@ export const styleSheet= {
     },
 
     leftForm:{
-        width: '25vw',
+        width: '20.5vw',
         height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -46,7 +46,7 @@ export const styleSheet= {
     },
 
     rightForm:{
-        width: '25vw',
+        width: '20.5vw',
         height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -57,7 +57,7 @@ export const styleSheet= {
     },
 
     profile_footer:{
-        width: '100vw',
+        width: '82.3vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Card Updated">
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signIn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +53,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/reactAdminPannel-YoutubeVideo/reactAdminPannel-YoutubeVideo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/carRentalSystem-main/carRentalSystem-main" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="C:\Users\Yasiru\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\212.5457.46\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -103,7 +104,9 @@
       <workItem from="1658808553138" duration="24982000" />
       <workItem from="1658895993561" duration="23578000" />
       <workItem from="1658986404989" duration="19874000" />
-      <workItem from="1659066322949" duration="8832000" />
+      <workItem from="1659066322949" duration="19424000" />
+      <workItem from="1659152557058" duration="551000" />
+      <workItem from="1659153198138" duration="5974000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -182,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659030518715</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated">
+      <created>1659087767145</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659087767145</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +211,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated" />
     <MESSAGE value="Login Page done" />
     <MESSAGE value="Sign Up Page done" />
     <MESSAGE value="Vehicle Manage Page Done" />
@@ -212,7 +221,8 @@
     <MESSAGE value="Updated SignUp" />
     <MESSAGE value="Driver Manage Done" />
     <MESSAGE value="Vehicle Card Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Card Updated" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
