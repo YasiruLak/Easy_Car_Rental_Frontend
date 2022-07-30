@@ -13,7 +13,7 @@ export const styleSheet= {
     },
 
     signUpForm:{
-        width: '50vw',
+        width: '100vw',
         height: '100vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -23,25 +23,49 @@ export const styleSheet= {
         //border:'1px solid red'
     },
 
-    signUpFormImg:{
+    // signUpFormImg:{
+    //     width: '50vw',
+    //     height: '100vh',
+    //     alignItems: 'center',
+    //     justifyContent: 'center',
+    //     display: 'flex',
+    //     flexWrap: 'wrap',
+    //     flexDirection: 'column',
+    //     //border:'1px solid red'
+    // },
+    header_content:{
         width: '50vw',
         height: '100vh',
+        //border:'1px solid red',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        //border:'1px solid red'
     },
-    header_content:{
-        width: '50vw',
-        height: '20vh',
-        //border:'1px solid red',
-        alignItems: 'flex-start',
+
+    signUp_Upload:{
+        // width: '50vw',
+        alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+    },
+
+    upload_button:{
+        marginTop:'20px',
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-around',
+    },
+
+    signUp_imageDiv : {
+        height : '20px',
+        width : '30px',
+        backgroundColor : 'white',
+        borderRadius: "20px",
     },
 
     leftForm:{

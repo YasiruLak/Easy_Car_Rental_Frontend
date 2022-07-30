@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Vehicle Manage Page Updated">
-      <change afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Booking Vehicle View Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/Schedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/Schedule.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +101,7 @@
       <workItem from="1658986404989" duration="19874000" />
       <workItem from="1659066322949" duration="19424000" />
       <workItem from="1659152557058" duration="551000" />
-      <workItem from="1659153198138" duration="18768000" />
+      <workItem from="1659153198138" duration="21192000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -201,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659160656924</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Booking Vehicle View Done">
+      <created>1659193394389</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659193394389</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +232,8 @@
     <MESSAGE value="Vehicle Card Updated" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Vehicle Manage Page Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Manage Page Updated" />
+    <MESSAGE value="Booking Vehicle View Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking Vehicle View Done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

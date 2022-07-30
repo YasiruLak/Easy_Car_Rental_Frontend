@@ -8,6 +8,7 @@ import {ValidatorForm} from "react-material-ui-form-validator";
 import SignUpService from "../../service/SignUpService";
 import GDSESnackBar from "../../components/common/SnackBar";
 import GDSEButton from "../../components/common/Button";
+import Button from "@mui/material/Button";
 
 // const role = [
 //     {label: 'DRIVER'},
@@ -127,11 +128,10 @@ class SignUp extends Component {
         return (
             <>
                 <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitSignUp}>
-                    <Grid className={classes.container}>
-                        <Grid className={classes.signUpFormImg}>
-                            <img src={homeImg} alt="" style={{width: '650px', height: '220px', marginLeft: '10px'}}/>
-                        </Grid>
-
+                    <Grid>
+                        {/*<Grid className={classes.signUpFormImg}>*/}
+                        {/*    <img src={homeImg} alt="" style={{width: '650px', height: '220px', marginLeft: '10px'}}/>*/}
+                        {/*</Grid>*/}
                         <Grid className={classes.signUpForm}>
                             <Grid className={classes.header_content}>
                                 <Grid>
@@ -142,6 +142,74 @@ class SignUp extends Component {
                                     <Typography variant="h6" gutterBottom component="div" style={{color: '#2d98da'}}>
                                         Sign in Your Best Journey with Easy Car Rental Service
                                     </Typography>
+                                    <Grid className={classes.signUp_Upload}>
+                                        <div className={classes.signUp_imageDiv} style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            height: '140px',
+                                            width: '240px',
+                                            border: '1px solid blue',
+                                            // backgroundImage:"url(" +this.state.frontView+ ")",
+                                            backgroundSize: 'cover',
+                                            margin:'20px 20px 0 0'
+                                        }}/>
+                                        <div className={classes.signUp_imageDiv} style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            height: '140px',
+                                            width: '240px',
+                                            border: '1px solid blue',
+                                            // backgroundImage:"url(" +this.state.frontView+ ")",
+                                            backgroundSize: 'cover',
+                                            margin:'20px 0 0 20px'
+                                        }}/>
+                                    </Grid>
+                                    <Grid className={classes.upload_button}>
+                                        <div style={{margin:'0 0 0 10px'}}><input
+                                            style={{display: 'none'}}
+                                            accept="image/*"
+                                            className={classes.input}
+                                            id="contained-button-file01"
+                                            multiple
+                                            type="file"
+                                            // onChange={(e) => {
+                                            //     this.setState({
+                                            //         frontImage: e.target.files[0],
+                                            //         frontView : URL.createObjectURL(e.target.files[0])
+                                            //     })
+                                            // }}
+                                        />
+                                            <label htmlFor="contained-button-file01">
+                                                <Button variant="outlined" color="primary" size="medium" component="span">
+                                                   Nic Upload
+                                                </Button>
+                                            </label>
+
+                                        </div>
+                                        <div style={{margin:'0 0 0 80px'}}><input
+                                            style={{display: 'none'}}
+                                            accept="image/*"
+                                            className={classes.input}
+                                            id="contained-button-file01"
+                                            multiple
+                                            type="file"
+                                            // onChange={(e) => {
+                                            //     this.setState({
+                                            //         frontImage: e.target.files[0],
+                                            //         frontView : URL.createObjectURL(e.target.files[0])
+                                            //     })
+                                            // }}
+                                        />
+                                            <label htmlFor="contained-button-file01">
+                                                <Button variant="outlined" color="primary" size="medium" component="span">
+                                                    License Upload
+                                                </Button>
+                                            </label>
+
+                                        </div>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                             <Grid className={classes.leftForm}>
@@ -182,7 +250,7 @@ class SignUp extends Component {
                                            validators={['required']}
                                 />
                                 <TextField id="outlined-basic" label="Nic No" variant="outlined" size="small"
-                                           style={{marginLeft: '40px'}}
+                                           //style={{marginLeft: '40px'}}
                                            value={this.state.formData.nic}
                                            onChange={(e) => {
                                                let formData = this.state.formData
@@ -191,12 +259,9 @@ class SignUp extends Component {
                                            }}
                                            validators={['required']}
                                 />
-                                <IconButton color="primary" aria-label="upload picture" component="label">
-                                    <input hidden accept="image/*" type="file"/>
-                                    <PhotoCamera/>
-                                </IconButton>
+
                                 <TextField id="outlined-basic" label="Lision No" variant="outlined" size="small"
-                                           style={{marginLeft: '40px'}}
+                                           //style={{marginLeft: '40px'}}
                                            value={this.state.formData.drivingLicenseNo}
                                            onChange={(e) => {
                                                let formData = this.state.formData
@@ -205,10 +270,7 @@ class SignUp extends Component {
                                            }}
                                            validators={['required']}
                                 />
-                                <IconButton color="primary" aria-label="upload picture" component="label">
-                                    <input hidden accept="image/*" type="file"/>
-                                    <PhotoCamera/>
-                                </IconButton>
+
                             </Grid>
                             <Grid className={classes.rightForm}>
                                 <TextField id="outlined-basic" label="Last Name" variant="outlined" size="small"
