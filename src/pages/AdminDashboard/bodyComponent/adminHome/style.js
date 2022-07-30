@@ -1,8 +1,8 @@
 export const styleSheet={
 
     Home_container:{
-        width: '82.3vw',
-        height: '100vh',
+        width: '82vw',
+        // height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
         alignItems: 'center',
@@ -14,7 +14,7 @@ export const styleSheet={
     },
 
     Admin_Home_Card:{
-        width: '82.3vw',
+        width: '82vw',
         height: '24vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -25,7 +25,7 @@ export const styleSheet={
     },
 
     Admin_Home_Driver_Card:{
-        width: '82.3vw',
+        width: '82vw',
         height: '75vh',
         alignItems: 'center',
         justifyContent: 'center',

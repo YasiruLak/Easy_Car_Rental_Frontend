@@ -34,8 +34,7 @@ class ViewBooking extends Component {
                               backgroundColor: '#3d3d3d',
                               width:'81vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Booking
-                            View</Typography>
+                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Booking View</Typography>
                     </Grid>
                     <ValidatorForm ref="form" className="pt-2">
                         <Grid style={classes.search_Bar}>
@@ -85,7 +84,7 @@ class ViewBooking extends Component {
                                         <TableCell align="left">Pickup Date</TableCell>
                                         <TableCell align="left">Pickup Time</TableCell>
                                         <TableCell align="left">Return Date</TableCell>
-                                        <TableCell align="left">Driver Requst</TableCell>
+                                        <TableCell align="left">Driver Request</TableCell>
                                         <TableCell align="left">Action</TableCell>
                                     </TableRow>
                                 </TableHead>
