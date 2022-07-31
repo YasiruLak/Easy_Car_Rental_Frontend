@@ -790,7 +790,7 @@ class WebPage extends Component {
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
                                                             style={{color: '#ff4d4d'}}>
-                                                    Toyota Corolla Axio/ NZE141
+                                                    Toyota Corolla Axio/NZE141
                                                 </Typography>
                                                 <Typography gutterBottom variant="body2" component="div"
                                                             style={{color: 'green'}}>

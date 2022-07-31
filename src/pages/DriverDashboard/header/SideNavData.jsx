@@ -1,12 +1,10 @@
 import React from 'react'
 import {Button, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
-import HomeIcon from '@mui/icons-material/Home';
 import {NavLink} from "react-router-dom";
 import {useStyles} from "./HeaderStyles";
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PersonIcon from '@mui/icons-material/Person';
-import HandymanIcon from '@mui/icons-material/Handyman';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function SideNavData({handleDrawerClose}) {
 
@@ -17,9 +15,9 @@ export default function SideNavData({handleDrawerClose}) {
     const classes = useStyles();
     const listItemData = [
 
+        {label: "Schedule", link: "/driverSchedule", icon: <CalendarMonthIcon/>},
         {label: "Profile", link: "/driverProfile", icon: <PersonIcon/>},
-
-
+        {label: "Log out", link: "/logOut", icon: <LogoutIcon/>},
 
     ]
     return (<List>

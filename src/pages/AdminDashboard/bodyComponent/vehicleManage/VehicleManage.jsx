@@ -396,6 +396,7 @@ class VehicleManage extends Component {
                                 getOptionLabel={
                                     (option) => option.type
                                 }
+                                value={this.state.formData.transmissionType}
                                 size="small"
                                 id="controllable-states-demo"
                                 options={this.state.transmissionTypes}

@@ -18,7 +18,7 @@ class DriverProfile extends Component {
                     <Grid>
                         <Typography variant="h4" gutterBottom component="div"
                                     style={{color: '#2d98da', fontWeight: '600', marginLeft: '20px'}}>
-                            Customer Profile
+                            Driver Profile
                         </Typography>
                         <Typography variant="h6" gutterBottom component="div" style={{color: '#2d98da'}}>
                             Edit, Update and Enjoy your Details

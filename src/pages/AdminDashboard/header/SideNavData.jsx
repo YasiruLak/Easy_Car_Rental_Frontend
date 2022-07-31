@@ -10,6 +10,7 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DvrIcon from '@mui/icons-material/Dvr';
 import PaidIcon from '@mui/icons-material/Paid';
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function SideNavData({handleDrawerClose}) {
 
@@ -27,6 +28,7 @@ export default function SideNavData({handleDrawerClose}) {
         {label: "User Manage", link: "/customerManage", icon: <SupportAgentIcon/>},
         {label: "Payment", link: "/payment", icon: <PaidIcon/>},
         {label: "Profile", link: "/adminProfile", icon: <PersonIcon/>},
+        {label: "Log out", link: "/logOut", icon: <LogoutIcon/>},
 
 
     ]

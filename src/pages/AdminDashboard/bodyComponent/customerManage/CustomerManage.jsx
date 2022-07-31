@@ -19,7 +19,6 @@ import {Autocomplete, TextField, Typography} from "@mui/material";
 import GDSEButton from "../../../../components/common/Button";
 import Paper from "@mui/material/Paper";
 import GDSESnackBar from "../../../../components/common/SnackBar";
-import DriverManageService from "../../../../service/DriverManageService";
 import CustomerManageService from "../../../../service/CustomerManageService";
 
 class CustomerManage extends Component {

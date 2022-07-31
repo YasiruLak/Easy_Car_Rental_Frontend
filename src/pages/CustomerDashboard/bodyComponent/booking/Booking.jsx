@@ -2,7 +2,6 @@ import {Component} from "react";
 import {styleSheet} from "./styles";
 import {withStyles} from "@mui/styles";
 import {Button, Card, CardContent, CardMedia, Grid, TextField, Typography} from "@mui/material";
-import driver1 from "../../../../assets/images/driver1.png";
 import GDSEButton from "../../../../components/common/Button";
 import c1 from "../../../../assets/images/c1.png";
 import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFilledOutlined";
@@ -11,15 +10,33 @@ import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import ChairIcon from "@mui/icons-material/Chair";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 
 class Booking extends Component{
     constructor(props) {
         super(props);
+
+        this.state = {
+            open:false,
+
+        }
     }
+
+    handleClickOpen = () => {
+        this.setState({ open: true })
+    };
+
+    handleClose = () => {
+        this.setState({ open: false })
+    };
 
     render() {
         const {classes} = this.props;
         return(
+            <>
             <Grid className={classes.booking_container}>
                 <Grid item lg={12} xs={12} sm={12} md={12} container className="pt-2" spacing={1}
                       style={{
@@ -27,26 +44,23 @@ class Booking extends Component{
                           display: 'flex',
                           flexWrap: 'wrap',
                           justifyContent: 'center',
-                          backgroundColor: '#00b894',
+                          backgroundColor: '#485460',
                           width:'81vw',
                       }}>
                     <Typography variant="h4" style={{margin: '14px 0 20px 0', color: 'white',}}>Book Your Dream Vehicle</Typography>
                 </Grid>
                 <Grid  className={classes.searchBar}>
-                    <TextField id="outlined-basic" label="Location" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Pick Up Date" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Pick Up Time" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Return Date" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Vehicle No" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Customer Id" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Driver Request" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
-                    <TextField id="outlined-basic" label="Driver Id" variant="outlined" size="small" style={{marginLeft:'20px'}}/>
+                    <TextField id="outlined-basic" label="Location" variant="outlined" style={{marginLeft:'20px'}}/>
+                    <TextField id="outlined-basic" label="Pick Up Date" variant="outlined" style={{marginLeft:'20px'}}/>
+                    <TextField id="outlined-basic" label="Pick Up Time" variant="outlined" style={{marginLeft:'20px'}}/>
+                    <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px'}}/>
+
                     <Grid container
                           direction="row"
                           justifyContent="flex-end"
                           alignItems="center"
                     >
-                        <GDSEButton label="Reserve Now" type="submit" size="medium"
+                        <GDSEButton label="Search Here" type="submit" size="medium"
                                     color="primary" variant="contained"
                                     style={{margin: '10px 40px 20px 0'}}/>
                     </Grid>
@@ -127,7 +141,7 @@ class Booking extends Component{
                                     <Grid>
                                         <Grid className={classes.desc_2}>
                                             <Button variant="contained" fullWidth
-                                                    style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
+                                                    style={{color: '#ffffff', backgroundColor: '#ff9f1a'}} onClick={this.handleClickOpen}>Rent
                                                 Now</Button>
                                         </Grid>
                                     </Grid>
@@ -502,7 +516,7 @@ class Booking extends Component{
                                                 Premium
                                             </Typography>
                                         </Grid>
-                                        <Grid className={classes.bookinge_card_subDetail}>
+                                        <Grid className={classes.booking_card_subDetail}>
                                             <SettingsSuggestIcon style={{
                                                 fontSize: '16px',
                                                 marginRight: '2px',
@@ -1008,6 +1022,42 @@ class Booking extends Component{
                     </Grid>
                 </Grid>
             </Grid>
+                <Dialog
+                    fullWidth
+                    maxWidth="sm=8"
+                    open={this.state.open}
+                    //TransitionComponent={}
+                    keepMounted
+                    onClose={this.handleClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogTitle style={{ textAlign: 'center', fontSize: '30px', color: '#000d6b' }}>{"VEHICLE BOOKING"}</DialogTitle>
+                    <DialogContent>
+                        <Grid style={{width:'91.5vw',height:'80vh',border:'1px solid red'}}>
+                            <Grid style={{width:'90vw', height:'60vh',marginTop:'20px'}}>
+                                <TextField id="outlined-basic" label="Location" variant="outlined" style={{marginLeft:'20px'}}/>
+                                <TextField id="outlined-basic" label="Pick Up Date" variant="outlined" style={{marginLeft:'20px'}}/>
+                                <TextField id="outlined-basic" label="Pick Up Time" variant="outlined" style={{marginLeft:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px', marginTop:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px', marginTop:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px', marginTop:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px', marginTop:'20px'}}/>
+                                <TextField id="outlined-basic" label="Return Date" variant="outlined" style={{marginLeft:'20px', marginTop:'20px'}}/>
+                                <Grid container
+                                    direction="row"
+                                    justifyContent="flex-end"
+                                    alignItems="center">
+                                    <GDSEButton label="Book Here" type="submit" size="medium"
+                                                color="primary" variant="contained"
+                                                style={{margin: '30px 20px 20px 0'}}/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </DialogContent>
+                </Dialog>
+            </>
         )
     }
 }
