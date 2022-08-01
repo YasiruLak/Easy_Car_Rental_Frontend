@@ -9,6 +9,7 @@ import SignUpService from "../../service/SignUpService";
 import GDSESnackBar from "../../components/common/SnackBar";
 import GDSEButton from "../../components/common/Button";
 import Button from "@mui/material/Button";
+import VehicleService from "../../service/VehicleService";
 
 // const role = [
 //     {label: 'DRIVER'},
@@ -19,6 +20,13 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
+            licenceImage: null,
+            nicImage:null,
+
+            licenceView:null,
+            nicView:null,
+
             formData: {
                 id: '',
                 nic: '',
@@ -49,6 +57,13 @@ class SignUp extends Component {
 
     clearFields = () => {
         this.setState({
+
+            licenceImage: null,
+            nicImage:null,
+
+            licenceView:null,
+            nicView:null,
+
             formData: {
                 id: '',
                 nic: '',
@@ -69,6 +84,29 @@ class SignUp extends Component {
         });
     };
 
+    addRegisterUserImage=async (id) =>{
+
+        var bodyFormData = new FormData();
+        bodyFormData.append('param', this.state.licenceImage);
+        bodyFormData.append('param', this.state.nicImage);
+
+        let res = await SignUpService.addRegisterUserImage(bodyFormData,id);
+        if (res.status === 200) {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'success'
+            });
+        }else {
+            this.setState({
+                alert: true,
+                message: res.message,
+                severity: 'error'
+            });
+        }
+
+    }
+
 
     submitSignUp = async () => {
         let formData = this.state.formData;
@@ -76,10 +114,10 @@ class SignUp extends Component {
             let formData = this.state.formData;
 
             let res = await SignUpService.postSignUpCustomer(formData);
+            //this.addRegisterUserImage(formData.id);
 
-            console.log(res)    //print the promise
-
-            if (res.status === 200) {
+            if (res.status === 201) {
+                this.addRegisterUserImage(formData.id);
                 this.setState({
                     alert: true,
                     message: res.data.message,
@@ -89,7 +127,7 @@ class SignUp extends Component {
             } else {
                 this.setState({
                     alert: true,
-                    message: res.response.data.message,
+                    message: res.message,
                     severity: 'error'
                 });
             }
@@ -97,10 +135,10 @@ class SignUp extends Component {
             let formData = this.state.formData;
 
             let res = await SignUpService.postSignUpDriver(formData);
+            //this.addRegisterUserImage(formData.id);
 
-            console.log(res)    //print the promise
-
-            if (res.status === 200) {
+            if (res.status === 201) {
+                this.addRegisterUserImage(formData.id);
                 this.setState({
                     alert: true,
                     message: res.data.message,
@@ -150,7 +188,7 @@ class SignUp extends Component {
                                             height: '140px',
                                             width: '240px',
                                             border: '1px solid blue',
-                                            // backgroundImage:"url(" +this.state.frontView+ ")",
+                                            backgroundImage:"url(" +this.state.licenceView+ ")",
                                             backgroundSize: 'cover',
                                             margin:'20px 20px 0 0'
                                         }}/>
@@ -161,7 +199,7 @@ class SignUp extends Component {
                                             height: '140px',
                                             width: '240px',
                                             border: '1px solid blue',
-                                            // backgroundImage:"url(" +this.state.frontView+ ")",
+                                            backgroundImage:"url(" +this.state.nicView+ ")",
                                             backgroundSize: 'cover',
                                             margin:'20px 0 0 20px'
                                         }}/>
@@ -174,12 +212,12 @@ class SignUp extends Component {
                                             id="contained-button-file01"
                                             multiple
                                             type="file"
-                                            // onChange={(e) => {
-                                            //     this.setState({
-                                            //         frontImage: e.target.files[0],
-                                            //         frontView : URL.createObjectURL(e.target.files[0])
-                                            //     })
-                                            // }}
+                                            onChange={(e) => {
+                                                this.setState({
+                                                    licenceImage: e.target.files[0],
+                                                    licenceView : URL.createObjectURL(e.target.files[0])
+                                                })
+                                            }}
                                         />
                                             <label htmlFor="contained-button-file01">
                                                 <Button variant="outlined" color="primary" size="medium" component="span">
@@ -192,22 +230,21 @@ class SignUp extends Component {
                                             style={{display: 'none'}}
                                             accept="image/*"
                                             className={classes.input}
-                                            id="contained-button-file01"
+                                            id="contained-button-file02"
                                             multiple
                                             type="file"
-                                            // onChange={(e) => {
-                                            //     this.setState({
-                                            //         frontImage: e.target.files[0],
-                                            //         frontView : URL.createObjectURL(e.target.files[0])
-                                            //     })
-                                            // }}
+                                            onChange={(e) => {
+                                                this.setState({
+                                                    nicImage: e.target.files[0],
+                                                    nicView : URL.createObjectURL(e.target.files[0])
+                                                })
+                                            }}
                                         />
-                                            <label htmlFor="contained-button-file01">
+                                            <label htmlFor="contained-button-file02">
                                                 <Button variant="outlined" color="primary" size="medium" component="span">
                                                     License Upload
                                                 </Button>
                                             </label>
-
                                         </div>
                                     </Grid>
                                 </Grid>

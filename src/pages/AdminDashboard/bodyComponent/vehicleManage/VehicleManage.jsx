@@ -201,7 +201,6 @@ class VehicleManage extends Component {
             let res = await VehicleService.putVehicle(formData);
             if (res.status === 200) {
 
-
                 let front=this.state.frontImage;
                 let back=this.state.backImage;
                 let side=this.state.sideImage;
@@ -216,6 +215,12 @@ class VehicleManage extends Component {
                         await this.updateCarImage(formData, formData.vehicleId, viewList[i]);
                     }
                 }
+
+                // this.setState({
+                //     alert: true,
+                //     message: "Image Updated",
+                //     severity: 'error'
+                // });
 
                 this.setState({
                     alert: true,
@@ -236,9 +241,9 @@ class VehicleManage extends Component {
         }
     };
 
-    updateCarImage=async (data,carId,view) =>{
-        let response =await VehicleService.updateCarImage(data,carId,view);
-        if (response.status!=200){
+    updateCarImage=async (data,vehicleId,view) =>{
+        let response =await VehicleService.updateCarImage(data,vehicleId,view);
+        if (response.status!==200){
             alert("Car Image Update Fail")
         }
     }
@@ -816,6 +821,7 @@ class VehicleManage extends Component {
                                                     <IconButton
                                                         onClick={() => {
                                                             this.updateVehicle(row);
+                                                            //this.updateCarImage();
                                                         }}
                                                     >
                                                         <EditIcon color="primary"/>
