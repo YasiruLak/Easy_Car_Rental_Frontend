@@ -23,6 +23,17 @@ class VehicleManage extends Component {
         super(props);
 
         this.state = {
+
+            frontImage: null,
+            backImage: null,
+            sideImage: null,
+            interiorImage: null,
+
+            frontView: null,
+            backView: null,
+            sideView: null,
+            interiorView: null,
+
             formData: {
                 vehicleId: '',
                 registrationNo: '',
@@ -95,18 +106,37 @@ class VehicleManage extends Component {
         }
     }
 
+    addCarImage=async (vehicleId) =>{
+
+        var bodyFormData = new FormData();
+        bodyFormData.append('param', this.state.frontImage);
+        bodyFormData.append('param', this.state.backImage);
+        bodyFormData.append('param', this.state.sideImage);
+        bodyFormData.append('param', this.state.interiorImage);
+
+        let res = await VehicleService.addCarImage(bodyFormData,vehicleId);
+        if (res.data.code===200){alert(res.data.message)}else {
+            alert(res.data.message);
+        }
+
+    }
+
     deleteVehicle = async (vehicleId) => {
         let params = {
             vehicleId: vehicleId
+
         }
         let res = await VehicleService.deleteVehicle(params);
 
         if (res.status === 200) {
-            this.setState({
-                alert: true,
-                message: res.data.message,
-                severity: 'success'
-            });
+            let res =await VehicleService.deleteCarImages(vehicleId);
+            if (res.status === 200) {
+                this.setState({
+                    alert: true,
+                    message: res.data.message,
+                    severity: 'success'
+                });
+            }
             this.loadData();
         } else {
             this.setState({
@@ -144,8 +174,10 @@ class VehicleManage extends Component {
     submitVehicle = async () => {
         let formData = this.state.formData;
 
+
         if (this.state.btnLabel === "save") {
             let res = await VehicleService.postVehicle(formData);
+            this.addCarImage(formData.vehicleId)
 
             console.log(res)    //print the promise
 
@@ -157,6 +189,7 @@ class VehicleManage extends Component {
                 });
                 this.clearFields();
                 await this.loadData();
+
             } else {
                 this.setState({
                     alert: true,
@@ -167,6 +200,23 @@ class VehicleManage extends Component {
         } else {
             let res = await VehicleService.putVehicle(formData);
             if (res.status === 200) {
+
+
+                let front=this.state.frontImage;
+                let back=this.state.backImage;
+                let side=this.state.sideImage;
+                let interior=this.state.interiorImage;
+                let list=[front,back,side,interior]
+                let viewList=["Front","Back","Side","Interior"]
+
+                for (var i=0; i<list.length; i++){
+                    if (list[i] != null){
+                        let formData = new FormData();
+                        formData.append('carImage',list[i]);
+                        await this.updateCarImage(formData, formData.vehicleId, viewList[i]);
+                    }
+                }
+
                 this.setState({
                     alert: true,
                     message: res.data.message,
@@ -185,6 +235,13 @@ class VehicleManage extends Component {
             }
         }
     };
+
+    updateCarImage=async (data,carId,view) =>{
+        let response =await VehicleService.updateCarImage(data,carId,view);
+        if (response.status!=200){
+            alert("Car Image Update Fail")
+        }
+    }
 
     updateVehicle = (data) => {
         console.log(data)
@@ -219,6 +276,17 @@ class VehicleManage extends Component {
 
     clearFields = () => {
         this.setState({
+
+            frontImage: null,
+            backImage : null,
+            sideImage : null,
+            interiorImage : null,
+
+            frontView : null,
+            backView : null,
+            sideView : null,
+            interiorView : null,
+
             formData: {
                 vehicleId: '',
                 registrationNo: '',
@@ -396,7 +464,7 @@ class VehicleManage extends Component {
                                 getOptionLabel={
                                     (option) => option.type
                                 }
-                                value={this.state.formData.transmissionType}
+                                // value={this.state.formData.transmissionType}
                                 size="small"
                                 id="controllable-states-demo"
                                 options={this.state.transmissionTypes}
@@ -556,7 +624,7 @@ class VehicleManage extends Component {
                                 justifyContent: 'center',
                                 height: '140px',
                                 border: '1px solid blue',
-                                // backgroundImage:"url(" +this.state.frontView+ ")",
+                                backgroundImage:"url(" +this.state.frontView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
 
@@ -567,7 +635,7 @@ class VehicleManage extends Component {
                                 justifyContent: 'center',
                                 height: '140px',
                                 border: '1px solid blue',
-                                // backgroundImage:"url(" +this.state.backView+ ")",
+                                backgroundImage:"url(" +this.state.backView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
 
@@ -578,7 +646,7 @@ class VehicleManage extends Component {
                                 justifyContent: 'center',
                                 height: '140px',
                                 border: '1px solid blue',
-                                // backgroundImage:"url(" +this.state.sideView+ ")",
+                                backgroundImage:"url(" +this.state.sideView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
 
@@ -589,7 +657,7 @@ class VehicleManage extends Component {
                                 justifyContent: 'center',
                                 height: '140px',
                                 border: '1px solid blue',
-                                // backgroundImage:"url(" +this.state.interiorView+ ")",
+                                backgroundImage:"url(" +this.state.interiorView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
 
@@ -605,12 +673,12 @@ class VehicleManage extends Component {
                                 id="contained-button-file01"
                                 multiple
                                 type="file"
-                                // onChange={(e) => {
-                                //     this.setState({
-                                //         frontImage: e.target.files[0],
-                                //         frontView : URL.createObjectURL(e.target.files[0])
-                                //     })
-                                // }}
+                                onChange={(e) => {
+                                    this.setState({
+                                        frontImage: e.target.files[0],
+                                        frontView : URL.createObjectURL(e.target.files[0])
+                                    })
+                                }}
                             />
                                 <label htmlFor="contained-button-file01">
                                     <Button variant="outlined" color="primary" size="medium" component="span">
@@ -627,12 +695,12 @@ class VehicleManage extends Component {
                                 id="contained-button-file02"
                                 multiple
                                 type="file"
-                                // onChange={(e) => {
-                                //     this.setState({
-                                //         backImage: e.target.files[0],
-                                //         backView : URL.createObjectURL(e.target.files[0])
-                                //     })
-                                // }}
+                                onChange={(e) => {
+                                    this.setState({
+                                        backImage: e.target.files[0],
+                                        backView : URL.createObjectURL(e.target.files[0])
+                                    })
+                                }}
                             />
                                 <label htmlFor="contained-button-file02">
                                     <Button variant="outlined" color="primary" size="medium" component="span">
@@ -649,12 +717,12 @@ class VehicleManage extends Component {
                                 id="contained-button-file03"
                                 multiple
                                 type="file"
-                                // onChange={(e) => {
-                                //     this.setState({
-                                //         sideImage: e.target.files[0],
-                                //         sideView : URL.createObjectURL(e.target.files[0])
-                                //     })
-                                // }}
+                                onChange={(e) => {
+                                    this.setState({
+                                        sideImage: e.target.files[0],
+                                        sideView : URL.createObjectURL(e.target.files[0])
+                                    })
+                                }}
                             />
                                 <label htmlFor="contained-button-file03">
                                     <Button variant="outlined" color="primary" size="medium" component="span">
@@ -671,12 +739,12 @@ class VehicleManage extends Component {
                                 id="contained-button-file04"
                                 multiple
                                 type="file"
-                                // onChange={(e) => {
-                                //     this.setState({
-                                //         interiorImage: e.target.files[0],
-                                //         interiorView : URL.createObjectURL(e.target.files[0])
-                                //     })
-                                // }}
+                                onChange={(e) => {
+                                    this.setState({
+                                        interiorImage: e.target.files[0],
+                                        interiorView : URL.createObjectURL(e.target.files[0])
+                                    })
+                                }}
                             />
                                 <label htmlFor="contained-button-file04">
                                     <Button variant="outlined" color="primary" size="medium" component="span">
