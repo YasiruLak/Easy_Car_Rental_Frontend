@@ -54,6 +54,7 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
+                noOfVehicle:'',
                 vehicleAvailability: ''
 
             },
@@ -118,7 +119,6 @@ class VehicleManage extends Component {
         if (res.data.code===200){alert(res.data.message)}else {
             alert(res.data.message);
         }
-
     }
 
     deleteVehicle = async (vehicleId) => {
@@ -249,7 +249,6 @@ class VehicleManage extends Component {
     }
 
     updateVehicle = (data) => {
-        console.log(data)
 
         this.setState({
             btnLabel: 'update',
@@ -274,6 +273,7 @@ class VehicleManage extends Component {
                     monthlyMileage: data.freeMileage.monthlyMileage
                 },
                 lastServiceMileage: data.lastServiceMileage,
+                noOfVehicle:data.noOfVehicle,
                 vehicleAvailability: data.vehicleAvailability
             }
         });
@@ -312,6 +312,7 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
+                noOfVehicle:'',
                 vehicleAvailability: ''
             }
         });
@@ -602,6 +603,24 @@ class VehicleManage extends Component {
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+
+                            <TextValidator
+                                id="outlinedbasic"
+                                placeholder="500 Km"
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="No Of Vehicle"
+                                value={this.state.formData.noOfVehicle}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.noOfVehicle = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <Autocomplete
                                 // style={{padding: '10px', width: '230px'}}
                                 onChange={(e, value, r) => {
@@ -776,23 +795,23 @@ class VehicleManage extends Component {
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell align="left">Vehicle Id</TableCell>
-                                    <TableCell align="left">Registration No</TableCell>
-                                    <TableCell align="left">Vehicle Brand</TableCell>
-                                    <TableCell align="left">Number Of Passengers</TableCell>
-                                    {/* <TableCell align="left">Driver Type</TableCell> */}
+                                    <TableCell align="left">Id</TableCell>
+                                    <TableCell align="left">Reg_No</TableCell>
+                                    <TableCell align="left">Brand</TableCell>
+                                    <TableCell align="left">Passengers</TableCell>
                                     <TableCell align="left">Color</TableCell>
-                                    <TableCell align="left">Vehicle Type</TableCell>
-                                    <TableCell align="left">Fuel Type</TableCell>
-                                    <TableCell align="left">Transmission Type</TableCell>
-                                    <TableCell align="left">Daily Mileage</TableCell>
-                                    <TableCell align="left">Monthly Mileage</TableCell>
-                                    <TableCell align="left">Daily Rate</TableCell>
-                                    <TableCell align="left">Monthly Rate</TableCell>
-                                    <TableCell align="left">Vehicle Availability Type</TableCell>
-                                    <TableCell align="left">Damage Fee</TableCell>
-                                    <TableCell align="left">LastService Mileage</TableCell>
-                                    <TableCell align="left">Vehicle Service Mileage</TableCell>
+                                    <TableCell align="left">Vehicle_Type</TableCell>
+                                    <TableCell align="left">Fuel</TableCell>
+                                    <TableCell align="left">Transmission</TableCell>
+                                    <TableCell align="left">Daily_Mileage</TableCell>
+                                    <TableCell align="left">Monthly_Mileage</TableCell>
+                                    <TableCell align="left">Daily_Rate</TableCell>
+                                    <TableCell align="left">Monthly_Rate</TableCell>
+                                    <TableCell align="left">Availability</TableCell>
+                                    <TableCell align="left">Damage_Fee</TableCell>
+                                    <TableCell align="left">LastService_Mileage</TableCell>
+                                    <TableCell align="left">Vehicle_Service_Mileage</TableCell>
+                                    <TableCell align="left">No_Of_Vehicle</TableCell>
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -816,6 +835,7 @@ class VehicleManage extends Component {
                                             <TableCell align="left">{row.refundableDamagedFee}</TableCell>
                                             <TableCell align="left">{row.lastServiceMileage}</TableCell>
                                             <TableCell align="left">{row.vehicleMileage}</TableCell>
+                                            <TableCell align="left">{row.noOfVehicle}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton

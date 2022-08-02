@@ -2,29 +2,25 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import {Grid} from "@mui/material";
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import Stack from '@mui/material/Stack';
 
-
-
-
-export default function BasicDatePicker() {
-    const [value, setValue] = React.useState(null);
-
+export default function ResponsiveDatePickers() {
+    const [value, setValue] = React.useState(new Date());
 
     return (
-        <Grid style={{width:'13vw', backgroundColor:'white',borderRadius:'5px',margin:'2px'}}>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <DatePicker
-                    label={"Pick-up Date"}
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <Stack >
+                <DesktopDatePicker
+                    label="For desktop"
                     value={value}
+                    minDate={new Date('2017-01-01')}
                     onChange={(newValue) => {
                         setValue(newValue);
                     }}
                     renderInput={(params) => <TextField {...params} />}
                 />
-            </LocalizationProvider>
-        </Grid>
-
+            </Stack>
+        </LocalizationProvider>
     );
 }

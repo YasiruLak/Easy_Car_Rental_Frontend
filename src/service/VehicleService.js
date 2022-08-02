@@ -35,7 +35,7 @@ class VehicleService {
 
     updateCarImage =async (data,vehicleId,view) =>{
         const promise = new Promise((resolve, reject) => {
-            axios.post('api/v1/vehicle/updateCarImage?carId='+vehicleId+'&view='+view,data)
+            axios.post('api/v1/vehicle/updateCarImage?vehicleId='+vehicleId+'&view='+view,data)
 
                 .then((res) => {
                     return resolve(res)

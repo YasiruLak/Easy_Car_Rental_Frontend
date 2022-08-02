@@ -16,6 +16,32 @@ import TableContainer from "@mui/material/TableContainer";
 class AdminHome extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            formData: {
+                id: '',
+                nic: '',
+                name: {
+                    firstName:'',
+                    lastName: ''
+                },
+                address: '',
+                drivingLicenseNo: '',
+                email: '',
+                contactNo: '',
+                user: {
+                    userName:'',
+                    password: ''
+                }
+            },
+            alert: false,
+            message: '',
+            severity: '',
+
+            data: [],
+            btnLabel: 'update',
+            btnColor: 'secondary'
+        }
     }
 
     render() {
@@ -278,25 +304,29 @@ class AdminHome extends Component {
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell align="left">Booking Id</TableCell>
                                         <TableCell align="left">Customer Id</TableCell>
-                                        <TableCell align="left">Pickup Date</TableCell>
-                                        <TableCell align="left">Pickup Time</TableCell>
-                                        <TableCell align="left">Return Date</TableCell>
-                                        <TableCell align="left">Driver Request</TableCell>
+                                        <TableCell align="left">First Name</TableCell>
+                                        <TableCell align="left">Last Name</TableCell>
+                                        <TableCell align="left">NIC No</TableCell>
+                                        <TableCell align="left">License No</TableCell>
+                                        <TableCell align="left">Address</TableCell>
+                                        <TableCell align="left">Email</TableCell>
+                                        <TableCell align="left">Contact No</TableCell>
                                         <TableCell align="left">Action</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {
-                                        //this.state.data.map((row) => (
+                                        this.state.data.map((row) => (
                                         <TableRow>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
+                                            <TableCell align="left">{row.id}</TableCell>
+                                            <TableCell align="left">{row.nic}</TableCell>
+                                            <TableCell align="left">{row.name.firstName}</TableCell>
+                                            <TableCell align="left">{row.name.lastName}</TableCell>
+                                            <TableCell align="left">{row.drivingLicenseNo}</TableCell>
+                                            <TableCell align="left">{row.address}</TableCell>
+                                            <TableCell align="left">{row.email}</TableCell>
+                                            <TableCell align="left">{row.contactNo}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
@@ -318,7 +348,7 @@ class AdminHome extends Component {
                                                 </Tooltip>
                                             </TableCell>
                                         </TableRow>
-                                        //))
+                                        ))
                                     }
                                 </TableBody>
                             </Table>
