@@ -149,7 +149,7 @@ class VehicleManage extends Component {
 
     exampleForMap = () => {
         this.state.data.map((value, index) => {
-            console.log(value)   // access element one by one
+            console.log(value)
         })
     };
 
@@ -161,8 +161,6 @@ class VehicleManage extends Component {
                 data: res.data.data
             });
         }
-        console.log(this.state.data)    // print customers array
-
         this.exampleForMap()
 
     };

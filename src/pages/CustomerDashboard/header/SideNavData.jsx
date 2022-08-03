@@ -8,6 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import LogoutIcon from '@mui/icons-material/Logout';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
 
 export default function SideNavData({handleDrawerClose}) {
@@ -20,6 +21,7 @@ export default function SideNavData({handleDrawerClose}) {
     const listItemData = [
 
         {label: "Booking", link: "/booking", icon: <DirectionsCarIcon/>},
+        {label: "Driver", link: "/driverView", icon: <ContactPhoneIcon/>},
         {label: "Profile", link: "/customerProfile", icon: <PersonIcon/>},
         {label: "Log out", link: "/logOut", icon: <LogoutIcon/>},
 

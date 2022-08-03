@@ -75,7 +75,7 @@ class Booking extends Component {
                               display: 'flex',
                               flexWrap: 'wrap',
                               justifyContent: 'center',
-                              backgroundColor: '#485460',
+                              backgroundColor: '#ffa801',
                               width: '81vw',
                           }}>
                         <Typography variant="h4" style={{margin: '14px 0 20px 0', color: 'white',}}>Book Your Dream
@@ -126,8 +126,7 @@ class Booking extends Component {
                     <Grid className={classes.subContainer}>
                         <Grid className={classes.booking_detail_row}>
                             <div className={classes.card}>
-                                {
-                                    this.state.vehicleList.map((vehicle) => (
+                                {this.state.vehicleList.map((vehicle) => (
                                         <Card sx={{maxWidth: 345, minHeight: 380}} style={{margin: '0 20px 0 0'}}>
                                             <CardMedia
                                                 component="img"
@@ -208,881 +207,16 @@ class Booking extends Component {
                                         </Card>
                                     ))
                                 }
-
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Suzuki Alto K10 - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            71,390.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            3,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    8 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <StarIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    General*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Suzuki Celerio - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            77,220.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            3,300.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    5 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <StarIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    General*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-
-                            </div>
-                        </Grid>
-                        <Grid className={classes.booking_detail_row}>
-                            <div className={classes.card}>
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Perodua (Daihatsu) Axia - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            90,200.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            3,800.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    2 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <StarIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    General*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Toyota Prius C/ Aqua - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            110,330.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            5,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    8 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <StarIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    General*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Toyota Corolla Axio/ NZE141*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            120,330.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            5,500.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    4 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <WorkspacePremiumIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Premium*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <SettingsSuggestIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Manual*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                            </div>
-                        </Grid>
-                        <Grid className={classes.booking_detail_row}>
-                            <div className={classes.card}>
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Perodua Bezza Prime - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            120,330.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            5,500.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    5 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <WorkspacePremiumIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Premium*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Toyota Allion NZT 260 - Manual*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            155,760.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            5,800.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    3 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <WorkspacePremiumIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Premium*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <SettingsSuggestIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Manual*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Toyota Axio NKR 165 - Manual*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            175,230.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            6,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    2 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <WorkspacePremiumIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Premium*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <SettingsSuggestIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Manual*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                            </div>
-                        </Grid>
-                        <Grid className={classes.booking_detail_row}>
-                            <div className={classes.card}>
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Toyota Premio - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            227,150.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            10,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    2 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <ChairIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Luxury*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            Mercedes - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            300,000.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            18,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    2 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <ChairIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Luxury*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
-                                {/*<Card style={{margin: '0 20px 0 0'}} sx={{maxWidth: 345, minHeight: 380}}>*/}
-                                {/*    <CardMedia*/}
-                                {/*        component="img"*/}
-                                {/*        alt="green iguana"*/}
-                                {/*        height="140"*/}
-                                {/*        image={c1}*/}
-                                {/*    />*/}
-                                {/*    <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>*/}
-                                {/*        <Typography gutterBottom variant="h6" component="div"*/}
-                                {/*                    style={{color: '#ff4d4d'}}>*/}
-                                {/*            BMW i8 - Auto*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green'}}>*/}
-                                {/*            300,000.00 lkr (2400 free km) - month*/}
-                                {/*        </Typography>*/}
-                                {/*        <Typography gutterBottom variant="body2" component="div"*/}
-                                {/*                    style={{color: 'green', marginTop: '8px'}}>*/}
-                                {/*            18,000.00 lkr (100 free km) - daily*/}
-                                {/*        </Typography>*/}
-
-                                {/*        <Grid className={classes.booking_card_detail}>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <DirectionsCarFilledOutlinedIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    2 Cars*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <ChairIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Luxury*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*            <Grid className={classes.booking_card_subDetail}>*/}
-                                {/*                <AutorenewIcon style={{*/}
-                                {/*                    fontSize: '16px',*/}
-                                {/*                    marginRight: '2px',*/}
-                                {/*                    color: '#2C3A47'*/}
-                                {/*                }}/>*/}
-                                {/*                <Typography variant="caption" display="block" gutterBottom*/}
-                                {/*                            style={{*/}
-                                {/*                                color: '#2C3A47',*/}
-                                {/*                                marginTop: '10px',*/}
-                                {/*                                marginLeft: '4px'*/}
-                                {/*                            }}>*/}
-                                {/*                    Auto*/}
-                                {/*                </Typography>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-
-                                {/*        <Grid>*/}
-                                {/*            <Grid className={classes.desc_2}>*/}
-                                {/*                <Button variant="contained" fullWidth*/}
-                                {/*                        style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent*/}
-                                {/*                    Now</Button>*/}
-                                {/*            </Grid>*/}
-                                {/*        </Grid>*/}
-                                {/*    </CardContent>*/}
-                                {/*</Card>*/}
                             </div>
                         </Grid>
                     </Grid>
+                        {/*<Grid className={classes.booking_detail_row}>*/}
+                        {/*</Grid>*/}
+                        {/*<Grid className={classes.booking_detail_row}>*/}
+                        {/*</Grid>*/}
+                        {/*<Grid className={classes.booking_detail_row}>*/}
+                        {/*</Grid>*/}
+
                 </Grid>
                 <Dialog
                     fullWidth
@@ -1099,36 +233,89 @@ class Booking extends Component {
                         color: '#000d6b'
                     }}>{"VEHICLE BOOKING"}</DialogTitle>
                     <DialogContent>
-                        <Grid style={{width: '91.5vw', height: '80vh', border: '1px solid red'}}>
-                            <Grid style={{width: '90vw', height: '60vh', marginTop: '20px'}}>
+                        <Grid style={{width: '88vw', height: '80vh'}}>
+                            <Grid style={{width: '90vw', height: '50vh', marginTop: '0'}}>
                                 <TextField id="outlined-basic" label="Rent Id" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Pick Up Date" variant="outlined"
+                                <TextField id="outlined-basic" label="Customer Id" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Pick Up Time" variant="outlined"
+                                <TextField id="outlined-basic" label="Customer Name" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
+                                <TextField id="outlined-basic" label="Driver Id" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
+                                <TextField id="outlined-basic" label="Driver Name" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
+                                <TextField id="outlined-basic" label="Vehicle Id" variant="outlined"
                                            style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
+                                <TextField id="outlined-basic" label="Refundable Fee" variant="outlined"
                                            style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
-                                           style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
-                                           style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <TextField id="outlined-basic" label="Return Date" variant="outlined"
-                                           style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <Grid container
-                                      direction="row"
-                                      justifyContent="flex-end"
-                                      alignItems="center">
-                                    <GDSEButton label="Book Here" type="submit" size="medium"
-                                                color="primary" variant="contained"
-                                                style={{margin: '30px 20px 20px 0'}}/>
+                                <Grid className={classes.book_Bar}>
+                                <Autocomplete
+                                    style={{marginLeft: '0', marginTop:'0'}}
+                                    // onChange={(e, value, r) => {
+                                    //
+                                    //     let formData = this.state.formData
+                                    //     formData.vehicleAvailability = value.type
+                                    //     this.setState({formData})
+                                    //
+                                    // }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    size="large"
+                                    id="controllable-states-demo"
+                                    options={this.state.Locations}
+                                    sx={{width: 222}}
+                                    renderInput={(params) => <TextField {...params} label="Location"/>}
+                                />
+                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
+                                    <DatePicker label="Pickup Date" sx={{width: 200}}/>
                                 </Grid>
+                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
+                                    <Timepicker label="Pickup Time"  sx={{width: 200}}/>
+                                </Grid>
+                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
+                                    <DatePicker label="Return Date" sx={{width: 200}}/>
+                                </Grid>
+                                </Grid>
+                                <Grid className={classes.signUp_Upload} style={{margin:'0 20px 10px 20px'}}>
+                                    <div className={classes.signUp_imageDiv} style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'flex-start',
+                                        height: '140px',
+                                        width: '240px',
+                                        //border: '1px solid blue',
+                                        //backgroundImage:"url(" +this.state.licenceView+ ")",
+                                        backgroundSize: 'cover',
+                                        margin:'0 20px 0 0'
+                                    }}/>
+                                </Grid>
+                                <div style={{margin:'0 0 0 60px'}}><input
+                                    style={{display: 'none'}}
+                                    accept="image/*"
+                                    className={classes.input}
+                                    id="contained-button-file02"
+                                    multiple
+                                    type="file"
+                                    // onChange={(e) => {
+                                    //     this.setState({
+                                    //         nicImage: e.target.files[0],
+                                    //         nicView : URL.createObjectURL(e.target.files[0])
+                                    //     })
+                                    // }}
+                                />
+                                    <label htmlFor="contained-button-file02">
+                                        <Button variant="outlined" color="primary" size="medium" component="span">
+                                            Payment Slip Upload
+                                        </Button>
+                                    </label>
+                                    <GDSEButton label="Placed Order" type="submit" size="medium"
+                                                color="primary" variant="contained"
+                                                style={{margin: '0 20px 80px 880px'}}/>
+                               </div>
+
+
                             </Grid>
                         </Grid>
                     </DialogContent>

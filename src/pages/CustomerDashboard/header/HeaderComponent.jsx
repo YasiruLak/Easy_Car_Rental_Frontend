@@ -5,6 +5,7 @@ import {Box} from "@mui/material";
 import SideNav from "./SideNav";
 import CustomerProfile from "../bodyComponent/customerProfile/CustomerProfile";
 import Booking from "../bodyComponent/booking/Booking";
+import DriverView from "../bodyComponent/driverView/driverView";
 
 
 
@@ -22,6 +23,7 @@ export default function CustomerDashboard() {
                 <Routes>
                     <Route exact path="/booking" element={<Booking/>}/>
                     <Route exact path="/customerProfile" element={<CustomerProfile/>}/>
+                    <Route exact path="/driverView" element={<DriverView/>}/>
                 </Routes>
             </Box>
         </div>

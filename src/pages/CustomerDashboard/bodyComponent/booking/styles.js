@@ -22,6 +22,19 @@ export const styleSheet = {
         flexDirection: 'column',
         //backgroundColor:'red',
     },
+
+    book_Bar:{
+        width: '81vw',
+        height: '20vh',
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        flexWrap: 'wrap',
+        margin:'0px 0 10px 0',
+        flexDirection: 'column',
+        //backgroundColor:'red',
+    },
+
     subContainer:{
         width: '81vw',
         // height: '85vh',

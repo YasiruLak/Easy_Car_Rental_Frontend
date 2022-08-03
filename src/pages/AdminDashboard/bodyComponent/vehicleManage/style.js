@@ -10,7 +10,7 @@ export const styleSheet= {
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
-        backgroundColor:'red'
+        //backgroundColor:'red'
     },
 
     search_Bar: {
