@@ -96,7 +96,7 @@ class AdminHome extends Component {
                                 }}>
                                     <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
                                                 style={{fontSize: '28px'}}>
-                                        Vehicle
+                                       Customer
                                     </Typography>
                                     <Typography lg={{mb: 1.5}} color="text.secondary" style={{
                                         alignItems: 'center',
@@ -125,7 +125,7 @@ class AdminHome extends Component {
                                 }}>
                                     <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
                                                 style={{fontSize: '28px'}}>
-                                        Vehicle
+                                        Booking
                                     </Typography>
                                     <Typography lg={{mb: 1.5}} color="text.secondary" style={{
                                         alignItems: 'center',
@@ -155,7 +155,7 @@ class AdminHome extends Component {
                                 }}>
                                     <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
                                                 style={{fontSize: '28px'}}>
-                                        Vehicle
+                                        Drivers
                                     </Typography>
                                     <Typography lg={{mb: 1.5}} color="text.secondary" style={{
                                         alignItems: 'center',
@@ -168,124 +168,124 @@ class AdminHome extends Component {
                             </Card>
                         </Grid>
                     </Grid>
-                    <Grid className={classes.Admin_Home_Card}>
-                        <Grid
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center">
-                            <Card sx={{minWidth: 275}} style={{
-                                backgroundColor: '#808e9b',
-                                color: 'white',
-                                width: '200px',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
-                                <CardContent style={{
-                                    alignItems: 'center', justifyContent: 'center', display: 'flex',
-                                    flexWrap: 'wrap', flexDirection: 'column',
-                                }}>
-                                    <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
-                                                style={{fontSize: '28px'}}>
-                                        Vehicle
-                                    </Typography>
-                                    <Typography lg={{mb: 1.5}} color="text.secondary" style={{
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '22px'
-                                    }}>
-                                        01
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center">
-                            <Card sx={{minWidth: 275}} style={{
-                                backgroundColor: '#808e9b',
-                                color: 'white',
-                                width: '200px',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
-                                <CardContent style={{
-                                    alignItems: 'center', justifyContent: 'center', display: 'flex',
-                                    flexWrap: 'wrap', flexDirection: 'column',
-                                }}>
-                                    <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
-                                                style={{fontSize: '28px'}}>
-                                        Vehicle
-                                    </Typography>
-                                    <Typography lg={{mb: 1.5}} color="text.secondary" style={{
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '22px'
-                                    }}>
-                                        01
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center">
-                            <Card sx={{minWidth: 275}} style={{
-                                backgroundColor: '#808e9b',
-                                color: 'white',
-                                width: '200px',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
-                                <CardContent style={{
-                                    alignItems: 'center', justifyContent: 'center', display: 'flex',
-                                    flexWrap: 'wrap', flexDirection: 'column',
-                                }}>
-                                    <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
-                                                style={{fontSize: '28px'}}>
-                                        Vehicle
-                                    </Typography>
-                                    <Typography lg={{mb: 1.5}} color="text.secondary" style={{
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '22px'
-                                    }}>
-                                        01
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center">
-                            <Card sx={{minWidth: 275}} style={{
-                                backgroundColor: '#808e9b',
-                                color: 'white',
-                                width: '200px',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
-                                <CardContent style={{
-                                    alignItems: 'center', justifyContent: 'center', display: 'flex',
-                                    flexWrap: 'wrap', flexDirection: 'column',
-                                }}>
-                                    <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom
-                                                style={{fontSize: '28px'}}>
-                                        Vehicle
-                                    </Typography>
-                                    <Typography lg={{mb: 1.5}} color="text.secondary" style={{
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '22px'
-                                    }}>
-                                        01
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    </Grid>
+                    {/*<Grid className={classes.Admin_Home_Card}>*/}
+                    {/*    <Grid*/}
+                    {/*        direction="column"*/}
+                    {/*        justifyContent="center"*/}
+                    {/*        alignItems="center">*/}
+                    {/*        <Card sx={{minWidth: 275}} style={{*/}
+                    {/*            backgroundColor: '#808e9b',*/}
+                    {/*            color: 'white',*/}
+                    {/*            width: '200px',*/}
+                    {/*            alignItems: 'center',*/}
+                    {/*            justifyContent: 'center'*/}
+                    {/*        }}>*/}
+                    {/*            <CardContent style={{*/}
+                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
+                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
+                    {/*            }}>*/}
+                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
+                    {/*                            style={{fontSize: '28px'}}>*/}
+                    {/*                    Vehicle*/}
+                    {/*                </Typography>*/}
+                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
+                    {/*                    alignItems: 'center',*/}
+                    {/*                    justifyContent: 'center',*/}
+                    {/*                    fontSize: '22px'*/}
+                    {/*                }}>*/}
+                    {/*                    01*/}
+                    {/*                </Typography>*/}
+                    {/*            </CardContent>*/}
+                    {/*        </Card>*/}
+                    {/*    </Grid>*/}
+                    {/*    <Grid*/}
+                    {/*        direction="column"*/}
+                    {/*        justifyContent="center"*/}
+                    {/*        alignItems="center">*/}
+                    {/*        <Card sx={{minWidth: 275}} style={{*/}
+                    {/*            backgroundColor: '#808e9b',*/}
+                    {/*            color: 'white',*/}
+                    {/*            width: '200px',*/}
+                    {/*            alignItems: 'center',*/}
+                    {/*            justifyContent: 'center'*/}
+                    {/*        }}>*/}
+                    {/*            <CardContent style={{*/}
+                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
+                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
+                    {/*            }}>*/}
+                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
+                    {/*                            style={{fontSize: '28px'}}>*/}
+                    {/*                    Vehicle*/}
+                    {/*                </Typography>*/}
+                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
+                    {/*                    alignItems: 'center',*/}
+                    {/*                    justifyContent: 'center',*/}
+                    {/*                    fontSize: '22px'*/}
+                    {/*                }}>*/}
+                    {/*                    01*/}
+                    {/*                </Typography>*/}
+                    {/*            </CardContent>*/}
+                    {/*        </Card>*/}
+                    {/*    </Grid>*/}
+                    {/*    <Grid*/}
+                    {/*        direction="column"*/}
+                    {/*        justifyContent="center"*/}
+                    {/*        alignItems="center">*/}
+                    {/*        <Card sx={{minWidth: 275}} style={{*/}
+                    {/*            backgroundColor: '#808e9b',*/}
+                    {/*            color: 'white',*/}
+                    {/*            width: '200px',*/}
+                    {/*            alignItems: 'center',*/}
+                    {/*            justifyContent: 'center'*/}
+                    {/*        }}>*/}
+                    {/*            <CardContent style={{*/}
+                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
+                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
+                    {/*            }}>*/}
+                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
+                    {/*                            style={{fontSize: '28px'}}>*/}
+                    {/*                    Vehicle*/}
+                    {/*                </Typography>*/}
+                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
+                    {/*                    alignItems: 'center',*/}
+                    {/*                    justifyContent: 'center',*/}
+                    {/*                    fontSize: '22px'*/}
+                    {/*                }}>*/}
+                    {/*                    01*/}
+                    {/*                </Typography>*/}
+                    {/*            </CardContent>*/}
+                    {/*        </Card>*/}
+                    {/*    </Grid>*/}
+                    {/*    <Grid*/}
+                    {/*        direction="column"*/}
+                    {/*        justifyContent="center"*/}
+                    {/*        alignItems="center">*/}
+                    {/*        <Card sx={{minWidth: 275}} style={{*/}
+                    {/*            backgroundColor: '#808e9b',*/}
+                    {/*            color: 'white',*/}
+                    {/*            width: '200px',*/}
+                    {/*            alignItems: 'center',*/}
+                    {/*            justifyContent: 'center'*/}
+                    {/*        }}>*/}
+                    {/*            <CardContent style={{*/}
+                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
+                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
+                    {/*            }}>*/}
+                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
+                    {/*                            style={{fontSize: '28px'}}>*/}
+                    {/*                    Vehicle*/}
+                    {/*                </Typography>*/}
+                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
+                    {/*                    alignItems: 'center',*/}
+                    {/*                    justifyContent: 'center',*/}
+                    {/*                    fontSize: '22px'*/}
+                    {/*                }}>*/}
+                    {/*                    01*/}
+                    {/*                </Typography>*/}
+                    {/*            </CardContent>*/}
+                    {/*        </Card>*/}
+                    {/*    </Grid>*/}
+                    {/*</Grid>*/}
                     <Grid item lg={12} xs={12} sm={12} md={12} container className="pt-2" spacing={1}
                           style={{
                               alignItems: 'center',
@@ -300,7 +300,7 @@ class AdminHome extends Component {
                     </Grid>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
+                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>
@@ -369,7 +369,7 @@ class AdminHome extends Component {
                     </Grid>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
+                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

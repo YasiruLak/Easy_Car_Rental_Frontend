@@ -332,7 +332,7 @@ class CustomerManage extends Component {
                     </Grid>
                 </ValidatorForm>
                 <Grid>
-                    <TableContainer component={Paper} style={{height: '45vh',width:'81vw',backgroundColor:'#eeeff1'}}>
+                    <TableContainer component={Paper} style={{height: '45vh',width:'80vw',backgroundColor:'#eeeff1', marginLeft:'25px'}}>
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>

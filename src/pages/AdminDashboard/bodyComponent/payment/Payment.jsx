@@ -33,7 +33,7 @@ class Payment extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#05c46b',
-                              width: '81vw',
+                              width: '82.3vw',
                           }}>
                         <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Payment
                             Manage</Typography>
@@ -76,7 +76,7 @@ class Payment extends Component {
                     </ValidatorForm>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
+                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

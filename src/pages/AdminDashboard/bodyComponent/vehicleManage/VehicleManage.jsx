@@ -54,7 +54,6 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
-                noOfVehicle:'',
                 vehicleAvailability: ''
 
             },
@@ -271,7 +270,6 @@ class VehicleManage extends Component {
                     monthlyMileage: data.freeMileage.monthlyMileage
                 },
                 lastServiceMileage: data.lastServiceMileage,
-                noOfVehicle:data.noOfVehicle,
                 vehicleAvailability: data.vehicleAvailability
             }
         });
@@ -310,7 +308,6 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
-                noOfVehicle:'',
                 vehicleAvailability: ''
             }
         });
@@ -600,24 +597,6 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
-
-                            <TextValidator
-                                id="outlinedbasic"
-                                placeholder="500 Km"
-                                variant="outlined"
-                                size="small"
-                                style={{width: '100%'}}
-                                label="No Of Vehicle"
-                                value={this.state.formData.noOfVehicle}
-                                onChange={(e) => {
-                                    let formData = this.state.formData
-                                    formData.noOfVehicle = e.target.value
-                                    this.setState({formData})
-                                }}
-                                validators={['required']}
-                            />
-                        </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <Autocomplete
                                 // style={{padding: '10px', width: '230px'}}
@@ -645,7 +624,7 @@ class VehicleManage extends Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 height: '140px',
-                                border: '1px solid blue',
+                                //border: '1px solid blue',
                                 backgroundImage:"url(" +this.state.frontView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
@@ -656,7 +635,7 @@ class VehicleManage extends Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 height: '140px',
-                                border: '1px solid blue',
+                                //border: '1px solid blue',
                                 backgroundImage:"url(" +this.state.backView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
@@ -667,7 +646,7 @@ class VehicleManage extends Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 height: '140px',
-                                border: '1px solid blue',
+                                //border: '1px solid blue',
                                 backgroundImage:"url(" +this.state.sideView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
@@ -678,7 +657,7 @@ class VehicleManage extends Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 height: '140px',
-                                border: '1px solid blue',
+                                //border: '1px solid blue',
                                 backgroundImage:"url(" +this.state.interiorView+ ")",
                                 backgroundSize: 'cover'
                             }}/>
@@ -809,7 +788,6 @@ class VehicleManage extends Component {
                                     <TableCell align="left">Damage_Fee</TableCell>
                                     <TableCell align="left">LastService_Mileage</TableCell>
                                     <TableCell align="left">Vehicle_Service_Mileage</TableCell>
-                                    <TableCell align="left">No_Of_Vehicle</TableCell>
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -833,7 +811,6 @@ class VehicleManage extends Component {
                                             <TableCell align="left">{row.refundableDamagedFee}</TableCell>
                                             <TableCell align="left">{row.lastServiceMileage}</TableCell>
                                             <TableCell align="left">{row.vehicleMileage}</TableCell>
-                                            <TableCell align="left">{row.noOfVehicle}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
