@@ -15,6 +15,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import DatePicker from "../../../../components/common/DatePicker/index"
 import VehicleService from "../../../../service/VehicleService";
+import Timepicker from "../../../../components/common/TimePicker/index"
 
 class Booking extends Component {
     constructor(props) {
@@ -105,10 +106,11 @@ class Booking extends Component {
                             <DatePicker label="Pickup Date"/>
                         </Grid>
                         <Grid style={{marginLeft: '20px'}}>
-                            <DatePicker label="Return Date"/>
+                            <Timepicker label="Pickup Time"  sx={{width: 200}}/>
                         </Grid>
-                        <TextField id="outlined-basic" label="Return Date" variant="outlined"
-                                   style={{marginLeft: '20px'}}/>
+                        <Grid style={{marginLeft: '20px'}}>
+                            <DatePicker label="Return Date" />
+                        </Grid>
 
                         <Grid container
                               direction="row"
