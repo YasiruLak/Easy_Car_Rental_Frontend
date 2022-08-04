@@ -54,6 +54,7 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
+                extraKmPer:'',
                 vehicleAvailability: ''
 
             },
@@ -115,8 +116,18 @@ class VehicleManage extends Component {
         bodyFormData.append('param', this.state.interiorImage);
 
         let res = await VehicleService.addCarImage(bodyFormData,vehicleId);
-        if (res.data.code===200){alert(res.data.message)}else {
-            alert(res.data.message);
+        if (res.data.code===200){
+            this.setState({
+                alert: true,
+                message: "Saved",
+                severity: 'success'
+            });
+        }else {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'error'
+            });
         }
     }
 
@@ -132,7 +143,7 @@ class VehicleManage extends Component {
             if (res.status === 200) {
                 this.setState({
                     alert: true,
-                    message: res.data.message,
+                    message: "Deleted",
                     severity: 'success'
                 });
             }
@@ -160,6 +171,9 @@ class VehicleManage extends Component {
                 data: res.data.data
             });
         }
+        // this.setState({
+        //     data: res.data.data
+        // });
         this.exampleForMap()
 
     };
@@ -176,12 +190,11 @@ class VehicleManage extends Component {
             let res = await VehicleService.postVehicle(formData);
             this.addCarImage(formData.vehicleId)
 
-            console.log(res)    //print the promise
 
             if (res.status === 201) {
                 this.setState({
                     alert: true,
-                    message: res.data.message,
+                    message: "Saved",
                     severity: 'success'
                 });
                 this.clearFields();
@@ -221,7 +234,7 @@ class VehicleManage extends Component {
 
                 this.setState({
                     alert: true,
-                    message: res.data.message,
+                    message: "Updated",
                     severity: 'success',
                     btnLabel: 'save',
                     btnColor: 'primary'
@@ -241,7 +254,11 @@ class VehicleManage extends Component {
     updateCarImage=async (data,vehicleId,view) =>{
         let response =await VehicleService.updateCarImage(data,vehicleId,view);
         if (response.status!==200){
-            alert("Car Image Update Fail")
+            this.setState({
+                alert: true,
+                message: "Car Image Not Updated",
+                severity: 'error'
+            });
         }
     }
 
@@ -270,6 +287,7 @@ class VehicleManage extends Component {
                     monthlyMileage: data.freeMileage.monthlyMileage
                 },
                 lastServiceMileage: data.lastServiceMileage,
+                extraKmPer:data.extraKmPer,
                 vehicleAvailability: data.vehicleAvailability
             }
         });
@@ -308,6 +326,7 @@ class VehicleManage extends Component {
                     monthlyMileage: ''
                 },
                 lastServiceMileage: '',
+                extraKmPer:'',
                 vehicleAvailability: ''
             }
         });
@@ -597,6 +616,24 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+
+                            <TextValidator
+                                id="outlinedbasic"
+                                placeholder="32.00"
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="Extra Km Price"
+                                value={this.state.formData.extraKmPer}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.extraKmPer = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
                             <Autocomplete
                                 // style={{padding: '10px', width: '230px'}}
@@ -787,7 +824,8 @@ class VehicleManage extends Component {
                                     <TableCell align="left">Availability</TableCell>
                                     <TableCell align="left">Damage_Fee</TableCell>
                                     <TableCell align="left">LastService_Mileage</TableCell>
-                                    <TableCell align="left">Vehicle_Service_Mileage</TableCell>
+                                    <TableCell align="left">Service_Mileage</TableCell>
+                                    <TableCell align="left">Extra_Km_fee</TableCell>
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -810,6 +848,7 @@ class VehicleManage extends Component {
                                             <TableCell align="left">{row.vehicleAvailability}</TableCell>
                                             <TableCell align="left">{row.refundableDamagedFee}</TableCell>
                                             <TableCell align="left">{row.lastServiceMileage}</TableCell>
+                                            <TableCell align="left">{row.extraKmPer}</TableCell>
                                             <TableCell align="left">{row.vehicleMileage}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">

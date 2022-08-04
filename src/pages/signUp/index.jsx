@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {Grid, IconButton, TextField, Typography} from "@mui/material";
+import {Autocomplete, Grid, IconButton, TextField, Typography} from "@mui/material";
 import {withStyles} from "@mui/styles";
 import {styleSheet} from "./style";
 import {PhotoCamera} from "@mui/icons-material";
@@ -44,6 +44,16 @@ class SignUp extends Component {
                     role: ''
                 }
             },
+
+            userTypes: [
+                {
+                    type: 'CUSTOMER'
+                },
+                {
+                    type: 'DRIVER'
+                }
+            ],
+
             alert: false,
             message: '',
             severity: '',
@@ -120,7 +130,7 @@ class SignUp extends Component {
                 this.addRegisterUserImage(formData.id);
                 this.setState({
                     alert: true,
-                    message: res.data.message,
+                    message: "Saved",
                     severity: 'success'
                 });
                 this.clearFields();
@@ -141,7 +151,7 @@ class SignUp extends Component {
                 this.addRegisterUserImage(formData.id);
                 this.setState({
                     alert: true,
-                    message: res.data.message,
+                    message: "Saved",
                     severity: 'success'
                 });
                 this.clearFields();
@@ -187,7 +197,7 @@ class SignUp extends Component {
                                             justifyContent: 'center',
                                             height: '140px',
                                             width: '240px',
-                                            border: '1px solid blue',
+                                            //border: '1px solid blue',
                                             backgroundImage:"url(" +this.state.licenceView+ ")",
                                             backgroundSize: 'cover',
                                             margin:'20px 20px 0 0'
@@ -198,7 +208,7 @@ class SignUp extends Component {
                                             justifyContent: 'center',
                                             height: '140px',
                                             width: '240px',
-                                            border: '1px solid blue',
+                                            //border: '1px solid blue',
                                             backgroundImage:"url(" +this.state.nicView+ ")",
                                             backgroundSize: 'cover',
                                             margin:'20px 0 0 20px'
@@ -250,24 +260,26 @@ class SignUp extends Component {
                                 </Grid>
                             </Grid>
                             <Grid className={classes.leftForm}>
-                                <TextField id="outlined-basic" label="First Name" variant="outlined" size="small"
-                                           value={this.state.formData.name.firstName}
+                                <TextField id="outlined-basic" label="Register Id" variant="outlined"
+                                           size="small"
+                                           value={this.state.formData.id}
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.name.firstName = e.target.value
+                                               formData.id = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
                                 />
-                                <TextField id="outlined-basic" label="Address" variant="outlined" size="small"
-                                           value={this.state.formData.address}
+                                <TextField id="outlined-basic" label="Last Name" variant="outlined" size="small"
+                                           value={this.state.formData.name.lastName}
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.address = e.target.value
+                                               formData.name.lastName = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
                                 />
+
                                 <TextField id="outlined-basic" label="Email" variant="outlined" size="small"
                                            value={this.state.formData.email}
                                            onChange={(e) => {
@@ -277,11 +289,11 @@ class SignUp extends Component {
                                            }}
                                            validators={['required']}
                                 />
-                                <TextField id="outlined-basic" label="Password" variant="outlined" size="small"
-                                           value={this.state.formData.user.password}
+                                <TextField id="outlined-basic" label="User Name" variant="outlined" size="small"
+                                           value={this.state.formData.user.userName}
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.user.password = e.target.value
+                                               formData.user.userName = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
@@ -310,15 +322,26 @@ class SignUp extends Component {
 
                             </Grid>
                             <Grid className={classes.rightForm}>
-                                <TextField id="outlined-basic" label="Last Name" variant="outlined" size="small"
-                                           value={this.state.formData.name.lastName}
+                                <TextField id="outlined-basic" label="First Name" variant="outlined" size="small"
+                                           value={this.state.formData.name.firstName}
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.name.lastName = e.target.value
+                                               formData.name.firstName = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
                                 />
+
+                                <TextField id="outlined-basic" label="Address" variant="outlined" size="small"
+                                           value={this.state.formData.address}
+                                           onChange={(e) => {
+                                               let formData = this.state.formData
+                                               formData.address = e.target.value
+                                               this.setState({formData})
+                                           }}
+                                           validators={['required']}
+                                />
+
                                 <TextField id="outlined-basic" label="Contact No" variant="outlined" size="small"
                                            value={this.state.formData.contactNo}
                                            onChange={(e) => {
@@ -328,33 +351,35 @@ class SignUp extends Component {
                                            }}
                                            validators={['required']}
                                 />
-                                <TextField id="outlined-basic" label="User Name" variant="outlined" size="small"
-                                           value={this.state.formData.user.userName}
+                                <TextField id="outlined-basic" label="Password" variant="outlined" size="small"
+                                           value={this.state.formData.user.password}
+                                           type="password"
                                            onChange={(e) => {
                                                let formData = this.state.formData
-                                               formData.user.userName = e.target.value
+                                               formData.user.password = e.target.value
                                                this.setState({formData})
                                            }}
                                            validators={['required']}
                                 />
-                                <TextField id="outlined-basic" label="Register Id" variant="outlined"
-                                           size="small"
-                                           value={this.state.formData.id}
-                                           onChange={(e) => {
-                                               let formData = this.state.formData
-                                               formData.id = e.target.value
-                                               this.setState({formData})
-                                           }}
-                                           validators={['required']}
-                                />
-                                <TextField id="outlined-basic" label="Type" variant="outlined" size="small"
-                                           value={this.state.formData.user.role}
-                                           onChange={(e) => {
-                                               let formData = this.state.formData
-                                               formData.user.role = e.target.value
-                                               this.setState({formData})
-                                           }}
-                                           validators={['required']}
+
+
+                                    <Autocomplete
+                                    // style={{padding: '10px', width: '230px'}}
+                                    onChange={(e, value, r) => {
+
+                                        let formData = this.state.formData
+                                        formData.user.role = value.type
+                                        this.setState({formData})
+
+                                    }}
+                                    getOptionLabel={
+                                        (option) => option.type
+                                    }
+                                    size="small"
+                                    id="controllable-states-demo"
+                                    options={this.state.userTypes}
+                                    sx={{width: 220}}
+                                    renderInput={(params) => <TextField {...params} label="Type"/>}
                                 />
 
                                 <GDSEButton variant="contained" size="large" type="submit" label={this.state.btnLabel}

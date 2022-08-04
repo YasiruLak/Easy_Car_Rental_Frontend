@@ -42,6 +42,20 @@ class CustomerManageService{
         return await promise;
     };
 
+    deleteCustomerImages = async (id) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.delete('api/v1/customer/deleteCustomerImage?id=' + id)
+
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    }
+
 }
 
 

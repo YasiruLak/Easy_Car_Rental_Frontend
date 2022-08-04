@@ -18,6 +18,7 @@ import GDSEButton from "../../../../components/common/Button";
 import GDSESnackBar from "../../../../components/common/SnackBar";
 import VehicleService from "../../../../service/VehicleService";
 import DriverManageService from "../../../../service/DriverManageService";
+import CustomerManageService from "../../../../service/CustomerManageService";
 
 
 class DriverManage extends Component {
@@ -37,8 +38,10 @@ class DriverManage extends Component {
                 email: '',
                 contactNo: '',
                 user: {
+                    userId:'',
                     userName:'',
-                    password: ''
+                    password: '',
+                    role:'',
                 },
                 driverAvailability: ''
 
@@ -70,12 +73,13 @@ class DriverManage extends Component {
         let res = await DriverManageService.deleteDriver(params);
 
         if (res.status === 200) {
+            let res = await DriverManageService.deleteDriverImages(id);
             this.setState({
                 alert: true,
                 message: res.data.message,
                 severity: 'success'
             });
-            this.loadData();
+            await this.loadData();
         } else {
             this.setState({
                 alert: true,
@@ -102,7 +106,13 @@ class DriverManage extends Component {
                 drivingLicenseNo: data.drivingLicenseNo,
                 email: data.email,
                 contactNo: data.contactNo,
-                driverAvailability: data.driverAvailability
+                driverAvailability: data.driverAvailability,
+                user: {
+                    userId:data.user.userId,
+                    userName:data.user.userName,
+                    password: data.user.password,
+                    role:data.user.role,
+                }
 
             }
         });
@@ -117,11 +127,11 @@ class DriverManage extends Component {
     loadData = async () => {
         let res = await DriverManageService.fetchDriver();
 
-        if (res.status === 200) {
+       // if (res.status === 200) {
             this.setState({
                 data: res.data.data
             });
-        }
+        //}
         console.log(this.state.data)    // print customers array
 
         this.exampleForMap()
@@ -353,6 +363,80 @@ class DriverManage extends Component {
                                 options={this.state.driverAvailabilityTypes}
                                 // sx={{width: 300}}
                                 renderInput={(params) => <TextField {...params} label="Availability"/>}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="User Id"
+                                value={this.state.formData.user.userId}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.userId = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                //type="password"
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="User Name"
+                                value={this.state.formData.user.userName}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.userName = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                type="password"
+                                style={{width: '100%'}}
+                                label="Password"
+                                value={this.state.formData.user.password}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.password = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="Role"
+                                value={this.state.formData.user.role}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.role = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
                             />
                         </Grid>
                         <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"

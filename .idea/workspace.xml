@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Driver View Page Done">
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CustomerManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerManageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/DriverManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DriverManageService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,8 @@
       <workItem from="1659241032237" duration="20916000" />
       <workItem from="1659326173419" duration="16797000" />
       <workItem from="1659446870858" duration="15585000" />
-      <workItem from="1659502757286" duration="24937000" />
+      <workItem from="1659502757286" duration="25595000" />
+      <workItem from="1659582698842" duration="14287000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -263,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659552495369</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated">
+      <created>1659553505847</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1659553505847</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,10 +306,10 @@
     <MESSAGE value="Booking Updated" />
     <MESSAGE value="Vehicle Image Saved and Delete Success" />
     <MESSAGE value="Register Nic and Licence Upload Done" />
-    <MESSAGE value="Updated" />
     <MESSAGE value="Add Time Picker" />
     <MESSAGE value="Driver View Page Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Driver View Page Done" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -20,6 +20,7 @@ import GDSEButton from "../../../../components/common/Button";
 import Paper from "@mui/material/Paper";
 import GDSESnackBar from "../../../../components/common/SnackBar";
 import CustomerManageService from "../../../../service/CustomerManageService";
+import VehicleService from "../../../../service/VehicleService";
 
 class CustomerManage extends Component {
     constructor(props) {
@@ -38,8 +39,10 @@ class CustomerManage extends Component {
                 email: '',
                 contactNo: '',
                 user: {
+                    userId:'',
                     userName:'',
-                    password: ''
+                    password: '',
+                    role:'',
                 }
             },
             alert: false,
@@ -59,12 +62,13 @@ class CustomerManage extends Component {
         let res = await CustomerManageService.deleteCustomer(params);
 
         if (res.status === 200) {
-            this.setState({
-                alert: true,
-                message: res.data.message,
-                severity: 'success'
-            });
-            this.loadData();
+            let res = await CustomerManageService.deleteCustomerImages(id);
+                this.setState({
+                    alert: true,
+                    message: res.data.message,
+                    severity: 'success'
+                });
+            await this.loadData();
         } else {
             this.setState({
                 alert: true,
@@ -91,7 +95,13 @@ class CustomerManage extends Component {
                 drivingLicenseNo: data.drivingLicenseNo,
                 email: data.email,
                 contactNo: data.contactNo,
-                driverAvailability: data.driverAvailability
+                driverAvailability: data.driverAvailability,
+                user: {
+                    userId:data.user.userId,
+                    userName:data.user.userName,
+                    password: data.user.password,
+                    role:data.user.role,
+                }
 
             }
         });
@@ -106,12 +116,14 @@ class CustomerManage extends Component {
     loadData = async () => {
         let res = await CustomerManageService.fetchCustomer();
 
-        if (res.status === 200) {
+        // if (res.status === 200 || res.status === 404) {
             this.setState({
                 data: res.data.data
             });
-        }
-        console.log(this.state.data)    // print customers array
+        //}
+        // this.setState({
+        //     data: res.data.data
+        // });
 
         this.exampleForMap()
 
@@ -135,8 +147,10 @@ class CustomerManage extends Component {
                 email: '',
                 contactNo: '',
                 user: {
+                    userId:'',
                     userName:'',
-                    password: ''
+                    password: '',
+                    role:'',
                 }
             }
         });
@@ -166,6 +180,8 @@ class CustomerManage extends Component {
             }
         }
     };
+
+
 
     render() {
         const {classes} = this.props
@@ -322,6 +338,80 @@ class CustomerManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="User Id"
+                                value={this.state.formData.user.userId}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.userId = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                //type="password"
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="User Name"
+                                value={this.state.formData.user.userName}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.userName = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                type="password"
+                                style={{width: '100%'}}
+                                label="Password"
+                                value={this.state.formData.user.password}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.password = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                            <TextValidator
+                                disabled
+                                id="outlinedbasic"
+                                placeholder=""
+                                variant="outlined"
+                                size="small"
+                                style={{width: '100%'}}
+                                label="Role"
+                                value={this.state.formData.user.role}
+                                onChange={(e) => {
+                                    let formData = this.state.formData
+                                    formData.user.role = e.target.value
+                                    this.setState({formData})
+                                }}
+                                validators={['required']}
+                            />
+                        </Grid>
                         <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
                             <GDSEButton label={this.state.btnLabel} type="submit" size="medium" color={this.state.btnColor} variant="contained"
@@ -337,13 +427,17 @@ class CustomerManage extends Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell align="left">Customer Id</TableCell>
+                                    <TableCell align="left">NIC No</TableCell>
                                     <TableCell align="left">First Name</TableCell>
                                     <TableCell align="left">Last Name</TableCell>
-                                    <TableCell align="left">NIC No</TableCell>
                                     <TableCell align="left">License No</TableCell>
                                     <TableCell align="left">Address</TableCell>
                                     <TableCell align="left">Email</TableCell>
                                     <TableCell align="left">Contact No</TableCell>
+                                    {/*<TableCell align="left">User Id</TableCell>*/}
+                                    {/*<TableCell align="left">User Name</TableCell>*/}
+                                    {/*<TableCell align="left">Password</TableCell>*/}
+                                    {/*<TableCell align="left">User Role</TableCell>*/}
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -359,6 +453,10 @@ class CustomerManage extends Component {
                                             <TableCell align="left">{row.address}</TableCell>
                                             <TableCell align="left">{row.email}</TableCell>
                                             <TableCell align="left">{row.contactNo}</TableCell>
+                                            {/*<TableCell align="left">{row.user.userId}</TableCell>*/}
+                                            {/*<TableCell align="left">{row.user.userName}</TableCell>*/}
+                                            {/*<TableCell align="left">{row.user.password}</TableCell>*/}
+                                            {/*<TableCell align="left">{row.user.role}</TableCell>*/}
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
