@@ -113,6 +113,20 @@ class VehicleService {
         })
         return await promise;
     };
+
+    vehicleCount = async (count) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/vehicle/vehicleCount/count', { params: count })
+
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    };
 }
 
 

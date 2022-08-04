@@ -54,7 +54,21 @@ class DriverManageService{
                 })
         })
         return await promise;
-    }
+    };
+
+    driverCount = async (count) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/driver/driverCount/count', { params: count })
+
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    };
 }
 
 

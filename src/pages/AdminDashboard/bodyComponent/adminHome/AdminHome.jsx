@@ -13,6 +13,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import TableContainer from "@mui/material/TableContainer";
 import BookingService from "../../../../service/BookingService";
+import DriverManageService from "../../../../service/DriverManageService";
+import CustomerManageService from "../../../../service/CustomerManageService";
+import VehicleService from "../../../../service/VehicleService";
 
 class AdminHome extends Component {
     constructor(props) {
@@ -20,6 +23,9 @@ class AdminHome extends Component {
 
         this.state = {
              bookingData:'',
+             customerData:'',
+             vehicleData:'',
+             driverData:'',
 
             formData: {
                 id: '',
@@ -59,8 +65,47 @@ class AdminHome extends Component {
 
     };
 
+    driverDataCount = async () => {
+        let res = await DriverManageService.driverCount();
+
+        if (res.status === 200) {
+            this.setState({
+                driverData: res.data.data
+            });
+        }
+        console.log(this.state.data)    // print customers array
+
+    };
+
+    customerDataCount = async () => {
+        let res = await CustomerManageService.customerCount();
+
+        if (res.status === 200) {
+            this.setState({
+                customerData: res.data.data
+            });
+        }
+        console.log(this.state.data)    // print customers array
+
+    };
+
+    vehicleDataCount = async () => {
+        let res = await VehicleService.vehicleCount();
+
+        if (res.status === 200) {
+            this.setState({
+                vehicleData: res.data.data
+            });
+        }
+        console.log(this.state.data)    // print customers array
+
+    };
+
     componentDidMount() {
         this.bookingDataCount();
+        this.driverDataCount();
+        this.customerDataCount();
+        this.vehicleDataCount();
     };
 
     render() {
@@ -93,7 +138,7 @@ class AdminHome extends Component {
                                         justifyContent: 'center',
                                         fontSize: '22px'
                                     }}>
-                                        01
+                                        {this.state.vehicleData}
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -122,7 +167,7 @@ class AdminHome extends Component {
                                         justifyContent: 'center',
                                         fontSize: '22px'
                                     }}>
-                                        01
+                                        {this.state.customerData}
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -181,7 +226,7 @@ class AdminHome extends Component {
                                         justifyContent: 'center',
                                         fontSize: '22px'
                                     }}>
-                                        01
+                                        {this.state.driverData}
                                     </Typography>
                                 </CardContent>
                             </Card>

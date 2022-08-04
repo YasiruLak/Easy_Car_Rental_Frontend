@@ -54,7 +54,21 @@ class CustomerManageService{
                 })
         })
         return await promise;
-    }
+    };
+
+    customerCount = async (count) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/customer/customerCount/count', { params: count })
+
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    };
 
 }
 
