@@ -24,6 +24,83 @@ class Booking extends Component {
         this.state = {
             open: false,
 
+            formData:{
+                bookingId:'',
+                pickUpDate:'',
+                pickUpTime:'',
+                returnDate:'',
+                pickUpLocation:'',
+                DriverRequestType:'',
+                customer:{
+                    id: '',
+                    nic: '',
+                    name: {
+                        firstName:'',
+                        lastName: ''
+                    },
+                    address: '',
+                    drivingLicenseNo: '',
+                    email: '',
+                    contactNo: '',
+                    user: {
+                        userId:'',
+                        userName:'',
+                        password: '',
+                        role:'',
+                    }
+                },
+                bookingDetails:{
+                    vehicleId:'',
+                    bookingId:'',
+                    vehicle:{
+                        vehicleId: '',
+                        registrationNo: '',
+                        vehicleBrand: '',
+                        vehicleType: '',
+                        fuelType: '',
+                        numberOfPassenger: '',
+                        vehicleColour: '',
+                        transmissionType: '',
+                        refundableDamagedFee: '',
+                        vehicleMileage: '',
+                        vehiclePriceRate: {
+                            dailyRate: '',
+                            monthlyRate: ''
+                        },
+                        freeMileage: {
+                            dailyMileage: '',
+                            monthlyMileage: ''
+                        },
+                        lastServiceMileage: '',
+                        extraKmPer:'',
+                        vehicleAvailability: ''
+                    },
+                },
+                driverSchedules:{
+                    driverId:'',
+                    bookingId:'',
+                    driver:{
+                        id: '',
+                        nic: '',
+                        name: {
+                            firstName:'',
+                            lastName: ''
+                        },
+                        address: '',
+                        drivingLicenseNo: '',
+                        email: '',
+                        contactNo: '',
+                        user: {
+                            userId:'',
+                            userName:'',
+                            password: '',
+                            role:'',
+                        },
+                        driverAvailability: ''
+                    }
+                },
+            },
+
             vehicleList: [],
 
             Locations: [

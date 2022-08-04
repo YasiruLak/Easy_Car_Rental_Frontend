@@ -86,7 +86,6 @@ class VehicleService {
                 })
         })
         return await promise;
-
     }
 
     putVehicle = async (data) => {

@@ -12,12 +12,15 @@ import Tooltip from "@mui/material/Tooltip";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import TableContainer from "@mui/material/TableContainer";
+import BookingService from "../../../../service/BookingService";
 
 class AdminHome extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
+             bookingData:'',
+
             formData: {
                 id: '',
                 nic: '',
@@ -43,6 +46,22 @@ class AdminHome extends Component {
             btnColor: 'secondary'
         }
     }
+
+    bookingDataCount = async () => {
+        let res = await BookingService.bookingCount();
+
+        if (res.status === 200) {
+            this.setState({
+                bookingData: res.data.data
+            });
+        }
+        console.log(this.state.data)    // print customers array
+
+    };
+
+    componentDidMount() {
+        this.bookingDataCount();
+    };
 
     render() {
         const {classes} = this.props
@@ -132,7 +151,7 @@ class AdminHome extends Component {
                                         justifyContent: 'center',
                                         fontSize: '22px'
                                     }}>
-                                        01
+                                        {this.state.bookingData}
                                     </Typography>
                                 </CardContent>
                             </Card>

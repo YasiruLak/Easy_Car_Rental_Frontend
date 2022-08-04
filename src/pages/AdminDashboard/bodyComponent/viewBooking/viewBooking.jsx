@@ -14,10 +14,113 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import VehicleService from "../../../../service/VehicleService";
+import BookingService from "../../../../service/BookingService";
 
 class ViewBooking extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+
+            formData: {
+                bookingId: '',
+                pickUpDate: '',
+                pickUpTime: '',
+                returnDate: '',
+                pickUpLocation: '',
+                DriverRequestType: '',
+                customer: {
+                    id: '',
+                    nic: '',
+                    name: {
+                        firstName: '',
+                        lastName: ''
+                    },
+                    address: '',
+                    drivingLicenseNo: '',
+                    email: '',
+                    contactNo: '',
+                    user: {
+                        userId: '',
+                        userName: '',
+                        password: '',
+                        role: '',
+                    }
+                },
+                bookingDetails: {
+                    vehicleId: '',
+                    bookingId: '',
+                    vehicle: {
+                        vehicleId: '',
+                        registrationNo: '',
+                        vehicleBrand: '',
+                        vehicleType: '',
+                        fuelType: '',
+                        numberOfPassenger: '',
+                        vehicleColour: '',
+                        transmissionType: '',
+                        refundableDamagedFee: '',
+                        vehicleMileage: '',
+                        vehiclePriceRate: {
+                            dailyRate: '',
+                            monthlyRate: ''
+                        },
+                        freeMileage: {
+                            dailyMileage: '',
+                            monthlyMileage: ''
+                        },
+                        lastServiceMileage: '',
+                        extraKmPer: '',
+                        vehicleAvailability: ''
+                    },
+                },
+                driverSchedules: {
+                    driverId: '',
+                    bookingId: '',
+                    driver: {
+                        id: '',
+                        nic: '',
+                        name: {
+                            firstName: '',
+                            lastName: ''
+                        },
+                        address: '',
+                        drivingLicenseNo: '',
+                        email: '',
+                        contactNo: '',
+                        user: {
+                            userId: '',
+                            userName: '',
+                            password: '',
+                            role: '',
+                        },
+                        driverAvailability: ''
+                    }
+                },
+            },
+
+            data: [],
+        }
+    }
+
+    loadBookingData = async () => {
+        let res = await BookingService.fetchBooking();
+
+        if (res.status === 200) {
+            this.setState({
+                data: res.data.data
+            });
+        }
+        // this.setState({
+        //     data: res.data.data
+        // });
+        this.exampleForMap()
+
+    };
+
+    componentDidMount() {
+        this.loadBookingData();
     }
 
     render() {
@@ -81,7 +184,11 @@ class ViewBooking extends Component {
                                     <TableRow>
                                         <TableCell align="left">Booking Id</TableCell>
                                         <TableCell align="left">Customer Id</TableCell>
+                                        <TableCell align="left">Customer Name</TableCell>
+                                        <TableCell align="left">Driver Id</TableCell>
+                                        <TableCell align="left">Driver Name</TableCell>
                                         <TableCell align="left">Pickup Date</TableCell>
+                                        <TableCell align="left">Pickup Location</TableCell>
                                         <TableCell align="left">Pickup Time</TableCell>
                                         <TableCell align="left">Return Date</TableCell>
                                         <TableCell align="left">Driver Request</TableCell>
@@ -90,14 +197,18 @@ class ViewBooking extends Component {
                                 </TableHead>
                                 <TableBody>
                                     {
-                                        //this.state.data.map((row) => (
+                                        this.state.data.map((row) => (
                                         <TableRow>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
+                                            <TableCell align="left">{row.bookingId}</TableCell>
+                                            <TableCell align="left">{row.customer.id}</TableCell>
+                                            <TableCell align="left">{row.customer.name.firstName}</TableCell>
+                                            <TableCell align="left">{row.driverSchedules.driver.id}</TableCell>
+                                            <TableCell align="left">{row.driverSchedules.driver.name.firstName}</TableCell>
+                                            <TableCell align="left">{row.pickUpDate}</TableCell>
+                                            <TableCell align="left">{row.pickUpLocation}</TableCell>
+                                            <TableCell align="left">{row.pickUpTime}</TableCell>
+                                            <TableCell align="left">{row.returnDate}</TableCell>
+                                            <TableCell align="left">{row.DriverRequestType}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
@@ -119,7 +230,7 @@ class ViewBooking extends Component {
                                                 </Tooltip>
                                             </TableCell>
                                         </TableRow>
-                                        //))
+                                        ))
                                     }
                                 </TableBody>
                             </Table>
