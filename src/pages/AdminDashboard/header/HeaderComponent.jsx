@@ -24,14 +24,14 @@ export default function AdminDashboard() {
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
                 <Routes>
-                    <Route path="/vehicleManage" element={<VehicleManage/>}/>
-                    <Route path="/adminProfile" element={<AdminProfile/>}/>
-                    <Route exact path="/adminHome" element={<AdminHome/>}/>
-                    <Route path="/driverManage" element={<DriverManage/>}/>
-                    <Route path="/customerManage" element={<CustomerManage/>}/>
-                    <Route path="/payment" element={<Payment/>}/>
-                    <Route path="/schedule" element={<Schedule/>}/>
-                    <Route path="/viewBooking" element={<ViewBooking/>}/>
+                    <Route path="vehicleManage" element={<VehicleManage/>}/>
+                    <Route path="adminProfile" element={<AdminProfile/>}/>
+                    <Route exact path="adminHome" element={<AdminHome/>}/>
+                    <Route path="driverManage" element={<DriverManage/>}/>
+                    <Route path="customerManage" element={<CustomerManage/>}/>
+                    <Route path="payment" element={<Payment/>}/>
+                    <Route path="schedule" element={<Schedule/>}/>
+                    <Route path="viewBooking" element={<ViewBooking/>}/>
 
                 </Routes>
             </Box>

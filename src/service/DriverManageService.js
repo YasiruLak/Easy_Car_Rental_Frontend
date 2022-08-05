@@ -69,6 +69,19 @@ class DriverManageService{
         })
         return await promise;
     };
+
+    fetchDriverData = async (paramsDriver) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/driver',{params:paramsDriver})
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    }
 }
 
 

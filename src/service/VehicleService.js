@@ -47,6 +47,21 @@ class VehicleService {
         return await promise;
     }
 
+    getAllAvailableVehicles = async (params) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/browse', { params: params })
+
+
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    };
+
     deleteCarImages =async (vehicleId) =>{
         const promise = new Promise((resolve, reject) => {
             axios.delete('api/v1/vehicle/deleteCarImage?vehicleId='+vehicleId)
@@ -127,6 +142,19 @@ class VehicleService {
         })
         return await promise;
     };
+
+    fetchVehicleData = async (paramsVehicle) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/vehicle',{params:paramsVehicle})
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    }
 }
 
 

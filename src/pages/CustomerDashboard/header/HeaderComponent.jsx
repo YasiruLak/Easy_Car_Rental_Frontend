@@ -22,8 +22,8 @@ export default function CustomerDashboard() {
             <Box className={classes.wrapper}>
                 <Routes>
                     <Route exact path="/booking" element={<Booking/>}/>
-                    <Route exact path="/customerProfile" element={<CustomerProfile/>}/>
-                    <Route exact path="/driverView" element={<DriverView/>}/>
+                    <Route path="/customerProfile" element={<CustomerProfile/>}/>
+                    <Route path="/driverView" element={<DriverView/>}/>
                 </Routes>
             </Box>
         </div>

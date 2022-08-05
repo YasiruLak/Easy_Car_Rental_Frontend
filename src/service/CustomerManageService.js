@@ -70,6 +70,19 @@ class CustomerManageService{
         return await promise;
     };
 
+    fetchCustomerbyUserName = async (params) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/customer',{params:params})
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    }
+
 }
 
 

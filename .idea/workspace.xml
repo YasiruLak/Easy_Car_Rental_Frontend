@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated">
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Admin Dashboard Count Load">
+      <change afterPath="$PROJECT_DIR$/src/components/common/DatePickerBrowse/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TimePickerBrowse/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/PaymentService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/SignInService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/CustomerProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/CustomerProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/BookingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BookingService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/CustomerManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerManageService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/DriverManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DriverManageService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/VehicleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
@@ -54,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/carRentalSystem-main/carRentalSystem-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -65,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\DriverDashboadrd\bodyComponent" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\DriverDashboadrd\header" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard\bodyComponent" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard\header" />
-      <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\assets\images" />
@@ -113,7 +125,8 @@
       <workItem from="1659326173419" duration="16797000" />
       <workItem from="1659446870858" duration="15585000" />
       <workItem from="1659502757286" duration="25595000" />
-      <workItem from="1659582698842" duration="21338000" />
+      <workItem from="1659582698842" duration="28223000" />
+      <workItem from="1659673160378" duration="18850000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -283,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659606628789</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Admin Dashboard Count Load">
+      <created>1659627607082</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659627607082</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +341,8 @@
     <MESSAGE value="Driver View Page Done" />
     <MESSAGE value="Customer and Driver Image Delete Done" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Admin Dashboard Count Load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Dashboard Count Load" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

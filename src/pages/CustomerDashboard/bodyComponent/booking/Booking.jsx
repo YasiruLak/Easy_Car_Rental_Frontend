@@ -7,15 +7,15 @@ import c1 from "../../../../assets/images/c1.png";
 import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFilledOutlined";
 import StarIcon from "@mui/icons-material/Star";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
-import ChairIcon from "@mui/icons-material/Chair";
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import DatePicker from "../../../../components/common/DatePicker/index"
+import DatePicker from "../../../../components/common/DatePickerBrowse/index"
 import VehicleService from "../../../../service/VehicleService";
-import Timepicker from "../../../../components/common/TimePicker/index"
+import Timepicker from "../../../../components/common/TimePickerBrowse/index"
+import { format } from "date-fns";
+import CustomerManageService from "../../../../service/CustomerManageService";
+import DriverManageService from "../../../../service/DriverManageService";
 
 class Booking extends Component {
     constructor(props) {
@@ -23,6 +23,28 @@ class Booking extends Component {
 
         this.state = {
             open: false,
+
+            customerBooking:{
+                id:'',
+                name:{
+                    firstName:'',
+                    lastName:'',
+                }
+            },
+
+            driverBooking:{
+                id:'',
+                name:{
+                    firstName:'',
+                    lastName:'',
+                }
+            },
+
+            vehicleBooking:{
+                vehicleId:'',
+                refundableDamagedFee:'',
+                // vehicleBrand:''
+            },
 
             formData:{
                 bookingId:'',
@@ -115,6 +137,71 @@ class Booking extends Component {
         }
     }
 
+    loadData = async () => {
+        //Load Customer Data
+        let params = {
+            userName: localStorage.getItem("userName")
+            // userName :'Yasiru'
+        }
+        let res = await CustomerManageService.fetchCustomerbyUserName(params);
+
+        let resData = res.data.data;
+
+        if (res.status === 200) {
+
+            this.setState({
+                customerBooking: {
+                    id: resData.id,
+                    name: {
+                        firstName: resData.name.firstName,
+                        lastName: resData.name.lastName
+                    },
+                }
+            });
+        }
+
+        //Load Vehicle Data
+        let paramsVehicle = {
+            id: localStorage.getItem("vehicleId")
+        }
+
+        let res1 = await VehicleService.fetchVehicleData(paramsVehicle);
+
+        if (res1.status === 200) {
+            this.setState({
+                vehicleBooking:{
+                    vehicleId: res1.data.data.vehicleId,
+                    // vehicleBrand: res1.data.data.vehicleBrand,
+                    refundableDamagedFee: res1.data.data.refundableDamagedFee
+                }
+            });
+            console.log(res1.data.data)
+        }
+
+        //Load Driver Data
+        let paramsDriver = {
+            id: localStorage.getItem("id")
+
+        }
+
+        let res2 = await DriverManageService.fetchDriverData(paramsDriver);
+
+        let resData1 = res.data.data;
+
+        if (res2.status === 200) {
+            this.setState({
+                driverBooking:{
+                    id: resData1.id,
+                    name: {
+                        firstName: resData1.name.firstName,
+                        lastName: resData1.name.lastName
+                    },
+                }
+            });
+            console.log(res2.data.data)
+        }
+    };
+
     componentDidMount() {
         this.loadAllData();
     }
@@ -129,11 +216,33 @@ class Booking extends Component {
         }
         console.log(this.state.data)    // print customers array
 
-        this.exampleForMap()
+        // this.exampleForMap()
+
+    };
+
+    loadAllAvailableVehicles = async () => {
+        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA")
+
+        let params = {
+            pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), 'yyyy-MM-dd'),
+            returnDate: format(new Date(localStorage.getItem("returnDate")), 'yyyy-MM-dd')
+        }
+
+        let res = await VehicleService.getAllAvailableVehicles(params);
+
+        console.log(res.data.data);
+
+        if (res.status === 200) {
+            this.setState({
+                vehicleList: res.data.data
+            });
+        }
+        console.log(this.state.vehicleList)    // print customers array
 
     };
 
     handleClickOpen = () => {
+        this.loadData();
         this.setState({open: true})
     };
 
@@ -180,11 +289,11 @@ class Booking extends Component {
                         {/*<TextField id="outlined-basic" label="Pick Up Date" variant="outlined" style={{marginLeft:'20px'}}/>*/}
                         {/*<TextField id="outlined-basic" label="Pick Up Time" variant="outlined" style={{marginLeft:'20px'}}/>*/}
                         <Grid style={{marginLeft: '20px'}}>
-                            <DatePicker label="Pickup Date"/>
+                            <DatePicker label="PickUp Date"/>
                         </Grid>
-                        <Grid style={{marginLeft: '20px'}}>
-                            <Timepicker label="Pickup Time"  sx={{width: 200}}/>
-                        </Grid>
+                        {/*<Grid style={{marginLeft: '20px'}}>*/}
+                        {/*    <Timepicker label="Pickup Time"  sx={{width: 200}}/>*/}
+                        {/*</Grid>*/}
                         <Grid style={{marginLeft: '20px'}}>
                             <DatePicker label="Return Date" />
                         </Grid>
@@ -194,9 +303,11 @@ class Booking extends Component {
                               justifyContent="flex-end"
                               alignItems="center"
                         >
-                            <GDSEButton label="Search Here" type="submit" size="medium"
+                            <Button label="Search Here" type="submit" size="medium"
                                         color="primary" variant="contained"
-                                        style={{margin: '10px 40px 20px 0'}}/>
+                                        style={{margin: '10px 40px 20px 0'}}
+                                        onClick={this.loadAllAvailableVehicles}
+                            >SEARCH CAR NOW</Button>
                         </Grid>
                     </Grid>
 
@@ -310,22 +421,31 @@ class Booking extends Component {
                         color: '#000d6b'
                     }}>{"VEHICLE BOOKING"}</DialogTitle>
                     <DialogContent>
-                        <Grid style={{width: '88vw', height: '80vh'}}>
+                        <Grid style={{width: '88vw', height: '90vh'}}>
                             <Grid style={{width: '90vw', height: '50vh', marginTop: '0'}}>
                                 <TextField id="outlined-basic" label="Rent Id" variant="outlined"
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Customer Id" variant="outlined"
+                                <TextField id="outlined-basic" label="Customer Id" variant="outlined" disabled
+                                           value={this.state.customerBooking.id}
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Customer Name" variant="outlined"
+                                <TextField id="outlined-basic" label="Customer Name" variant="outlined" disabled
+                                           value={this.state.customerBooking.name.firstName}
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Driver Id" variant="outlined"
+                                <TextField id="outlined-basic" label="Driver Id" variant="outlined" disabled
+                                           value={this.state.driverBooking.id}
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Driver Name" variant="outlined"
+                                <TextField id="outlined-basic" label="Driver Name" variant="outlined" disabled
+                                           value={this.state.driverBooking.name.firstName}
                                            style={{marginLeft: '20px'}}/>
-                                <TextField id="outlined-basic" label="Vehicle Id" variant="outlined"
+                                <TextField id="outlined-basic" label="Vehicle Id" variant="outlined" disabled
+                                           value={this.state.vehicleBooking.vehicleId}
                                            style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <TextField id="outlined-basic" label="Refundable Fee" variant="outlined"
+                                <TextField id="outlined-basic" label="Refundable Fee" variant="outlined" disabled
+                                           value={this.state.vehicleBooking.refundableDamagedFee}
                                            style={{marginLeft: '20px', marginTop: '20px'}}/>
+                                <GDSEButton label="Placed Order" type="submit" size="medium"
+                                            color="primary" variant="contained"
+                                            style={{margin: '30px 0 20px 500px'}}/>
                                 <Grid className={classes.book_Bar}>
                                 <Autocomplete
                                     style={{marginLeft: '0', marginTop:'0'}}
@@ -345,15 +465,15 @@ class Booking extends Component {
                                     sx={{width: 222}}
                                     renderInput={(params) => <TextField {...params} label="Location"/>}
                                 />
-                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
-                                    <DatePicker label="Pickup Date" sx={{width: 200}}/>
-                                </Grid>
-                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
-                                    <Timepicker label="Pickup Time"  sx={{width: 200}}/>
-                                </Grid>
-                                <Grid style={{marginLeft: '20px', marginTop:'0'}}>
-                                    <DatePicker label="Return Date" sx={{width: 200}}/>
-                                </Grid>
+                                    <Grid style={{marginLeft: '20px', marginTop:'0'}}>
+                                        <DatePicker label="PickUp Date" sx={{width: 200}}/>
+                                    </Grid>
+                                    {/*<Grid style={{marginLeft: '20px'}}>*/}
+                                    {/*    <Timepicker label="Pickup Time"  sx={{width: 200}}/>*/}
+                                    {/*</Grid>*/}
+                                    <Grid style={{marginLeft: '20px', marginTop:'0'}}>
+                                        <DatePicker label="Return Date" sx={{width: 200}}/>
+                                    </Grid>
                                 </Grid>
                                 <Grid className={classes.signUp_Upload} style={{margin:'0 20px 10px 20px'}}>
                                     <div className={classes.signUp_imageDiv} style={{
@@ -387,9 +507,7 @@ class Booking extends Component {
                                             Payment Slip Upload
                                         </Button>
                                     </label>
-                                    <GDSEButton label="Placed Order" type="submit" size="medium"
-                                                color="primary" variant="contained"
-                                                style={{margin: '0 20px 80px 880px'}}/>
+
                                </div>
 
 

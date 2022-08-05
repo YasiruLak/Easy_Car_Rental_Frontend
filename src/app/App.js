@@ -10,18 +10,20 @@ import CustomerDashboard from "../pages/CustomerDashboard/header/HeaderComponent
 import DriverDashboard from "../pages/DriverDashboard/header/HeaderComponent";
 function App() {
   return (
-    // <Routes>
-    //   <Route exact path='/easy' element={<WebPage/>}/>
-    //   <Route exact path='/login' element={<SignIn/>}/>
-    //   <Route exact path='/signup' element={<SignUp/>}/>
-    // </Routes>
+    <Routes>
+      <Route exact path='/easy' element={<WebPage/>}/>
+      <Route path='/login' element={<SignIn/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+      {/*<Route path='/adminDashBoard' element={<AdminDashboard/>}/>*/}
+      {/*<Route path='/customerDashBoard' element={<CustomerDashboard/>}/>*/}
+      {/*<Route path='/driverDashBoard' element={<DriverDashboard/>}/>*/}
+    </Routes>
 
-      <Fragment>
-          <AdminDashboard/>
-          {/*<CustomerDashboard/>*/}
-          {/*<DriverDashboard/>*/}
-
-      </Fragment>
+      // <Fragment>
+      //     {/*<AdminDashboard/>*/}
+      //     <CustomerDashboard/>
+      //     {/*<DriverDashboard/>*/}
+      // </Fragment>
   );
 }
 

@@ -1,12 +1,9 @@
 import React from 'react'
 import {Button, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
-import HomeIcon from '@mui/icons-material/Home';
 import {NavLink} from "react-router-dom";
 import {useStyles} from "./HeaderStyles";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PersonIcon from '@mui/icons-material/Person';
-import HandymanIcon from '@mui/icons-material/Handyman';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
