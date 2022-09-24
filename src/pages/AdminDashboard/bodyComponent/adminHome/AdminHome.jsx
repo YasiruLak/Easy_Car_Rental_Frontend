@@ -122,6 +122,7 @@ class AdminHome extends Component {
                                 backgroundColor: '#808e9b',
                                 color: 'white',
                                 width: '200px',
+
                                 alignItems: 'center',
                                 justifyContent: 'center'
                             }}>

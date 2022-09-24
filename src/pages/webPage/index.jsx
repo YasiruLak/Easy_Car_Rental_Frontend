@@ -1,23 +1,23 @@
 import {Component} from "react";
 import {styleSheet} from "./style";
 import {withStyles} from "@mui/styles";
-import {Button, Card, CardContent, CardMedia, Grid, TextField, Typography} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import homeImg from "../../assets/images/homeImg.png";
 import c1 from "../../assets/images/c1.png";
+import c2 from "../../assets/images/c2.png";
+import c6 from "../../assets/images/c6.png";
+import vehicle from "../../assets/images/vehicle.png";
 import vehicle3 from "../../assets/images/vehicle3.png";
+import driver1 from "../../assets/images/driver1.png";
 import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
-
 import StarIcon from '@mui/icons-material/Star';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import ChairIcon from '@mui/icons-material/Chair';
-
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SupportIcon from '@mui/icons-material/Support';
@@ -61,7 +61,9 @@ class WebPage extends Component {
                                             justifyContent: 'center',
                                             width: '100px',
                                             margin: '2px 10px 0 10px'
-                                        }}>
+                                        }}
+                                href={"/login"}
+                                >
                                     SignIn
                                 </Button>
                             </Tabs>
@@ -464,7 +466,7 @@ class WebPage extends Component {
                                                 component="img"
                                                 alt="green iguana"
                                                 height="140"
-                                                image={c1}
+                                                image={c2}
                                             />
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
@@ -544,7 +546,7 @@ class WebPage extends Component {
                                                 component="img"
                                                 alt="green iguana"
                                                 height="140"
-                                                image={c1}
+                                                image={driver1}
                                             />
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
@@ -626,7 +628,7 @@ class WebPage extends Component {
                                                 component="img"
                                                 alt="green iguana"
                                                 height="140"
-                                                image={c1}
+                                                image={vehicle3}
                                             />
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
@@ -706,7 +708,7 @@ class WebPage extends Component {
                                                 component="img"
                                                 alt="green iguana"
                                                 height="140"
-                                                image={c1}
+                                                image={vehicle}
                                             />
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
@@ -786,7 +788,7 @@ class WebPage extends Component {
                                                 component="img"
                                                 alt="green iguana"
                                                 height="140"
-                                                image={c1}
+                                                image={c6}
                                             />
                                             <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
                                                 <Typography gutterBottom variant="h6" component="div"
@@ -846,490 +848,6 @@ class WebPage extends Component {
                                                                         marginLeft: '4px'
                                                                     }}>
                                                             Manual
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                </Grid>
-                                <Grid className={classes.vehicle_detail_row}>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    Perodua Bezza Prime - Auto
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    120,330.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    5,500.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            5 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <WorkspacePremiumIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Premium
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <AutorenewIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Auto
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    Toyota Allion NZT 260 - Manual
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    155,760.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    5,800.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            3 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <WorkspacePremiumIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Premium
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <SettingsSuggestIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Manual
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    Toyota Axio NKR 165 - Manual
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    175,230.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    6,000.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            2 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <WorkspacePremiumIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Premium
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <SettingsSuggestIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Manual
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                </Grid>
-                                <Grid className={classes.vehicle_detail_row}>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    Toyota Premio - Auto
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    227,150.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    10,000.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            2 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <ChairIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Luxury
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <AutorenewIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Auto
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    Mercedes - Auto
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    300,000.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    18,000.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            2 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <ChairIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Luxury
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <AutorenewIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Auto
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-
-                                                <Grid>
-                                                    <Grid className={classes.desc_1}>
-                                                        <Button variant="contained" fullWidth
-                                                                style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}>Rent
-                                                            Now</Button>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                    <div className={classes.vehicle_card}>
-                                        <Card sx={{maxWidth: 345, minHeight: 380}}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="green iguana"
-                                                height="140"
-                                                image={c1}
-                                            />
-                                            <CardContent style={{marginTop: '4px', marginBottom: '8px'}}>
-                                                <Typography gutterBottom variant="h6" component="div"
-                                                            style={{color: '#ff4d4d'}}>
-                                                    BMW i8 - Auto
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green'}}>
-                                                    300,000.00 lkr (2400 free km) - month
-                                                </Typography>
-                                                <Typography gutterBottom variant="body2" component="div"
-                                                            style={{color: 'green', marginTop: '8px'}}>
-                                                    18,000.00 lkr (100 free km) - daily
-                                                </Typography>
-
-                                                <Grid className={classes.vehicle_card_detail}>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <DirectionsCarFilledOutlinedIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            2 Cars
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <ChairIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Luxury
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid className={classes.vehicle_card_subDetail}>
-                                                        <AutorenewIcon style={{
-                                                            fontSize: '16px',
-                                                            marginRight: '2px',
-                                                            color: '#2C3A47'
-                                                        }}/>
-                                                        <Typography variant="caption" display="block" gutterBottom
-                                                                    style={{
-                                                                        color: '#2C3A47',
-                                                                        marginTop: '10px',
-                                                                        marginLeft: '4px'
-                                                                    }}>
-                                                            Auto
                                                         </Typography>
                                                     </Grid>
                                                 </Grid>
@@ -1436,19 +954,26 @@ class WebPage extends Component {
                                 </Grid>
                             </Grid>
                             <Grid className={classes.footer_content_4}>
-                                <Typography variant="h5" gutterBottom component="div" style={{
-                                    marginLeft: '10px',
-                                    fontWeight: '600',
-                                    marginBottom: '28px',
-                                    color: '#ffffff'
-                                }}>
-                                    Newsletter
-                                </Typography>
-                                <Typography variant="body2" gutterBottom style={{color: '#ffffff'}}>
-                                    Subscribe our newsletter to get updated information
-                                </Typography>
-                                <TextField id="outlined-basic" label="Email" variant="outlined" size="small"
-                                           style={{borderRadius: '100px', color: 'white'}}/>
+
+                                <iframe style={{ height: '50vh', width: '30vw'}}
+                                        src="https://maps.google.com/maps?q=Srilanka%20Galle&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
+                                </iframe>
+
+
+                                {/*<Typography variant="h5" gutterBottom component="div" style={{*/}
+                                {/*    marginLeft: '10px',*/}
+                                {/*    fontWeight: '600',*/}
+                                {/*    marginBottom: '28px',*/}
+                                {/*    color: '#ffffff'*/}
+                                {/*}}>*/}
+                                {/*    Newsletter*/}
+                                {/*</Typography>*/}
+                                {/*<Typography variant="body2" gutterBottom style={{color: '#ffffff'}}>*/}
+                                {/*    Subscribe our newsletter to get updated information*/}
+                                {/*</Typography>*/}
+                                {/*<TextField id="outlined-basic" label="Email" variant="outlined" size="small"*/}
+                                {/*           style={{borderRadius: '100px', color: 'white'}}/>*/}
                             </Grid>
                         </Grid>
                         <Grid className={classes.copyright}>

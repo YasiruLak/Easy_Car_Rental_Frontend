@@ -18,11 +18,10 @@ export default function DriverDashboard() {
         <div>
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
-                <Routes>
-                    <Route exact path="/driverProfile" element={<DriverProfile/>}/>
-                    <Route exact path="/driverSchedule" element={<DriverSchedule/>}/>
-
-                </Routes>
+                {/*<Routes>*/}
+                {/*    <Route exact path="/driverProfile" element={<DriverProfile/>}/>*/}
+                {/*    <Route exact path="/driverSchedule" element={<DriverSchedule/>}/>*/}
+                {/*</Routes>*/}
             </Box>
         </div>
     );

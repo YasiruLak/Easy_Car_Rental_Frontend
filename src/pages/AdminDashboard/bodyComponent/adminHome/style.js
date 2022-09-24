@@ -21,6 +21,7 @@ export const styleSheet={
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+
         //border:'1px solid red'
     },
 

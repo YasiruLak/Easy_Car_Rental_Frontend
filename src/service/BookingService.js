@@ -2,8 +2,6 @@ import axios from "../axsios";
 
 class BookingService{
 
-
-
     bookingCount = async (count) => {
         const promise = new Promise((resolve, reject) => {
             axios.get('api/v1/booking/bookingCount/count', { params: count })
@@ -28,6 +26,22 @@ class BookingService{
                     return resolve(err)
                 })
         })
+        return await promise;
+    }
+
+    postBooking = async (data) => {
+        const promise = new Promise((resolve, reject) => {
+
+
+            axios.post('api/v1/booking', data)    // 20s
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        });
+
         return await promise;
     }
 

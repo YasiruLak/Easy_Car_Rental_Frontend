@@ -82,6 +82,19 @@ class DriverManageService{
         })
         return await promise;
     }
+
+    fetchDriverbyUserName = async (params) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('api/v1/driver',{params:params})
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+        return await promise;
+    }
 }
 
 

@@ -16,6 +16,8 @@ import Timepicker from "../../../../components/common/TimePickerBrowse/index"
 import { format } from "date-fns";
 import CustomerManageService from "../../../../service/CustomerManageService";
 import DriverManageService from "../../../../service/DriverManageService";
+import BookingService from "../../../../service/BookingService";
+import GDSESnackBar from "../../../../components/common/SnackBar";
 
 class Booking extends Component {
     constructor(props) {
@@ -23,6 +25,8 @@ class Booking extends Component {
 
         this.state = {
             open: false,
+
+            bookingId:'',
 
             customerBooking:{
                 id:'',
@@ -33,11 +37,23 @@ class Booking extends Component {
             },
 
             driverBooking:{
-                id:'',
-                name:{
+                id: '',
+                nic: '',
+                name: {
                     firstName:'',
-                    lastName:'',
-                }
+                    lastName: ''
+                },
+                address: '',
+                drivingLicenseNo: '',
+                email: '',
+                contactNo: '',
+                user: {
+                    userId:'',
+                    userName:'',
+                    password: '',
+                    role:'',
+                },
+                driverAvailability: ''
             },
 
             vehicleBooking:{
@@ -134,7 +150,123 @@ class Booking extends Component {
                 }
             ],
 
+            driverRequest: [
+                {
+                    type: 'YES'
+                },
+                {
+                    type: 'NO'
+                }
+            ],
+
+            driverRequestType:'',
+
         }
+    }
+
+    submitBooking = async () => {
+
+        let driverSchedule=[];
+
+        if (this.state.driverRequest === "YES"){
+
+            driverSchedule=[
+                {
+                    driverId:this.state.driverBooking.id,
+                    bookingId:this.state.bookingId,
+                    driver:this.state.driverBooking,
+                    booking: {
+                        bookingId: this.state.bookingId,
+                        //bookingDate: format(new Date(), 'yyyy-MM-dd'),
+                        pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), "yyyy-MM-dd"),
+                        pickUpTime: format(new Date(localStorage.getItem("pickUpTime")), "HH:mm:ss"),
+                        returnDate: format(new Date(localStorage.getItem("returnDate")), "yyyy-MM-dd"),
+                        //returnTime: format(new Date(localStorage.getItem("returnTime")), "HH:mm:ss"),
+                        DriverRequestType: this.state.driverRequest,
+                        customer: this.state.customerBooking,
+                        bookingDetails:[
+                            {
+                                vehicleId: this.state.vehicleBooking.vehicleId,
+                                bookingId: this.state.bookingId,
+                                vehicle: this.state.vehicleBooking
+                                ,
+                                booking: {
+                                    bookingId: this.state.bookingId,
+                                    //bookingDate: format(new Date(), 'yyyy-MM-dd'),
+                                    pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), "yyyy-MM-dd"),
+                                    pickUpTime: format(new Date(localStorage.getItem("pickUpTime")), "HH:mm:ss"),
+                                    returnDate: format(new Date(localStorage.getItem("returnDate")), "yyyy-MM-dd"),
+                                    returnTime: format(new Date(localStorage.getItem("returnTime")), "HH:mm:ss"),
+                                    DriverRequestType: this.state.driverRequest,
+                                    //status:'UNDER_REVIEW',
+                                    customer: this.state.customerBooking,
+                                    driverScheduleList: [
+                                        {  driverId:this.state.driverBooking.id,
+                                            bookingId:this.state.bookingId,
+                                            driver:this.state.driverBooking}
+                                    ],
+
+                                }
+                            }
+                        ],
+                    }
+                }
+            ]
+        }
+
+
+        let booking = {
+            bookingId: this.state.bookingId,
+            bookingDate: format(new Date(), 'yyyy-MM-dd'),
+            pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), "yyyy-MM-dd"),
+            pickUpTime: format(new Date(localStorage.getItem("pickUpTime")), "HH:mm:ss"),
+            returnDate: format(new Date(localStorage.getItem("returnDate")), "yyyy-MM-dd"),
+            returnTime: format(new Date(localStorage.getItem("returnTime")), "HH:mm:ss"),
+            DriverRequestType: this.state.driverRequest,
+            //status:'UNDER_REVIEW',
+            customer: this.state.customerBooking,
+            driverScheduleList: driverSchedule,
+            bookingDetails: [
+                {
+                    vehicleId: this.state.vehicleBooking.vehicleId,
+                    bookingId: this.state.bookingId,
+                    vehicle: this.state.vehicleBooking
+                    ,
+                    booking: {
+                        bookingId: this.state.bookingId,
+                        bookingDate: format(new Date(), 'yyyy-MM-dd'),
+                        pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), "yyyy-MM-dd"),
+                        pickUpTime: format(new Date(localStorage.getItem("pickUpTime")), "HH:mm:ss"),
+                        returnDate: format(new Date(localStorage.getItem("returnDate")), "yyyy-MM-dd"),
+                        returnTime: format(new Date(localStorage.getItem("returnTime")), "HH:mm:ss"),
+                        DriverRequestType: this.state.driverRequest,
+                        //status:'UNDER_REVIEW',
+                        customer: this.state.customerBooking,
+                        driverScheduleList: [],
+
+                    }
+                }
+            ],
+        }
+
+        let res = await BookingService.postBooking(booking);
+        if (res.status === 201) {
+            this.setState({
+                alert: true,
+                message: res.data.message,
+                severity: 'success'
+            });
+
+            await this.loadData();
+
+        } else {
+            this.setState({
+                alert: true,
+                message: res.response.data.message,
+                severity: 'error'
+            });
+        }
+
     }
 
     loadData = async () => {
@@ -164,6 +296,7 @@ class Booking extends Component {
         let paramsVehicle = {
             id: localStorage.getItem("vehicleId")
         }
+        console.log(localStorage.getItem("vehicleId"))
 
         let res1 = await VehicleService.fetchVehicleData(paramsVehicle);
 
@@ -175,31 +308,32 @@ class Booking extends Component {
                     refundableDamagedFee: res1.data.data.refundableDamagedFee
                 }
             });
+            console.log(this.state.vehicleBooking)
             console.log(res1.data.data)
         }
 
-        //Load Driver Data
-        let paramsDriver = {
-            id: localStorage.getItem("id")
-
-        }
-
-        let res2 = await DriverManageService.fetchDriverData(paramsDriver);
-
-        let resData1 = res.data.data;
-
-        if (res2.status === 200) {
-            this.setState({
-                driverBooking:{
-                    id: resData1.id,
-                    name: {
-                        firstName: resData1.name.firstName,
-                        lastName: resData1.name.lastName
-                    },
-                }
-            });
-            console.log(res2.data.data)
-        }
+        // //Load Driver Data
+        // let paramsDriver = {
+        //     id: localStorage.getItem("id")
+        //
+        // }
+        //
+        // let res2 = await DriverManageService.fetchDriverData(paramsDriver);
+        //
+        // let resData1 = res.data.data;
+        //
+        // if (res2.status === 200) {
+        //     this.setState({
+        //         driverBooking:{
+        //             id: resData1.id,
+        //             name: {
+        //                 firstName: resData1.name.firstName,
+        //                 lastName: resData1.name.lastName
+        //             },
+        //         }
+        //     });
+        //     console.log(res2.data.data)
+        // }
     };
 
     componentDidMount() {
@@ -221,7 +355,6 @@ class Booking extends Component {
     };
 
     loadAllAvailableVehicles = async () => {
-        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA")
 
         let params = {
             pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), 'yyyy-MM-dd'),
@@ -234,6 +367,7 @@ class Booking extends Component {
 
         if (res.status === 200) {
             this.setState({
+
                 vehicleList: res.data.data
             });
         }
@@ -249,6 +383,29 @@ class Booking extends Component {
     handleClose = () => {
         this.setState({open: false})
     };
+
+    setDriver = async () => {
+
+        let params={
+            pickUpDate: format(new Date(localStorage.getItem("pickUpDate")), "yyyy-MM-dd"),
+            returnDate:format(new Date(localStorage.getItem("returnDate")), "yyyy-MM-dd")
+        }
+
+        let res = await DriverManageService.fetchDriverData(params);
+
+        if (res.status === 200) {
+
+            this.setState({
+                driverBooking:{
+                    id:res.data.data.id,
+                    name:{
+                        firstName:res.data.data.name.firstName,
+                        lastName:res.data.data.name.lastName,
+                    }
+                },
+            });
+        }
+    }
 
     render() {
         const {classes} = this.props;
@@ -268,24 +425,24 @@ class Booking extends Component {
                             Vehicle</Typography>
                     </Grid>
                     <Grid className={classes.searchBar}>
-                        <Autocomplete
-                            style={{marginLeft: '20px'}}
-                            // onChange={(e, value, r) => {
-                            //
-                            //     let formData = this.state.formData
-                            //     formData.vehicleAvailability = value.type
-                            //     this.setState({formData})
-                            //
-                            // }}
-                            getOptionLabel={
-                                (option) => option.type
-                            }
-                            size="large"
-                            id="controllable-states-demo"
-                            options={this.state.Locations}
-                            sx={{width: 200}}
-                            renderInput={(params) => <TextField {...params} label="Location"/>}
-                        />
+                        {/*<Autocomplete*/}
+                        {/*    style={{marginLeft: '20px'}}*/}
+                        {/*    // onChange={(e, value, r) => {*/}
+                        {/*    //*/}
+                        {/*    //     let formData = this.state.formData*/}
+                        {/*    //     formData.vehicleAvailability = value.type*/}
+                        {/*    //     this.setState({formData})*/}
+                        {/*    //*/}
+                        {/*    // }}*/}
+                        {/*    getOptionLabel={*/}
+                        {/*        (option) => option.type*/}
+                        {/*    }*/}
+                        {/*    size="large"*/}
+                        {/*    id="controllable-states-demo"*/}
+                        {/*    options={this.state.Locations}*/}
+                        {/*    sx={{width: 200}}*/}
+                        {/*    renderInput={(params) => <TextField {...params} label="Location"/>}*/}
+                        {/*/>*/}
                         {/*<TextField id="outlined-basic" label="Pick Up Date" variant="outlined" style={{marginLeft:'20px'}}/>*/}
                         {/*<TextField id="outlined-basic" label="Pick Up Time" variant="outlined" style={{marginLeft:'20px'}}/>*/}
                         <Grid style={{marginLeft: '20px'}}>
@@ -387,7 +544,12 @@ class Booking extends Component {
                                                     <Grid className={classes.desc_2}>
                                                         <Button variant="contained" fullWidth
                                                                 style={{color: '#ffffff', backgroundColor: '#ff9f1a'}}
-                                                                onClick={this.handleClickOpen}>Rent
+                                                                onClick={()=>{
+                                                                    localStorage.setItem("vehicleId",vehicle.vehicleId)
+                                                                    this.handleClickOpen();
+                                                                }
+
+                                                                }>Rent
                                                             Now</Button>
                                                     </Grid>
                                                 </Grid>
@@ -422,15 +584,79 @@ class Booking extends Component {
                     }}>{"VEHICLE BOOKING"}</DialogTitle>
                     <DialogContent>
                         <Grid style={{width: '88vw', height: '90vh'}}>
-                            <Grid style={{width: '90vw', height: '50vh', marginTop: '0'}}>
+                            <Grid style={{width: '90vw', height: '50vh', marginTop: '10px'}}>
+                            <Grid style={{width: '90vw', height: '10vh', marginTop: '0',marginBottom:'20px',marginLeft:'1000px'}}>
+                                <GDSEButton label="Placed Order" type="submit" size="medium"
+                                            color="primary" variant="contained"
+                                            style={{margin: '30px 0 20px 0'}}
+                                            onClick={this.submitBooking}
+                                />
+                            </Grid>
                                 <TextField id="outlined-basic" label="Rent Id" variant="outlined"
-                                           style={{marginLeft: '20px'}}/>
+                                           value={this.state.bookingId}
+                                           onChange={(e) => {
+
+                                               this.setState({bookingId:e.target.value})
+                                           }}
+                                           style={{marginLeft: '20px'}}
+
+                                />
                                 <TextField id="outlined-basic" label="Customer Id" variant="outlined" disabled
                                            value={this.state.customerBooking.id}
                                            style={{marginLeft: '20px'}}/>
                                 <TextField id="outlined-basic" label="Customer Name" variant="outlined" disabled
                                            value={this.state.customerBooking.name.firstName}
                                            style={{marginLeft: '20px'}}/>
+                                {/*<Autocomplete*/}
+                                {/*    style={{ marginLeft: '20px', width: '220px' }}*/}
+                                {/*    onChange={(e, value, r) => {*/}
+
+                                {/*        // let formData = this.state.formData*/}
+                                {/*        // formData.driverRequest = value.type*/}
+
+
+                                {/*        if(value.type === "YES"){*/}
+
+                                {/*            this.setDriver();*/}
+                                {/*        }*/}
+                                {/*        this.setState({ driverRequestType: value.type })*/}
+
+                                {/*    }}*/}
+                                {/*    getOptionLabel={*/}
+                                {/*        (option) => option.type*/}
+                                {/*    }*/}
+
+                                {/*    id="controllable-states-demo"*/}
+                                {/*    options={this.state.driverRequestType}*/}
+                                {/*    sx={{ width: 300 }}*/}
+                                {/*    renderInput={(params) => <TextField {...params} label="Driver Requesting Type" />}*/}
+                                {/*/>*/}
+
+                                {/*<Autocomplete*/}
+                                {/*    style={{ padding: '10px', width: '230px' }}*/}
+                                {/*    onChange={(e, value, r) => {*/}
+
+                                {/*        // let formData = this.state.formData*/}
+                                {/*        // formData.driverAvailable = value.type*/}
+
+                                {/*        this.setState({ driverRequestingType: value.type })*/}
+
+                                {/*        if (value.type == "YES") {*/}
+                                {/*            this.setDriver();*/}
+                                {/*        }*/}
+
+                                {/*    }}*/}
+                                {/*    getOptionLabel={*/}
+                                {/*        (option) => option.type*/}
+                                {/*    }*/}
+
+                                {/*    id="controllable-states-demo"*/}
+                                {/*    options={this.state.driverAvailable}*/}
+                                {/*    sx={{ width: 300 }}*/}
+                                {/*    renderInput={(params) => <TextField {...params} label="Driver Requesting Type" />}*/}
+                                {/*/>*/}
+
+
                                 <TextField id="outlined-basic" label="Driver Id" variant="outlined" disabled
                                            value={this.state.driverBooking.id}
                                            style={{marginLeft: '20px'}}/>
@@ -439,32 +665,30 @@ class Booking extends Component {
                                            style={{marginLeft: '20px'}}/>
                                 <TextField id="outlined-basic" label="Vehicle Id" variant="outlined" disabled
                                            value={this.state.vehicleBooking.vehicleId}
-                                           style={{marginLeft: '20px', marginTop: '20px'}}/>
+                                           style={{marginLeft: '20px', marginTop:'20px'}}/>
                                 <TextField id="outlined-basic" label="Refundable Fee" variant="outlined" disabled
                                            value={this.state.vehicleBooking.refundableDamagedFee}
-                                           style={{marginLeft: '20px', marginTop: '20px'}}/>
-                                <GDSEButton label="Placed Order" type="submit" size="medium"
-                                            color="primary" variant="contained"
-                                            style={{margin: '30px 0 20px 500px'}}/>
+                                           style={{marginLeft: '20px', marginTop:'20px'}}/>
+
                                 <Grid className={classes.book_Bar}>
-                                <Autocomplete
-                                    style={{marginLeft: '0', marginTop:'0'}}
-                                    // onChange={(e, value, r) => {
-                                    //
-                                    //     let formData = this.state.formData
-                                    //     formData.vehicleAvailability = value.type
-                                    //     this.setState({formData})
-                                    //
-                                    // }}
-                                    getOptionLabel={
-                                        (option) => option.type
-                                    }
-                                    size="large"
-                                    id="controllable-states-demo"
-                                    options={this.state.Locations}
-                                    sx={{width: 222}}
-                                    renderInput={(params) => <TextField {...params} label="Location"/>}
-                                />
+                                {/*<Autocomplete*/}
+                                {/*    style={{marginLeft: '0', marginTop:'0'}}*/}
+                                {/*    // onChange={(e, value, r) => {*/}
+                                {/*    //*/}
+                                {/*    //     let formData = this.state.formData*/}
+                                {/*    //     formData.vehicleAvailability = value.type*/}
+                                {/*    //     this.setState({formData})*/}
+                                {/*    //*/}
+                                {/*    // }}*/}
+                                {/*    getOptionLabel={*/}
+                                {/*        (option) => option.type*/}
+                                {/*    }*/}
+                                {/*    size="large"*/}
+                                {/*    id="controllable-states-demo"*/}
+                                {/*    options={this.state.Locations}*/}
+                                {/*    sx={{width: 220}}*/}
+                                {/*    renderInput={(params) => <TextField {...params} label="Location"/>}*/}
+                                {/*/>*/}
                                     <Grid style={{marginLeft: '20px', marginTop:'0'}}>
                                         <DatePicker label="PickUp Date" sx={{width: 200}}/>
                                     </Grid>
@@ -514,6 +738,16 @@ class Booking extends Component {
                             </Grid>
                         </Grid>
                     </DialogContent>
+                    <GDSESnackBar
+                        open={this.state.alert}
+                        onClose={() => {
+                            this.setState({ alert: false })
+                        }}
+                        message={this.state.message}
+                        autoHideDuration={3000}
+                        severity={this.state.severity}
+                        variant="filled"
+                    />
                 </Dialog>
             </>
         )

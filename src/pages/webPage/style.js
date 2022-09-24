@@ -240,7 +240,7 @@ export const styleSheet={
 
     vehicle_container:{
         width:'100vw',
-        height:'280vh',
+        //height:'180vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -249,7 +249,7 @@ export const styleSheet={
 
     vehicle:{
         width:'100vw',
-        height:'260vh',
+        //height:'170vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -261,7 +261,7 @@ export const styleSheet={
 
     vehicle_detail:{
         width:'90vw',
-        height:'240vh',
+        //height:'160vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -273,7 +273,7 @@ export const styleSheet={
 
     vehicle_detail_row:{
         width:'90vw',
-        height:'60vh',
+        //height:'30vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
@@ -282,27 +282,15 @@ export const styleSheet={
     },
 
     vehicle_card:{
+        paddingTop: '30px',
         width:'29vw',
-        height:'60vh',
+        //height:'30vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent:'center',
     },
-
-    // vehicle_card_desc:{
-    //     width:'23vw',
-    //     height:'7vh',
-    //     display: 'flex',
-    //     flexWrap: 'wrap',
-    //     flexDirection: 'column',
-    //     alignItems: 'center',
-    //     justifyContent:'center',
-    //     marginTop:'30px',
-    //     border:'1px solid red'
-    //
-    // },
 
     desc_1:{
         width:'22vw',

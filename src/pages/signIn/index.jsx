@@ -137,7 +137,7 @@ class SignIn extends Component {
                                             <Typography variant="subtitle2" gutterBottom component="div"
                                                         style={{marginTop: '6px'}}>
                                                 Don't have and account? <span
-                                                style={{color: 'blue'}}>Sign up for free</span>
+                                                style={{color: 'blue'}}> <a href="http://localhost:3000/signup">Sign up for free</a></span>
                                             </Typography>
                                         </Grid>
                                     </Grid>

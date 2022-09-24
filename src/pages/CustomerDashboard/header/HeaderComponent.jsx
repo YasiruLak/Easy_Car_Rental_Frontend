@@ -7,9 +7,6 @@ import CustomerProfile from "../bodyComponent/customerProfile/CustomerProfile";
 import Booking from "../bodyComponent/booking/Booking";
 import DriverView from "../bodyComponent/driverView/driverView";
 
-
-
-
 export default function CustomerDashboard() {
     const classes = useStyles()
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -20,11 +17,11 @@ export default function CustomerDashboard() {
         <div>
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
-                <Routes>
-                    <Route exact path="/booking" element={<Booking/>}/>
-                    <Route path="/customerProfile" element={<CustomerProfile/>}/>
-                    <Route path="/driverView" element={<DriverView/>}/>
-                </Routes>
+                {/*<Routes>*/}
+                {/*    <Route exact path="/booking" element={<Booking/>}/>*/}
+                {/*    <Route path="/customerProfile" element={<CustomerProfile/>}/>*/}
+                {/*    <Route path="/driverView" element={<DriverView/>}/>*/}
+                {/*</Routes>*/}
             </Box>
         </div>
     );

@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Admin Dashboard Count Load">
-      <change afterPath="$PROJECT_DIR$/src/components/common/DatePickerBrowse/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/TimePickerBrowse/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/PaymentService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/SignInService.js" afterDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/CustomerProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/CustomerProfile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNav.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/DriverProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/DriverProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/signIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/webPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/BookingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BookingService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CustomerManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerManageService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/DriverManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DriverManageService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/VehicleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +55,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/style.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/styles.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/driverView.jsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/app/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/style.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/signUp/index.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/pages/webPage/style.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/styles.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2C3uFkiIynsYIWNI6AdZNzRWqw9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -61,20 +75,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="ts.external.directory.path" value="C:\Users\Yasiru\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\212.5457.46\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/DELL/Downloads/Car-Rental-System-React_FrontEnd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\components\common" />
@@ -90,6 +107,15 @@
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\CustomerDashboard" />
       <recent name="F:\Project\Web-Second Sem\Spring Projects\Easy Car Rental System\easy_car_rental_frontend\src\pages\AdminDashboard\bodyComponent" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,7 +152,25 @@
       <workItem from="1659446870858" duration="15585000" />
       <workItem from="1659502757286" duration="25595000" />
       <workItem from="1659582698842" duration="28223000" />
-      <workItem from="1659673160378" duration="18850000" />
+      <workItem from="1659673160378" duration="34039000" />
+      <workItem from="1659754712446" duration="4412000" />
+      <workItem from="1659795393171" duration="7270000" />
+      <workItem from="1659853360444" duration="5823000" />
+      <workItem from="1659945023088" duration="1212000" />
+      <workItem from="1660054927994" duration="473000" />
+      <workItem from="1660311782696" duration="1462000" />
+      <workItem from="1660805995369" duration="478000" />
+      <workItem from="1660831237786" duration="178000" />
+      <workItem from="1661009520298" duration="3082000" />
+      <workItem from="1661015205356" duration="872000" />
+      <workItem from="1661016872454" duration="1754000" />
+      <workItem from="1661054195341" duration="14000" />
+      <workItem from="1661654644039" duration="200000" />
+      <workItem from="1663124306918" duration="4456000" />
+      <workItem from="1663168608298" duration="18000" />
+      <workItem from="1663647641859" duration="685000" />
+      <workItem from="1664023398469" duration="3604000" />
+      <workItem from="1664027139888" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -303,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659627607082</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated">
+      <created>1659713395012</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1659713395013</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +370,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login Page done" />
@@ -340,9 +390,9 @@
     <MESSAGE value="Add Time Picker" />
     <MESSAGE value="Driver View Page Done" />
     <MESSAGE value="Customer and Driver Image Delete Done" />
-    <MESSAGE value="Updated" />
     <MESSAGE value="Admin Dashboard Count Load" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Dashboard Count Load" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
