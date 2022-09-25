@@ -337,19 +337,20 @@ class VehicleManage extends Component {
         return (
             <>
                 <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitVehicle}>
-                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '8px'}}>
+                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '200px',width:'84vw'}}>
                         <Grid item lg={12} xs={12} sm={12} md={12}
                               style={{
                                   alignItems: 'center',
                                   display: 'flex',
                                   flexWrap: 'wrap',
                                   justifyContent: 'center',
-                                  backgroundColor: '#0984e3'
+                                  backgroundColor: '#0984e3',
+                                  width:'84vw',
                               }}>
-                            <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Vehicle
+                            <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white',}}>Vehicle
                                 Manage</Typography>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 30px'}}>
                             <TextValidator
                                 id="outlinedbasic"
                                 placeholder="V00-001"
@@ -437,7 +438,7 @@ class VehicleManage extends Component {
                                 renderInput={(params) => <TextField {...params} label="Vehicle Type"/>}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 30px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -526,7 +527,7 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 30px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -616,7 +617,7 @@ class VehicleManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 30px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -805,27 +806,27 @@ class VehicleManage extends Component {
                 </ValidatorForm>
                 <Grid>
                     <TableContainer component={Paper}
-                                    style={{height: '45vh', width: '81vw', backgroundColor: '#eeeff1'}}>
+                                    style={{marginLeft: '17vw', width: '80vw', backgroundColor: '#eeeff1'}}>
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell align="left">Id</TableCell>
-                                    <TableCell align="left">Reg_No</TableCell>
+                                    <TableCell align="left">Vehicle Id</TableCell>
+                                    <TableCell align="left">Registration No</TableCell>
                                     <TableCell align="left">Brand</TableCell>
                                     <TableCell align="left">Passengers</TableCell>
                                     <TableCell align="left">Color</TableCell>
-                                    <TableCell align="left">Vehicle_Type</TableCell>
-                                    <TableCell align="left">Fuel</TableCell>
-                                    <TableCell align="left">Transmission</TableCell>
-                                    <TableCell align="left">Daily_Mileage</TableCell>
-                                    <TableCell align="left">Monthly_Mileage</TableCell>
-                                    <TableCell align="left">Daily_Rate</TableCell>
-                                    <TableCell align="left">Monthly_Rate</TableCell>
+                                    <TableCell align="left">vehicle Type</TableCell>
+                                    <TableCell align="left">Fuel Type</TableCell>
+                                    <TableCell align="left">Transmission Type</TableCell>
+                                    <TableCell align="left">Daily Mileage</TableCell>
+                                    <TableCell align="left">Monthly Mileage</TableCell>
+                                    <TableCell align="left">Daily Rate</TableCell>
+                                    <TableCell align="left">Monthly Rate</TableCell>
                                     <TableCell align="left">Availability</TableCell>
-                                    <TableCell align="left">Damage_Fee</TableCell>
-                                    <TableCell align="left">LastService_Mileage</TableCell>
-                                    <TableCell align="left">Service_Mileage</TableCell>
-                                    <TableCell align="left">Extra_Km_fee</TableCell>
+                                    <TableCell align="left">Damage Fee</TableCell>
+                                    <TableCell align="left">LastService Mileage</TableCell>
+                                    <TableCell align="left">Service Mileage</TableCell>
+                                    <TableCell align="left">Extra fee</TableCell>
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>

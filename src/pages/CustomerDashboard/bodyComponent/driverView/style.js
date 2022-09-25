@@ -1,19 +1,8 @@
 export const styleSheet= {
     driver_view:{
-        width: '81vw',
-        // //height: '100vh',
-        // overflowX: 'hidden',
-        // overflowY: 'hidden',
-        // //marginLeft:'40px',
-        // alignItems: 'center',
-        // justifyContent: 'center',
-        // display: 'flex',
-        // flexWrap: 'wrap',
-        // flexDirection: 'row',
-        // //backgroundColor:'red'
-
-        //width: '81vw',
+        width: '83vw',
         // height: '280vh',
+        marginLeft:'16vw',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
@@ -22,7 +11,7 @@ export const styleSheet= {
     },
 
     driver_searchBar:{
-        width: '81vw',
+        width: '83vw',
         height: '30vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -34,7 +23,7 @@ export const styleSheet= {
     },
 
     book_Bar:{
-        width: '81vw',
+        width: '83vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -46,7 +35,7 @@ export const styleSheet= {
     },
 
     subContainer:{
-        width: '81vw',
+        width: '83vw',
         // height: '85vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -56,7 +45,7 @@ export const styleSheet= {
         //backgroundColor:'green',
     },
     card:{
-        width: '81vw',
+        width: '83vw',
         height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -68,7 +57,7 @@ export const styleSheet= {
     },
 
     booking_detail_row:{
-        width:'81vw',
+        width:'83vw',
         height:'60vh',
         display: 'flex',
         flexWrap: 'wrap',

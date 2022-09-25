@@ -1,7 +1,7 @@
 export const styleSheet= {
     driver_Manage_container: {
-        width: '82.3vw',
-        height: '100vh',
+        width: '84vw',
+        // height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
         alignItems: 'center',
@@ -10,6 +10,7 @@ export const styleSheet= {
         flexWrap: 'wrap',
         flexDirection: 'column',
         backgroundColor:'red',
+        marginLeft:'40vw',
         //marginRight:'100px'
     },
 

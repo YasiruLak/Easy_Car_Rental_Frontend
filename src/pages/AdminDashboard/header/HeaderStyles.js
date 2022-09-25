@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => ({
 
     //Side nav
     drawerPaper: {
-        width: "250px",
+        width: "220px",
         [theme.breakpoints.down("sm")]: {
             marginTop: "0px",
         },

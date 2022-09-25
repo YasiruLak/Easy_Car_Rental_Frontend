@@ -1,13 +1,15 @@
 export const styleSheet= {
     viewBooking_container: {
-        width: '82.3vw',
-        height: '100vh',
+        width: '84vw',
+        //height: '100vh',
+        marginLeft:'16vw',
+        overflowX: 'hidden',
+        overflowY: 'hidden',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
-        flexDirection: 'row',
-        //backgroundColor:'red'
+        flexDirection: 'column',
     },
 
 

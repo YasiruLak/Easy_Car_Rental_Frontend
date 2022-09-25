@@ -1,6 +1,6 @@
 export const styleSheet= {
     container: {
-        width: '82.3vw',
+        width: '82.5vw',
         height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
@@ -9,11 +9,12 @@ export const styleSheet= {
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+        marginLeft:'16vw',
         //backgroundColor:'#5B6C8C'
     },
 
     header_name:{
-        width: '82.3vw',
+        width: '84vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -57,7 +58,7 @@ export const styleSheet= {
     },
 
     profile_footer:{
-        width: '82.3vw',
+        width: '84vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',

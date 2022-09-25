@@ -135,9 +135,9 @@ class ViewBooking extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#3d3d3d',
-                              width:'81vw',
+                              width:'84vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Booking View</Typography>
+                        <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white'}}>Booking View</Typography>
                     </Grid>
                     <ValidatorForm ref="form" className="pt-2">
                         <Grid style={classes.search_Bar}>

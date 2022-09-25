@@ -16,6 +16,7 @@ import BookingService from "../../../../service/BookingService";
 import DriverManageService from "../../../../service/DriverManageService";
 import CustomerManageService from "../../../../service/CustomerManageService";
 import VehicleService from "../../../../service/VehicleService";
+import GDSESnackBar from "../../../../components/common/SnackBar";
 
 class AdminHome extends Component {
     constructor(props) {
@@ -43,6 +44,32 @@ class AdminHome extends Component {
                     password: ''
                 }
             },
+
+            formData2: {
+                vehicleId: '',
+                registrationNo: '',
+                vehicleBrand: '',
+                vehicleType: '',
+                fuelType: '',
+                numberOfPassenger: '',
+                vehicleColour: '',
+                transmissionType: '',
+                refundableDamagedFee: '',
+                vehicleMileage: '',
+                vehiclePriceRate: {
+                    dailyRate: '',
+                    monthlyRate: ''
+                },
+                freeMileage: {
+                    dailyMileage: '',
+                    monthlyMileage: ''
+                },
+                lastServiceMileage: '',
+                extraKmPer:'',
+                vehicleAvailability: ''
+
+            },
+
             alert: false,
             message: '',
             severity: '',
@@ -233,124 +260,6 @@ class AdminHome extends Component {
                             </Card>
                         </Grid>
                     </Grid>
-                    {/*<Grid className={classes.Admin_Home_Card}>*/}
-                    {/*    <Grid*/}
-                    {/*        direction="column"*/}
-                    {/*        justifyContent="center"*/}
-                    {/*        alignItems="center">*/}
-                    {/*        <Card sx={{minWidth: 275}} style={{*/}
-                    {/*            backgroundColor: '#808e9b',*/}
-                    {/*            color: 'white',*/}
-                    {/*            width: '200px',*/}
-                    {/*            alignItems: 'center',*/}
-                    {/*            justifyContent: 'center'*/}
-                    {/*        }}>*/}
-                    {/*            <CardContent style={{*/}
-                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
-                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
-                    {/*            }}>*/}
-                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
-                    {/*                            style={{fontSize: '28px'}}>*/}
-                    {/*                    Vehicle*/}
-                    {/*                </Typography>*/}
-                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
-                    {/*                    alignItems: 'center',*/}
-                    {/*                    justifyContent: 'center',*/}
-                    {/*                    fontSize: '22px'*/}
-                    {/*                }}>*/}
-                    {/*                    01*/}
-                    {/*                </Typography>*/}
-                    {/*            </CardContent>*/}
-                    {/*        </Card>*/}
-                    {/*    </Grid>*/}
-                    {/*    <Grid*/}
-                    {/*        direction="column"*/}
-                    {/*        justifyContent="center"*/}
-                    {/*        alignItems="center">*/}
-                    {/*        <Card sx={{minWidth: 275}} style={{*/}
-                    {/*            backgroundColor: '#808e9b',*/}
-                    {/*            color: 'white',*/}
-                    {/*            width: '200px',*/}
-                    {/*            alignItems: 'center',*/}
-                    {/*            justifyContent: 'center'*/}
-                    {/*        }}>*/}
-                    {/*            <CardContent style={{*/}
-                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
-                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
-                    {/*            }}>*/}
-                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
-                    {/*                            style={{fontSize: '28px'}}>*/}
-                    {/*                    Vehicle*/}
-                    {/*                </Typography>*/}
-                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
-                    {/*                    alignItems: 'center',*/}
-                    {/*                    justifyContent: 'center',*/}
-                    {/*                    fontSize: '22px'*/}
-                    {/*                }}>*/}
-                    {/*                    01*/}
-                    {/*                </Typography>*/}
-                    {/*            </CardContent>*/}
-                    {/*        </Card>*/}
-                    {/*    </Grid>*/}
-                    {/*    <Grid*/}
-                    {/*        direction="column"*/}
-                    {/*        justifyContent="center"*/}
-                    {/*        alignItems="center">*/}
-                    {/*        <Card sx={{minWidth: 275}} style={{*/}
-                    {/*            backgroundColor: '#808e9b',*/}
-                    {/*            color: 'white',*/}
-                    {/*            width: '200px',*/}
-                    {/*            alignItems: 'center',*/}
-                    {/*            justifyContent: 'center'*/}
-                    {/*        }}>*/}
-                    {/*            <CardContent style={{*/}
-                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
-                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
-                    {/*            }}>*/}
-                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
-                    {/*                            style={{fontSize: '28px'}}>*/}
-                    {/*                    Vehicle*/}
-                    {/*                </Typography>*/}
-                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
-                    {/*                    alignItems: 'center',*/}
-                    {/*                    justifyContent: 'center',*/}
-                    {/*                    fontSize: '22px'*/}
-                    {/*                }}>*/}
-                    {/*                    01*/}
-                    {/*                </Typography>*/}
-                    {/*            </CardContent>*/}
-                    {/*        </Card>*/}
-                    {/*    </Grid>*/}
-                    {/*    <Grid*/}
-                    {/*        direction="column"*/}
-                    {/*        justifyContent="center"*/}
-                    {/*        alignItems="center">*/}
-                    {/*        <Card sx={{minWidth: 275}} style={{*/}
-                    {/*            backgroundColor: '#808e9b',*/}
-                    {/*            color: 'white',*/}
-                    {/*            width: '200px',*/}
-                    {/*            alignItems: 'center',*/}
-                    {/*            justifyContent: 'center'*/}
-                    {/*        }}>*/}
-                    {/*            <CardContent style={{*/}
-                    {/*                alignItems: 'center', justifyContent: 'center', display: 'flex',*/}
-                    {/*                flexWrap: 'wrap', flexDirection: 'column',*/}
-                    {/*            }}>*/}
-                    {/*                <Typography lg={{fontSize: 14}} color="text.secondary" gutterBottom*/}
-                    {/*                            style={{fontSize: '28px'}}>*/}
-                    {/*                    Vehicle*/}
-                    {/*                </Typography>*/}
-                    {/*                <Typography lg={{mb: 1.5}} color="text.secondary" style={{*/}
-                    {/*                    alignItems: 'center',*/}
-                    {/*                    justifyContent: 'center',*/}
-                    {/*                    fontSize: '22px'*/}
-                    {/*                }}>*/}
-                    {/*                    01*/}
-                    {/*                </Typography>*/}
-                    {/*            </CardContent>*/}
-                    {/*        </Card>*/}
-                    {/*    </Grid>*/}
-                    {/*</Grid>*/}
                     <Grid item lg={12} xs={12} sm={12} md={12} container className="pt-2" spacing={1}
                           style={{
                               alignItems: 'center',
@@ -358,14 +267,14 @@ class AdminHome extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#ff3f34',
-                              width:'80vw',
+                              width:'82.5vw',
                               margin:'14px 0 14px 0'
                           }}>
                         <Typography variant="h5" style={{margin: '10px 0 10px 0', color: 'white'}}>Pending User Request</Typography>
                     </Grid>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
+                                        style={{width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>
@@ -427,14 +336,14 @@ class AdminHome extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#ff3f34',
-                              width:'80vw',
+                              width:'82.5vw',
                               margin:'14px 0 14px 0'
                           }}>
                         <Typography variant="h5" style={{margin: '10px 0 10px 0', color: 'white'}}>Available To Service</Typography>
                     </Grid>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
+                                        style={{width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>
@@ -448,13 +357,13 @@ class AdminHome extends Component {
                                 </TableHead>
                                 <TableBody>
                                     {
-                                        //this.state.data.map((row) => (
+                                        this.state.data.map((row) => (
                                         <TableRow>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
-                                            <TableCell align="left">{}</TableCell>
+                                            <TableCell align="left">{row.vehicleId}</TableCell>
+                                            <TableCell align="left">{row.registrationNo}</TableCell>
+                                            <TableCell align="left">{row.vehicleBrand}</TableCell>
+                                            <TableCell align="left">{row.lastServiceMileage}</TableCell>
+                                            <TableCell align="left">{row.vehicleMileage}</TableCell>
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton
@@ -476,7 +385,7 @@ class AdminHome extends Component {
                                                 </Tooltip>
                                             </TableCell>
                                         </TableRow>
-                                        //))
+                                        ))
                                     }
                                 </TableBody>
                             </Table>
@@ -484,6 +393,16 @@ class AdminHome extends Component {
 
                     </Grid>
                 </Grid>
+                <GDSESnackBar
+                    open={this.state.alert}
+                    onClose={() => {
+                        this.setState({alert: false})
+                    }}
+                    message={this.state.message}
+                    autoHideDuration={3000}
+                    severity={this.state.severity}
+                    variant="filled"
+                />
             </>
         )
     }

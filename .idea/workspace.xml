@@ -4,32 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="44d0fe4a-545b-4d2a-91bd-edb1a409a2c3" name="Changes" comment="Routing Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/AdminHome.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminHome/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/adminProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/CustomerManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/customerManage/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/DriverManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/driverManage/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/payment/Payment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/Schedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/Schedule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/schedule/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/VehicleManage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/vehicleManage/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/bodyComponent/viewBooking/viewBooking.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/HeaderStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminDashboard/header/SideNavData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/Booking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/booking/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/customerProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/driverView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/driverView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/bodyComponent/driverView/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/HeaderStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CustomerDashboard/header/SideNavData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/DriverProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/DriverProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverProfile/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverSchedule/DriverSchedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverSchedule/DriverSchedule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverSchedule/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/bodyComponent/driverSchedule/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/HeaderStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DriverDashboard/header/SideNavData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signIn/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/webPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/webPage/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/BookingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BookingService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/DriverManageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DriverManageService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/VehicleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/VehicleService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -89,6 +95,7 @@
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "ts.external.directory.path": "C:\\Users\\DELL\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\222.3739.54\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -170,7 +177,8 @@
       <workItem from="1663168608298" duration="18000" />
       <workItem from="1663647641859" duration="685000" />
       <workItem from="1664023398469" duration="3604000" />
-      <workItem from="1664027139888" duration="2337000" />
+      <workItem from="1664027139888" duration="4942000" />
+      <workItem from="1664078842989" duration="11844000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658149982080</created>
@@ -354,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659713395013</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Routing Updated">
+      <created>1664034728843</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664034728843</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +407,8 @@
     <MESSAGE value="Customer and Driver Image Delete Done" />
     <MESSAGE value="Admin Dashboard Count Load" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Routing Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Routing Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

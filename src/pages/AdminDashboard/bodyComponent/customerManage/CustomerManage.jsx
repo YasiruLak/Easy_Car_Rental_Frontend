@@ -188,19 +188,20 @@ class CustomerManage extends Component {
         return(
             <>
                 <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitCustomer}>
-                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '8px'}}>
+                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '200px',width:'85vw'}}>
                         <Grid item lg={12} xs={12} sm={12} md={12}
                               style={{
                                   alignItems: 'center',
                                   display: 'flex',
                                   flexWrap: 'wrap',
                                   justifyContent: 'center',
-                                  backgroundColor: '#0fb9b1'
+                                  backgroundColor: '#0fb9b1',
+                                  width:'84vw',
                               }}>
-                            <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Customer
+                            <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white',}}>Customer
                                 Manage</Typography>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 34px'}}>
                             <TextValidator
                                 id="outlinedbasic"
                                 placeholder="D00-001"
@@ -286,7 +287,7 @@ class CustomerManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 34px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -375,7 +376,7 @@ class CustomerManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 34px'}}>
                             <TextValidator
                                 disabled
                                 id="outlinedbasic"
@@ -412,7 +413,7 @@ class CustomerManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
+                        <Grid container style={{margin: '20px 40px 10px 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
                             <GDSEButton label={this.state.btnLabel} type="submit" size="medium" color={this.state.btnColor} variant="contained"
                                         style={{margin: '10px 12px 16px 5px'}}/>
@@ -422,7 +423,7 @@ class CustomerManage extends Component {
                     </Grid>
                 </ValidatorForm>
                 <Grid>
-                    <TableContainer component={Paper} style={{height: '45vh',width:'80vw',backgroundColor:'#eeeff1', marginLeft:'25px'}}>
+                    <TableContainer component={Paper} style={{width:'82vw',backgroundColor:'#eeeff1', marginLeft:'17vw'}}>
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>
@@ -434,10 +435,6 @@ class CustomerManage extends Component {
                                     <TableCell align="left">Address</TableCell>
                                     <TableCell align="left">Email</TableCell>
                                     <TableCell align="left">Contact No</TableCell>
-                                    {/*<TableCell align="left">User Id</TableCell>*/}
-                                    {/*<TableCell align="left">User Name</TableCell>*/}
-                                    {/*<TableCell align="left">Password</TableCell>*/}
-                                    {/*<TableCell align="left">User Role</TableCell>*/}
                                     <TableCell align="left">Action</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -453,10 +450,6 @@ class CustomerManage extends Component {
                                             <TableCell align="left">{row.address}</TableCell>
                                             <TableCell align="left">{row.email}</TableCell>
                                             <TableCell align="left">{row.contactNo}</TableCell>
-                                            {/*<TableCell align="left">{row.user.userId}</TableCell>*/}
-                                            {/*<TableCell align="left">{row.user.userName}</TableCell>*/}
-                                            {/*<TableCell align="left">{row.user.password}</TableCell>*/}
-                                            {/*<TableCell align="left">{row.user.role}</TableCell>*/}
                                             <TableCell align="left">
                                                 <Tooltip title="Edit">
                                                     <IconButton

@@ -23,16 +23,16 @@ export default function AdminDashboard() {
         <div>
             <SideNav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
-                <Routes>
-                    <Route exact path="/" element={<AdminHome/>}/>
-                    <Route exact path="/vehicleManage" element={<VehicleManage/>}/>
-                    <Route exact path="/adminProfile" element={<AdminProfile/>}/>
-                    <Route exact path="/driverManage" element={<DriverManage/>}/>
-                    <Route exact path="/customerManage" element={<CustomerManage/>}/>
-                    <Route exact path="/payment" element={<Payment/>}/>
-                    <Route exact path="/schedule" element={<Schedule/>}/>
-                    <Route exact path="/viewBooking" element={<ViewBooking/>}/>
-                </Routes>
+                {/*<Routes>*/}
+                {/*    <Route exact path="/" element={<AdminHome/>}/>*/}
+                {/*    <Route exact path="/vehicleManage" element={<VehicleManage/>}/>*/}
+                {/*    <Route exact path="/adminProfile" element={<AdminProfile/>}/>*/}
+                {/*    <Route exact path="/driverManage" element={<DriverManage/>}/>*/}
+                {/*    <Route exact path="/customerManage" element={<CustomerManage/>}/>*/}
+                {/*    <Route exact path="/payment" element={<Payment/>}/>*/}
+                {/*    <Route exact path="/schedule" element={<Schedule/>}/>*/}
+                {/*    <Route exact path="/viewBooking" element={<ViewBooking/>}/>*/}
+                {/*</Routes>*/}
             </Box>
         </div>
     );

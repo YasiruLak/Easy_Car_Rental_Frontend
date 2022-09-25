@@ -195,19 +195,20 @@ class DriverManage extends Component {
         return(
             <>
                 <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitDriver}>
-                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '8px'}}>
+                    <Grid container className="pt-2" spacing={1} style={{marginLeft: '200px', width:'85vw'}}>
                         <Grid item lg={12} xs={12} sm={12} md={12}
                               style={{
                                   alignItems: 'center',
                                   display: 'flex',
                                   flexWrap: 'wrap',
                                   justifyContent: 'center',
-                                  backgroundColor: '#4b6584'
+                                  backgroundColor: '#4b6584',
+                                  width:'84vw',
                               }}>
-                            <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white',}}>Driver
+                            <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white',}}>Driver
                                 Manage</Typography>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '12px 12px 14px 30px'}}>
                             <TextValidator
                                 id="outlinedbasic"
                                 placeholder="D00-001"
@@ -293,7 +294,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 14px 30px'}}>
 
                             <TextValidator
                                 id="outlinedbasic"
@@ -328,7 +329,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 0 12px'}}>
                             <TextValidator
                                 id="outlinedbasic"
                                 placeholder="076-8383493"
@@ -345,7 +346,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 0 12px'}}>
                             <Autocomplete
                                 // style={{padding: '10px', width: '230px'}}
                                 onChange={(e, value, r) => {
@@ -365,7 +366,7 @@ class DriverManage extends Component {
                                 renderInput={(params) => <TextField {...params} label="Availability"/>}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 12px 12px'}}>
                             <TextValidator
                                 disabled
                                 id="outlinedbasic"
@@ -383,7 +384,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 12px 30px'}}>
                             <TextValidator
                                 disabled
                                 id="outlinedbasic"
@@ -402,7 +403,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 16px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 12px 12px'}}>
                             <TextValidator
                                 disabled
                                 id="outlinedbasic"
@@ -421,7 +422,7 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 10px 12px'}}>
+                        <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 12px 12px'}}>
                             <TextValidator
                                 disabled
                                 id="outlinedbasic"
@@ -439,17 +440,17 @@ class DriverManage extends Component {
                                 validators={['required']}
                             />
                         </Grid>
-                        <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
+                        <Grid container style={{margin: '20px 40px 10px 0'}} direction="row" justifyContent="flex-end"
                               alignItems="center">
                             <GDSEButton label={this.state.btnLabel} type="submit" size="medium" color={this.state.btnColor} variant="contained"
-                                        style={{margin: '10px 12px 16px 5px'}}/>
+                                        style={{margin: '10px 12px 20px 5px'}}/>
                             <GDSEButton label="cancel" size="medium" color="error" variant="contained"
-                                        style={{margin: '10px 12px 16px 5px'}}/>
+                                        style={{margin: '10px 12px 20px 5px'}}/>
                         </Grid>
                     </Grid>
                 </ValidatorForm>
                 <Grid>
-                    <TableContainer component={Paper} style={{height: '45vh',width:'80vw',backgroundColor:'#eeeff1', marginLeft:'20px'}}>
+                    <TableContainer component={Paper} style={{marginLeft: '17vw',width:'80vw',backgroundColor:'#eeeff1'}}>
                         <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>

@@ -53,9 +53,9 @@ class DriverView extends Component{
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#485460',
-                              width: '81vw',
+                              width: '83vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '14px 0 20px 0', color: 'white',}}>Choose
+                        <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white',}}>Choose
                             Driver</Typography>
                     </Grid>
                     <Grid className={classes.searchBar} style={{margin:'30px 0 0 0'}}>

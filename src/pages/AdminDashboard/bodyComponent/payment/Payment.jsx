@@ -192,7 +192,7 @@ class Payment extends Component {
         return (
             <>
                 <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitPayment}>
-                <Grid container className="pt-2" spacing={1} style={{marginLeft: '8px'}}>
+                <Grid container className="pt-2" spacing={1} style={{marginLeft: '200px', width:'85vw'}}>
                     <Grid item lg={12} xs={12} sm={12} md={12} container className="pt-2" spacing={1}
                           style={{
                               alignItems: 'center',
@@ -200,13 +200,13 @@ class Payment extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#05c46b',
-                              width: '82.3vw',
+                              width: '85vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Payment
+                        <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white'}}>Payment
                             Manage</Typography>
                     </Grid>
 
-                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '24px 12px 14px 16px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '24px 12px 14px 30px'}}>
                         <TextValidator
                             id="outlinedbasic"
                             placeholder="P00-001"
@@ -293,7 +293,7 @@ class Payment extends Component {
                             validators={['required']}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 0 16px'}}>
+                    <Grid item xs={12} sm={12} md={12} lg={2} style={{margin: '0 12px 0 30px'}}>
                         <Autocomplete
                             onChange={(e, value, r) => {
 
@@ -312,7 +312,7 @@ class Payment extends Component {
                         />
                     </Grid>
 
-                    <Grid container style={{margin: '20px 40px 0 0'}} direction="row" justifyContent="flex-end"
+                    <Grid container style={{margin: '20px 40px 10px 0'}} direction="row" justifyContent="flex-end"
                           alignItems="center">
                         <GDSEButton  label={this.state.btnLabel} color={this.state.btnColor} type="submit" size="medium"  variant="contained"
                                     style={{margin: '10px 12px 20px 5px'}}/>
@@ -321,10 +321,9 @@ class Payment extends Component {
                     </Grid>
                 </Grid>
                 </ValidatorForm>
-
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1', marginLeft:'20px'}}>
+                                        style={{marginLeft: '17vw',width: '80vw', backgroundColor: '#eeeff1'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

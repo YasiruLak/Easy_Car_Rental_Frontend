@@ -32,9 +32,9 @@ class Schedule extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#1e3799',
-                              width: '81vw',
+                              width: '84vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Driver
+                        <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white'}}>Driver
                             Schedule</Typography>
                     </Grid>
                     <ValidatorForm ref="form" className="pt-2">
@@ -47,8 +47,8 @@ class Schedule extends Component {
                                     justifyContent: 'center',
                                     //backgroundColor: '#0984e3',
                                     //border:'1px solid red',
-                                    width: '80vw',
-                                    height: '20vh'
+                                    width: '84vw',
+
                                 }}>
                                 <TextValidator
                                     id="outlined-basic"
@@ -75,7 +75,7 @@ class Schedule extends Component {
                     </ValidatorForm>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
+                                        style={{marginTop:'20px',height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

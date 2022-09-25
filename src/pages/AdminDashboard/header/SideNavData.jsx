@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
 import HomeIcon from '@mui/icons-material/Home';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {useStyles} from "./HeaderStyles";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PersonIcon from '@mui/icons-material/Person';
@@ -10,11 +10,11 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DvrIcon from '@mui/icons-material/Dvr';
 import PaidIcon from '@mui/icons-material/Paid';
-import LogoutIcon from "@mui/icons-material/Logout";
 
-export default function SideNavData({handleDrawerClose}) {
 
+function SideNavData({handleDrawerClose}) {
     const classes = useStyles();
+
     const listItemData = [
         {label: "Home", to: "/admin", icon: <HomeIcon/>},
         {label: "View Booking", to: "/admin/viewBooking", icon: <DvrIcon/>},
@@ -25,8 +25,6 @@ export default function SideNavData({handleDrawerClose}) {
         {label: "Payment", to: "/admin/payment", icon: <PaidIcon/>},
         {label: "Profile", to: "/admin/adminProfile", icon: <PersonIcon/>},
         // {label: "Log out", to: "/admin/logOut", icon: <LogoutIcon/>},
-
-
     ]
     return (<List>
         {listItemData.map((item, i) => (
@@ -44,3 +42,5 @@ export default function SideNavData({handleDrawerClose}) {
             </Button>))}
     </List>);
 }
+
+export default (SideNavData)

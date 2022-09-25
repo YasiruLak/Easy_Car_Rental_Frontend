@@ -418,10 +418,10 @@ class Booking extends Component {
                               display: 'flex',
                               flexWrap: 'wrap',
                               justifyContent: 'center',
-                              backgroundColor: '#ffa801',
-                              width: '81vw',
+                              backgroundColor: '#485460',
+                              width: '82vw',
                           }}>
-                        <Typography variant="h4" style={{margin: '14px 0 20px 0', color: 'white',}}>Book Your Dream
+                        <Typography variant="h4" style={{margin: '10px 0 10px 0', color: 'white',}}>Book Your Dream
                             Vehicle</Typography>
                     </Grid>
                     <Grid className={classes.searchBar}>
@@ -462,7 +462,7 @@ class Booking extends Component {
                         >
                             <Button label="Search Here" type="submit" size="medium"
                                         color="primary" variant="contained"
-                                        style={{margin: '10px 40px 20px 0'}}
+                                        style={{margin: '10px 20px 20px 0'}}
                                         onClick={this.loadAllAvailableVehicles}
                             >SEARCH CAR NOW</Button>
                         </Grid>

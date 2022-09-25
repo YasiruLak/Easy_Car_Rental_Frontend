@@ -1,6 +1,6 @@
 export const styleSheet= {
     customer_Manage_container: {
-        width: '82.3vw',
+        width: '84vw',
         height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
@@ -10,7 +10,7 @@ export const styleSheet= {
         flexWrap: 'wrap',
         flexDirection: 'column',
         backgroundColor:'green',
-        //marginRight:'100px'
+        marginLeft:'40vw',
     },
 
 }

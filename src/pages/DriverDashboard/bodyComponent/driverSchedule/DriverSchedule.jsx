@@ -32,7 +32,7 @@ class DriverSchedule extends Component {
                               flexWrap: 'wrap',
                               justifyContent: 'center',
                               backgroundColor: '#1e3799',
-                              width: '81vw',
+                              width: '82.5vw',
                           }}>
                         <Typography variant="h4" style={{margin: '10px 0 20px 0', color: 'white'}}>Driver
                             Schedule</Typography>
@@ -45,17 +45,18 @@ class DriverSchedule extends Component {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     justifyContent: 'center',
+                                    marginBottom:'20px',
                                     //backgroundColor: '#0984e3',
                                     //border:'1px solid red',
-                                    width: '80vw',
-                                    height: '20vh'
+                                    width: '82.5vw',
+
                                 }}>
                                 <TextValidator
                                     id="outlined-basic"
                                     placeholder="B00-001"
                                     variant="outlined"
                                     size="small"
-                                    style={{width: '40vw', marginTop: '70px'}}
+                                    style={{width: '40vw', marginTop: '70px', marginBottom:'20px',}}
                                     label="Booking No"
                                     // value={this.state.formData.vehicleId}
                                     // onChange={(e) => {
@@ -68,14 +69,14 @@ class DriverSchedule extends Component {
                                 <Grid>
                                     <GDSEButton label="Search" type="submit" size="medium"
                                                 color="primary" variant="contained"
-                                                style={{margin: '70px 16px 0 20px'}}/>
+                                                style={{margin: '70px 16px 20px 20px'}}/>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </ValidatorForm>
                     <Grid>
                         <TableContainer component={Paper}
-                                        style={{height: '70vh', width: '80vw', backgroundColor: '#eeeff1'}}>
+                                        style={{ height: '65vh', width: '80vw', backgroundColor: '#eeeff1'}}>
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow>

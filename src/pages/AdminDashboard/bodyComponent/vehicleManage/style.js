@@ -1,20 +1,20 @@
 export const styleSheet= {
     vehicleContainer: {
-        width: '80vw',
-        height: '100vh',
+        width: '84vw',
+        //height: '100vh',
         overflowX: 'hidden',
         overflowY: 'hidden',
-        marginLeft:'40px',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
+        marginLeft:'40vw',
         //backgroundColor:'red'
     },
 
     search_Bar: {
-        width: '80vw',
+        width: '84vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -31,8 +31,8 @@ export const styleSheet= {
 
     imageContainer :{
         marginTop: '10px',
-        height : '30%',
-        width : '97%',
+        height : '30vh',
+        width : '84vw',
         display : 'flex',
         flexDirection : 'row',
         //backgroundColor :'#5b6161',
@@ -44,8 +44,8 @@ export const styleSheet= {
     },
 
     imageDiv : {
-        height : '80%',
-        width : '23%',
+        height : '60vh',
+        width : '15vw',
         backgroundColor : 'white',
         borderRadius: "20px",
     },
@@ -55,7 +55,7 @@ export const styleSheet= {
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'space-around',
-        width:'100%'
+        width:'100vw'
     },
 
 

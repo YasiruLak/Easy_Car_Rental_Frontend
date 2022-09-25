@@ -1,18 +1,19 @@
 export const styleSheet = {
     booking_container:{
-        width: '81vw',
+        width: '82.5vw',
         // height: '280vh',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
+        marginLeft:'16vw',
         //backgroundColor:'red',
         //overflowX:'hidden',
         // marginLeft:'5px'
     },
     searchBar:{
-        width: '81vw',
+        width: '82.5vw',
         height: '30vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -24,7 +25,7 @@ export const styleSheet = {
     },
 
     book_Bar:{
-        width: '81vw',
+        width: '82.5vw',
         height: '20vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -36,7 +37,7 @@ export const styleSheet = {
     },
 
     subContainer:{
-        width: '81vw',
+        width: '82.5vw',
         // height: '85vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -46,7 +47,7 @@ export const styleSheet = {
         //backgroundColor:'green',
     },
     card:{
-        width: '81vw',
+        width: '82.5vw',
         height: '60vh',
         alignItems: 'center',
         justifyContent: 'center',
@@ -58,7 +59,7 @@ export const styleSheet = {
     },
 
     booking_detail_row:{
-        width:'81vw',
+        width:'82.5vw',
         height:'60vh',
         display: 'flex',
         flexWrap: 'wrap',

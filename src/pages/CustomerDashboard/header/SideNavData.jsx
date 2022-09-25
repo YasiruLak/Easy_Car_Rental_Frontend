@@ -3,12 +3,12 @@ import {Button, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/c
 import {useStyles} from "./HeaderStyles";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PersonIcon from '@mui/icons-material/Person';
-import LogoutIcon from '@mui/icons-material/Logout';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-export default function SideNavData({handleDrawerClose}) {
+
+function SideNavData({handleDrawerClose}) {
 
     const classes = useStyles();
     const listItemData = [
@@ -36,3 +36,5 @@ export default function SideNavData({handleDrawerClose}) {
             </Button>))}
     </List>);
 }
+
+export default (SideNavData)
